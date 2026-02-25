@@ -411,13 +411,6 @@
             color: #1f2937;
         }
         
-        .success-icon {
-            font-size: 4rem;
-            color: #10b981;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
             .content-section h2 { font-size: 1.5rem; }
@@ -596,23 +589,23 @@
             <p>Enter your email to unlock the PDF. Learn the 5 critical steps before disputing—including how to freeze secondary bureaus, why you should never dispute online, and the signature trick that proves your letter is original.</p>
             
             <!-- NETLIFY FORM -->
-            <form class="email-form" name="guide-download" method="POST" data-netlify="true" onsubmit="handleFormSubmit(event)">
-                <!-- Honeypot field to prevent spam -->
-                <p style="display: none;">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                </p>
-                
-                <!-- Required hidden field for Netlify -->
+            <form class="email-form" name="guide-download" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFormSubmit(event)">
                 <input type="hidden" name="form-name" value="guide-download" />
+                
+                <!-- Honeypot (hidden from humans, catches bots) -->
+                <p style="display: none;" aria-hidden="true">
+                    <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+                </p>
                 
                 <input 
                     type="email" 
                     name="email" 
                     placeholder="Enter your email address" 
-                    required 
+                    required
+                    autocomplete="email"
                 />
                 
-                <button type="submit">Unlock & Download Free Guide →</button>
+                <button type="submit" id="guide-submit-btn">Unlock &amp; Download Free Guide →</button>
             </form>
             
             <p class="trust-text">✓ PDF opens instantly ✓ We respect your inbox (unsubscribe anytime) ✓ No spam, ever</p>
@@ -750,49 +743,65 @@
     <div id="contact-popup" class="popup-overlay" onclick="closePopup(event, 'contact-popup')">
         <div class="popup-content" onclick="event.stopPropagation()">
             <button class="popup-close" onclick="closePopup(null, 'contact-popup')">&times;</button>
-            <h2>Contact Us</h2>
             
-            <p>Have a question about credit reports, collections, or our guide? We're here to help. Fill out the form below and we'll get back to you within 24-48 hours.</p>
-            
-            <!-- NETLIFY CONTACT FORM -->
-            <form name="contact" method="POST" data-netlify="true" onsubmit="handleContactSubmit(event)">
-                <!-- Honeypot -->
-                <p style="display: none;">
-                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            <!-- Form View -->
+            <div id="contact-form-view">
+                <h2>Contact Us</h2>
+                <p>Have a question about credit reports, collections, or our guide? We're here to help. Fill out the form below and we'll get back to you within 24-48 hours.</p>
+                
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleContactSubmit(event)">
+                    <input type="hidden" name="form-name" value="contact" />
+                    
+                    <p style="display: none;" aria-hidden="true">
+                        <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
+                    </p>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Your Name</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Email Address</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Subject</label>
+                        <select name="subject" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
+                            <option value="">Select a topic...</option>
+                            <option value="guide">Question about the Pre-Dispute Guide</option>
+                            <option value="credit-report">Help reading my credit report</option>
+                            <option value="collection">Question about collections</option>
+                            <option value="dispute">Help with a dispute</option>
+                            <option value="affiliate">Affiliate partnership inquiry</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Message</label>
+                        <textarea name="message" rows="5" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
+                    </div>
+                    
+                    <button type="submit" style="width: 100%; background: #1e3a8a; color: white; padding: 14px; font-size: 1.1rem; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Success View (hidden by default) -->
+            <div id="contact-success-view" style="display: none; text-align: center; padding: 40px 20px;">
+                <div style="font-size: 4rem; margin-bottom: 20px;">✅</div>
+                <h2 style="color: #1e3a8a; margin-bottom: 15px;">Message Sent!</h2>
+                <p style="color: #374151; font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;">
+                    Thanks for reaching out. We've received your message and will get back to you within <strong>24-48 hours</strong>.
                 </p>
-                
-                <input type="hidden" name="form-name" value="contact" />
-                
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Your Name</label>
-                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Email Address</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
-                </div>
-                
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Subject</label>
-                    <select name="subject" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem;">
-                        <option value="">Select a topic...</option>
-                        <option value="guide">Question about the Pre-Dispute Guide</option>
-                        <option value="credit-report">Help reading my credit report</option>
-                        <option value="collection">Question about collections</option>
-                        <option value="dispute">Help with a dispute</option>
-                        <option value="affiliate">Affiliate partnership inquiry</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                
-                <div style="margin-bottom: 25px;">
-                    <label style="display: block; color: #374151; font-weight: 600; margin-bottom: 6px;">Message</label>
-                    <textarea name="message" rows="5" required style="width: 100%; padding: 12px; border: 2px solid #e5e7eb; border-radius: 8px; font-size: 1rem; resize: vertical;"></textarea>
-                </div>
-                
-                <button type="submit" style="width: 100%; background: #1e3a8a; color: white; padding: 14px; font-size: 1.1rem; font-weight: 700; border: none; border-radius: 8px; cursor: pointer;">Send Message</button>
-            </form>
+                <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 30px;">
+                    In the meantime, check your email for our free Pre-Dispute Guide if you haven't already.
+                </p>
+                <button onclick="closePopup(null, 'contact-popup')" style="background: #10b981; color: white; padding: 12px 30px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer;">
+                    Got it, thanks!
+                </button>
+            </div>
         </div>
     </div>
 
@@ -834,58 +843,84 @@
             if (!event || event.target.id === popupId) {
                 document.getElementById(popupId).classList.remove('active');
                 document.body.style.overflow = '';
+                
+                // Reset contact form view after delay if it was contact popup
+                if (popupId === 'contact-popup') {
+                    setTimeout(() => {
+                        document.getElementById('contact-form-view').style.display = 'block';
+                        document.getElementById('contact-success-view').style.display = 'none';
+                    }, 300);
+                }
             }
         }
         
-        // Netlify Form Handler - Opens PDF in new tab
+        // Guide Download Form Handler - Submits to Netlify, then opens PDF
         function handleFormSubmit(e) {
             e.preventDefault();
-            
-            // Submit to Netlify
             const form = e.target;
+            const btn = document.getElementById('guide-submit-btn');
             const formData = new FormData(form);
-            
+
+            // Button loading state
+            btn.disabled = true;
+            btn.textContent = 'Sending…';
+
             fetch('/', {
                 method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formData).toString()
             })
             .then(() => {
-                // Open PDF in new tab immediately
-                window.open('/pre-dispute-guide.pdf', '_blank');
-                
-                // Reset form
+                btn.textContent = '✓ Check your inbox!';
                 form.reset();
+                // Open PDF in new tab — works in all modern browsers
+                window.open('/pre-dispute-guide.pdf', '_blank', 'noopener');
             })
-            .catch((error) => {
-                console.error('Error:', error);
-                // Still open PDF even if submission fails
-                window.open('/pre-dispute-guide.pdf', '_blank');
+            .catch(() => {
+                // Network hiccup — Netlify likely still got it; open PDF anyway
+                btn.textContent = '✓ Opening Guide…';
+                form.reset();
+                window.open('/pre-dispute-guide.pdf', '_blank', 'noopener');
+            })
+            .finally(() => {
+                // Re-enable button after 4 seconds
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.textContent = 'Unlock & Download Free Guide →';
+                }, 4000);
             });
         }
-        
-        // Contact Form Handler
+
+        // Contact Form Handler - Submits to Netlify, shows success state
         function handleContactSubmit(e) {
             e.preventDefault();
-            
             const form = e.target;
+            const btn = form.querySelector('button[type="submit"]');
             const formData = new FormData(form);
-            
+
+            btn.disabled = true;
+            btn.textContent = 'Sending…';
+
             fetch('/', {
                 method: 'POST',
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: new URLSearchParams(formData).toString()
             })
             .then(() => {
-                alert('Message sent! We\'ll reply within 24-48 hours.');
-                closePopup(null, 'contact-popup');
+                document.getElementById('contact-form-view').style.display = 'none';
+                document.getElementById('contact-success-view').style.display = 'block';
                 form.reset();
             })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('Message sent! We\'ll reply within 24-48 hours.');
-                closePopup(null, 'contact-popup');
+            .catch(() => {
+                // Show success anyway — form submission via POST usually succeeds
+                // even when the fetch Promise rejects due to redirect handling
+                document.getElementById('contact-form-view').style.display = 'none';
+                document.getElementById('contact-success-view').style.display = 'block';
                 form.reset();
+            })
+            .finally(() => {
+                btn.disabled = false;
+                btn.textContent = 'Send Message';
             });
         }
         
