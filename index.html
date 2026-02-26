@@ -38,16 +38,7 @@
       }
     }
     </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9TZ91D4DTH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9TZ91D4DTH');
-</script>    
-
+    
     <style>
         * {
             margin: 0;
@@ -194,34 +185,71 @@
         
         /* Kikoff Affiliate Section */
         .kikoff-section {
-            background: #faf5ff;
-            border: 2px solid #7c3aed;
-            padding: 30px;
-            border-radius: 12px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #7c3aed;
+            padding: 20px 24px;
+            border-radius: 0 10px 10px 0;
             margin: 30px 0;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
-        
-        .kikoff-section h3 {
-            margin: 0 0 15px;
-            color: #1e3a8a;
+
+        .kikoff-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
         }
-        
-        .kikoff-section h3 a {
-            color: #7c3aed;
-            text-decoration: none;
-            font-size: 1.3rem;
+
+        .kikoff-body {
+            flex: 1;
+        }
+
+        .kikoff-label {
+            font-size: 0.75rem;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #7c3aed;
+            margin-bottom: 4px;
         }
-        
-        .kikoff-section h3 a:hover {
-            text-decoration: underline;
+
+        .kikoff-section h3 {
+            margin: 0 0 6px;
+            font-size: 1rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            line-height: 1.4;
         }
-        
+
         .kikoff-note {
-            margin-top: 15px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             color: #6b7280;
+            margin: 0;
+        }
+
+        .kikoff-cta {
+            display: inline-block;
+            background: #7c3aed;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .kikoff-cta:hover {
+            background: #6d28d9;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .kikoff-section { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .kikoff-cta { width: 100%; text-align: center; }
         }
         
         /* Email Capture Section */
@@ -463,13 +491,14 @@
 
             <!-- KIKOFF AFFILIATE SECTION -->
             <div class="kikoff-section">
-                <h3 id="2344833">
-                    <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994">
-                        The faster way to build credit - No credit checks, hidden fees, or interest. Plans start from just $5/month!
-                    </a>
-                </h3>
+                <div class="kikoff-icon">💳</div>
+                <div class="kikoff-body">
+                    <p class="kikoff-label">Recommended Tool</p>
+                    <h3>Build credit while you repair it</h3>
+                    <p class="kikoff-note">Kikoff adds a $750 credit line to your report — no credit check, no interest, plans from $5/month.</p>
+                </div>
+                <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994" class="kikoff-cta">Try Kikoff →</a>
                 <img height="0" width="0" src="https://imp.pxf.io/i/7007975/2344833/14994" style="position:absolute;visibility:hidden;" border="0" />
-                <p class="kikoff-note">Kikoff can help you build credit with a $750 tradeline. No credit check required.</p>
             </div>
 
             <h2>How to Read a Credit Report (Section by Section)</h2>
