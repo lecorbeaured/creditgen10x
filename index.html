@@ -453,6 +453,208 @@
             .content-section h2 { font-size: 1.5rem; }
             .popup-content { padding: 30px 20px; }
         }
+
+        /* Blog Footer Section */
+        .footer-blog {
+            background: #0f172a;
+            border-top: 1px solid #1e293b;
+            padding: 50px 0 0;
+        }
+
+        .footer-blog-title {
+            color: #f1f5f9;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .blog-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 18px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .blog-card:hover {
+            background: #273548;
+            border-color: #3b82f6;
+            transform: translateY(-2px);
+        }
+
+        .blog-card-tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #3b82f6;
+            margin-bottom: 8px;
+        }
+
+        .blog-card-title {
+            color: #f1f5f9;
+            font-size: 0.95rem;
+            font-weight: 600;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+
+        .blog-card-excerpt {
+            color: #94a3b8;
+            font-size: 0.82rem;
+            line-height: 1.5;
+        }
+
+        .blog-card-read {
+            display: inline-block;
+            margin-top: 10px;
+            color: #3b82f6;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Article Popup Styles */
+        .article-popup .popup-content {
+            max-width: 780px;
+            max-height: 88vh;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+            flex-wrap: wrap;
+        }
+
+        .article-tag {
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .article-date, .article-read-time {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+
+        .article-body h2 {
+            color: #1e3a8a;
+            font-size: 1.25rem;
+            margin: 28px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .article-body h3 {
+            color: #1e40af;
+            font-size: 1.05rem;
+            margin: 20px 0 8px;
+        }
+
+        .article-body p {
+            color: #374151;
+            font-size: 0.97rem;
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 0 0 16px 24px;
+            color: #374151;
+            font-size: 0.97rem;
+            line-height: 1.9;
+        }
+
+        .article-faq {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 24px 0;
+        }
+
+        .article-faq h2 {
+            border-bottom: none !important;
+            margin-top: 0 !important;
+            font-size: 1.1rem !important;
+            padding-bottom: 0 !important;
+        }
+
+        .article-faq-item {
+            border-bottom: 1px solid #e5e7eb;
+            padding: 14px 0;
+        }
+
+        .article-faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .article-faq-q {
+            font-weight: 700;
+            color: #1e3a8a;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .article-faq-a {
+            color: #4b5563;
+            font-size: 0.92rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .article-cta-box {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            margin: 28px 0 0;
+            text-align: center;
+        }
+
+        .article-cta-box p {
+            color: rgba(255,255,255,0.9) !important;
+            margin-bottom: 14px !important;
+            font-size: 0.97rem !important;
+        }
+
+        .article-cta-box a {
+            display: inline-block;
+            background: #fbbf24;
+            color: #1e3a8a;
+            padding: 11px 28px;
+            border-radius: 7px;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 0.97rem;
+        }
+
+        .article-cta-box a:hover { background: #f59e0b; }
     </style>
 </head>
 <body>
@@ -650,6 +852,44 @@
         </div>
     </section>
 
+    <!-- Footer Blog Section -->
+    <div class="footer-blog">
+        <div class="container">
+            <p class="footer-blog-title">📚 Credit Education Blog</p>
+            <div class="blog-grid">
+
+                <div class="blog-card" onclick="showPopup('article1')">
+                    <p class="blog-card-tag">Credit Building</p>
+                    <p class="blog-card-title">How to Build Credit From Scratch: The Complete Step-by-Step Guide</p>
+                    <p class="blog-card-excerpt">No credit history? Here's exactly how to establish a score from zero — even without a credit card.</p>
+                    <span class="blog-card-read">Read article →</span>
+                </div>
+
+                <div class="blog-card" onclick="showPopup('article2')">
+                    <p class="blog-card-tag">Credit Reports</p>
+                    <p class="blog-card-title">How to Read a Credit Report: Every Section Explained</p>
+                    <p class="blog-card-excerpt">Confused by the numbers, codes, and abbreviations? This guide decodes every line of your report.</p>
+                    <span class="blog-card-read">Read article →</span>
+                </div>
+
+                <div class="blog-card" onclick="showPopup('article3')">
+                    <p class="blog-card-tag">Free Resources</p>
+                    <p class="blog-card-title">How to Get a Credit Report for Free (Official & Safe Methods)</p>
+                    <p class="blog-card-excerpt">The only government-authorized source — and how to avoid the copycat sites that charge you.</p>
+                    <span class="blog-card-read">Read article →</span>
+                </div>
+
+                <div class="blog-card" onclick="showPopup('article4')">
+                    <p class="blog-card-tag">Credit Monitoring</p>
+                    <p class="blog-card-title">How to Check Your Credit Report Without Hurting Your Score</p>
+                    <p class="blog-card-excerpt">Hard vs. soft inquiries explained — and the best free tools to monitor your credit year-round.</p>
+                    <span class="blog-card-read">Read article →</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -843,6 +1083,400 @@
         </div>
     </div>
 
+    
+    <!-- ===== ARTICLE 1: How to Build Credit From Scratch ===== -->
+    <div id="article1-popup" class="popup-overlay article-popup" onclick="closePopup(event, 'article1-popup')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="closePopup(null, 'article1-popup')">&times;</button>
+            <div class="article-body">
+                <div class="article-meta">
+                    <span class="article-tag">Credit Building</span>
+                    <span class="article-date">January 2026</span>
+                    <span class="article-read-time">· 7 min read</span>
+                </div>
+
+                <h1 style="color:#1e3a8a;font-size:1.6rem;line-height:1.3;margin-bottom:16px;">How to Build Credit From Scratch: The Complete Step-by-Step Guide</h1>
+
+                <p>If you have no credit history, lenders see a blank file — and a blank file is almost as damaging as a bad one. The good news: building credit from scratch is entirely possible, and you can have a measurable score within 3 to 6 months by following the right steps in the right order.</p>
+
+                <h2>Why Building Credit From Scratch Is Different</h2>
+                <p>When you have no credit history, you're considered "credit invisible." According to the Consumer Financial Protection Bureau, roughly 26 million Americans are in this situation. Traditional lenders won't approve you because you have no track record — but you need a track record to get approved. This catch-22 is solvable with the right tools.</p>
+
+                <h2>Step 1: Open a Secured Credit Card</h2>
+                <p>A secured credit card requires a refundable deposit — usually $200 to $500 — that becomes your credit limit. Because the lender's risk is covered by your deposit, approval is almost guaranteed even with no credit history.</p>
+                <p><strong>What to look for in a secured card:</strong></p>
+                <ul>
+                    <li>No annual fee or a low annual fee (under $35)</li>
+                    <li>Reports to all three major bureaus (Equifax, Experian, TransUnion)</li>
+                    <li>Offers an upgrade path to an unsecured card after 12 months</li>
+                    <li>Doesn't require a credit check for approval</li>
+                </ul>
+                <p>Use the card for one small recurring purchase per month — like a streaming subscription. Pay the full balance before the due date every single month. This builds a perfect payment history, which is the single most important factor in your credit score (35%).</p>
+
+                <h2>Step 2: Add a Credit-Builder Loan</h2>
+                <p>Credit-builder loans are specifically designed for people building credit from scratch. Unlike a regular loan, the money you borrow is held in a savings account while you make monthly payments. At the end of the term, you receive the funds plus the positive payment history on your credit report.</p>
+                <p>Many credit unions and online lenders like Self offer credit-builder loans with no credit check required. Adding one creates a mix of credit types — another factor that helps your score.</p>
+
+                <h2>Step 3: Become an Authorized User</h2>
+                <p>Ask a family member or trusted friend with good credit to add you as an authorized user on one of their older credit card accounts. You don't need to use or even receive the card. The account's history — including its age and payment record — gets added to your credit file immediately.</p>
+                <p>This is one of the fastest ways to build credit from scratch because you inherit years of positive history overnight.</p>
+
+                <h2>Step 4: Use a Credit-Building Service</h2>
+                <p>Services like Kikoff add a credit account to your report with no credit check, no interest, and no hard inquiry. Kikoff's $750 credit line reports to the bureaus monthly, boosting your credit utilization ratio and adding positive payment history — two of the most impactful score factors.</p>
+                <div class="kikoff-section" style="margin:24px 0;">
+                    <div class="kikoff-icon">💳</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label">Recommended Tool</p>
+                        <h3 style="font-size:0.97rem;">Build credit while you repair it</h3>
+                        <p class="kikoff-note">Kikoff adds a $750 credit line to your report — no credit check, no interest, plans from $5/month.</p>
+                    </div>
+                    <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994" class="kikoff-cta" target="_blank" rel="noopener">Try Kikoff →</a>
+                    <img height="0" width="0" src="https://imp.pxf.io/i/7007975/2344833/14994" style="position:absolute;visibility:hidden;" border="0" />
+                </div>
+
+                <h2>Step 5: Monitor Your Progress</h2>
+                <p>Check your credit report every 30 to 60 days while you're building. Look for errors — a wrongly reported late payment can erase months of progress. You can get your report for free at AnnualCreditReport.com or through free monitoring tools like Credit Karma.</p>
+
+                <h2>How Long Does It Take to Build Credit From Scratch?</h2>
+                <p>Most people can reach a 650+ score within 6 months of opening their first account and paying on time. A score above 700 typically takes 12 to 18 months of consistent on-time payments and low utilization. The longer your accounts stay open and in good standing, the higher your score climbs.</p>
+
+                <div class="article-faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Can I build credit with no money?</p>
+                        <p class="article-faq-a">Yes. Becoming an authorized user on someone else's account costs nothing. Some credit-builder services like Kikoff start at $5/month, which is lower than most secured card fees.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Does a debit card build credit?</p>
+                        <p class="article-faq-a">No. Debit card activity is never reported to credit bureaus. Only credit accounts — credit cards, loans, and lines of credit — build your score.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How do I build credit at 18?</p>
+                        <p class="article-faq-a">Start with a secured credit card or become an authorized user on a parent's account. Both require no prior credit history and can establish your file within 30 to 60 days.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">What credit score do you start with?</p>
+                        <p class="article-faq-a">You don't start with a score. You have no score until you have at least one account that's been open for six months and has been reported to the bureaus within the last six months.</p>
+                    </div>
+                </div>
+
+                <div class="article-cta-box">
+                    <p>Ready to build credit the right way? Get our free Pre-Dispute Guide to protect yourself while you build — and learn the 5 mistakes that set people back months.</p>
+                    <a href="#guide" onclick="closePopup(null, 'article1-popup')">Get the Free Guide →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ARTICLE 2: How to Read a Credit Report ===== -->
+    <div id="article2-popup" class="popup-overlay article-popup" onclick="closePopup(event, 'article2-popup')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="closePopup(null, 'article2-popup')">&times;</button>
+            <div class="article-body">
+                <div class="article-meta">
+                    <span class="article-tag">Credit Reports</span>
+                    <span class="article-date">January 2026</span>
+                    <span class="article-read-time">· 8 min read</span>
+                </div>
+
+                <h1 style="color:#1e3a8a;font-size:1.6rem;line-height:1.3;margin-bottom:16px;">How to Read a Credit Report: Every Section Explained</h1>
+
+                <p>Your credit report is a 10 to 30 page document that determines whether you get approved for loans, apartments, and sometimes even jobs. Most people never read it — and that's exactly why errors go undetected for years. This guide breaks down every section so you can read yours with confidence.</p>
+
+                <h2>What Is a Credit Report?</h2>
+                <p>A credit report is a detailed record of your borrowing history compiled by one of the three major credit bureaus: Equifax, Experian, or TransUnion. Each bureau maintains its own file, so you actually have three separate credit reports that may contain different information.</p>
+                <p>Your credit report is NOT the same as your credit score. The report is the raw data. The score is a number calculated from that data using a specific formula (like FICO or VantageScore).</p>
+
+                <h2>Section 1: Personal Information</h2>
+                <p>This section contains your identifying information: full name, current and previous addresses, date of birth, Social Security Number (partially masked), phone numbers, and employer history.</p>
+                <p><strong>What to check:</strong> Look for addresses you've never lived at, misspelled names, or incorrect Social Security Numbers. These errors can indicate identity theft or a "mixed file" — where your credit history has been accidentally merged with someone else's.</p>
+
+                <h2>Section 2: Account Summary (Tradelines)</h2>
+                <p>This is the largest section and the most important. It lists every credit account you have or have had, including credit cards, auto loans, mortgages, student loans, and personal loans.</p>
+                <p><strong>For each account, you'll see:</strong></p>
+                <ul>
+                    <li><strong>Creditor name</strong> — the lender or company</li>
+                    <li><strong>Account number</strong> — usually partially masked for security</li>
+                    <li><strong>Account type</strong> — revolving (credit cards) or installment (loans)</li>
+                    <li><strong>Date opened</strong> — when the account was established</li>
+                    <li><strong>Credit limit or original loan amount</strong></li>
+                    <li><strong>Current balance</strong></li>
+                    <li><strong>Payment status</strong> — current, 30 days late, 60 days late, charged-off</li>
+                    <li><strong>Payment history grid</strong> — a month-by-month record, usually 24 months</li>
+                </ul>
+
+                <h3>Understanding Payment History Codes</h3>
+                <p>The payment history grid uses codes. Here's what they mean: <strong>OK or ✓</strong> means paid on time. <strong>30, 60, 90, 120</strong> mean days late. <strong>CO</strong> means charged-off (sent to collections). <strong>CLS</strong> means the account is closed. <strong>R</strong> before a number means revolving account status.</p>
+
+                <h2>Section 3: Collections & Public Records</h2>
+                <p>Collections appear when an original creditor sells your debt to a collection agency. Public records include bankruptcies, civil judgments, and tax liens.</p>
+                <p><strong>Critical detail — the Date of First Delinquency (DOFD):</strong> This is the date you first missed a payment on the original account. This date — not when it was sold to collections — determines when the item must be removed from your report (7 years from the DOFD). Always verify this date is accurate.</p>
+
+                <h2>Section 4: Credit Inquiries</h2>
+                <p>Every time someone pulls your credit, it's recorded as an inquiry. There are two types:</p>
+                <ul>
+                    <li><strong>Hard inquiries</strong> — triggered by credit applications (loans, cards). These can lower your score by a few points and stay on your report for 2 years.</li>
+                    <li><strong>Soft inquiries</strong> — triggered by pre-approval checks, employer background checks, or you checking your own credit. These never affect your score.</li>
+                </ul>
+
+                <h2>Section 5: Consumer Statements</h2>
+                <p>You can add a 100-word personal statement to your credit report explaining a dispute or extenuating circumstance. Lenders rarely read these, but they're useful during an active dispute process.</p>
+
+
+                <div class="kikoff-section" style="margin:24px 0;">
+                    <div class="kikoff-icon">💳</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label">Recommended Tool</p>
+                        <h3 style="font-size:0.97rem;">Build credit while you fix your report</h3>
+                        <p class="kikoff-note">Kikoff adds a $750 credit line to your report — no credit check, no interest, plans from $5/month.</p>
+                    </div>
+                    <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994" class="kikoff-cta" target="_blank" rel="noopener">Try Kikoff →</a>
+                    <img height="0" width="0" src="https://imp.pxf.io/i/7007975/2344833/14994" style="position:absolute;visibility:hidden;" border="0" />
+                </div>
+                <h2>Common Errors to Look For</h2>
+                <ul>
+                    <li>Accounts you never opened (possible identity theft or mixed file)</li>
+                    <li>Incorrect account status — paid accounts still showing as past due</li>
+                    <li>Duplicate entries — same debt listed twice</li>
+                    <li>Wrong balance or credit limit (affects your utilization ratio)</li>
+                    <li>Negative items past the 7-year removal date</li>
+                    <li>"Closed by creditor" on accounts you voluntarily closed</li>
+                </ul>
+
+                <div class="article-faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How many credit reports do I have?</p>
+                        <p class="article-faq-a">You have three — one from Equifax, one from Experian, and one from TransUnion. They often contain different information because not all creditors report to all three bureaus.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">What does "charge-off" mean on a credit report?</p>
+                        <p class="article-faq-a">A charge-off means the original creditor wrote your debt off as a loss after 120-180 days of non-payment. The debt still exists and can be collected — it's just been reclassified on their books. It's one of the most damaging entries on a credit report.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How long do negative items stay on my credit report?</p>
+                        <p class="article-faq-a">Most negative items — late payments, collections, charge-offs — stay for 7 years from the date of first delinquency. Chapter 7 bankruptcy stays for 10 years. Hard inquiries stay for 2 years.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">What is a good credit report?</p>
+                        <p class="article-faq-a">A good credit report shows no negative items, a low utilization ratio (under 30%), a long average account age, a mix of account types, and few recent hard inquiries.</p>
+                    </div>
+                </div>
+
+                <div class="article-cta-box">
+                    <p>Found errors on your report? Before you dispute anything, read our free Pre-Dispute Guide — it covers the 5 steps that protect you from common mistakes that get disputes rejected.</p>
+                    <a href="#guide" onclick="closePopup(null, 'article2-popup')">Get the Free Guide →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ARTICLE 3: How to Get a Credit Report Free ===== -->
+    <div id="article3-popup" class="popup-overlay article-popup" onclick="closePopup(event, 'article3-popup')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="closePopup(null, 'article3-popup')">&times;</button>
+            <div class="article-body">
+                <div class="article-meta">
+                    <span class="article-tag">Free Resources</span>
+                    <span class="article-date">January 2026</span>
+                    <span class="article-read-time">· 5 min read</span>
+                </div>
+
+                <h1 style="color:#1e3a8a;font-size:1.6rem;line-height:1.3;margin-bottom:16px;">How to Get a Credit Report for Free (Official & Safe Methods Only)</h1>
+
+                <p>Getting your credit report for free is your legal right — guaranteed by federal law under the Fair Credit Reporting Act (FCRA). But most people don't know where to go, and dozens of copycat websites are designed to trick you into paying for something you're entitled to for free. Here's exactly where to go and what to avoid.</p>
+
+                <h2>The Only Official Free Source: AnnualCreditReport.com</h2>
+                <p>The one legitimate, government-authorized website to get free credit reports is <strong>AnnualCreditReport.com</strong>. This site was created jointly by Equifax, Experian, and TransUnion in compliance with federal law. It gives you access to your report from all three bureaus.</p>
+
+                <h3>How to use AnnualCreditReport.com:</h3>
+                <ol>
+                    <li>Go to <strong>AnnualCreditReport.com</strong> — type it directly, don't search for it</li>
+                    <li>Click "Request your free credit reports"</li>
+                    <li>Enter your name, address, Social Security Number, and date of birth</li>
+                    <li>Select which bureau(s) you want — you can request all three at once</li>
+                    <li>Answer identity verification questions from each bureau</li>
+                    <li>View and download your reports as PDFs</li>
+                </ol>
+
+                <p><strong>How often can you get them free?</strong> As of 2023, you can get your free credit reports from all three bureaus once per week at AnnualCreditReport.com — permanently, not just during the pandemic period. This is a significant upgrade from the previous once-per-year limit.</p>
+
+                <h2>Free Reports Directly From Each Bureau</h2>
+                <p>Each bureau also offers free access through their own websites. These are legitimate but sometimes limited:</p>
+                <ul>
+                    <li><strong>Equifax</strong> — equifax.com offers one free report per year plus ongoing monitoring through myEquifax</li>
+                    <li><strong>Experian</strong> — experian.com offers a free account with monthly credit report access</li>
+                    <li><strong>TransUnion</strong> — transunion.com offers a free account with ongoing report access</li>
+                </ul>
+
+                <h2>Free Credit Monitoring Tools (Not Full Reports)</h2>
+                <p>These tools give you an ongoing view of your credit — useful for monitoring, but they don't replace the full report for dispute purposes:</p>
+                <ul>
+                    <li><strong>Credit Karma</strong> — free TransUnion and Equifax reports, updated weekly</li>
+                    <li><strong>Experian Free</strong> — free Experian report with dark web monitoring</li>
+                    <li><strong>Credit Sesame</strong> — free TransUnion report with identity protection alerts</li>
+                </ul>
+
+
+                <div class="kikoff-section" style="margin:24px 0;">
+                    <div class="kikoff-icon">💳</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label">Recommended Tool</p>
+                        <h3 style="font-size:0.97rem;">Build credit while you monitor your credit</h3>
+                        <p class="kikoff-note">Kikoff adds a $750 credit line to your report — no credit check, no interest, plans from $5/month.</p>
+                    </div>
+                    <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994" class="kikoff-cta" target="_blank" rel="noopener">Try Kikoff →</a>
+                    <img height="0" width="0" src="https://imp.pxf.io/i/7007975/2344833/14994" style="position:absolute;visibility:hidden;" border="0" />
+                </div>
+                <h2>Warning: Avoid These Imposter Sites</h2>
+                <p>The FTC has warned consumers about dozens of sites that imitate AnnualCreditReport.com and charge fees for reports you should get free. Red flags include:</p>
+                <ul>
+                    <li>Any URL that is NOT AnnualCreditReport.com</li>
+                    <li>Sites asking for a credit card "to verify identity"</li>
+                    <li>Offers for a "free trial" that auto-enrolls you in a paid subscription</li>
+                    <li>Sites with names like "FreeCreditReport.com" (owned by Experian, not fully free)</li>
+                </ul>
+
+                <h2>When You're Entitled to Extra Free Reports</h2>
+                <p>Beyond the weekly free reports, the FCRA entitles you to additional free reports in specific situations:</p>
+                <ul>
+                    <li>You were denied credit, insurance, or employment because of your credit report (within 60 days)</li>
+                    <li>You are a victim of identity theft</li>
+                    <li>You are on public assistance</li>
+                    <li>You are unemployed and plan to apply for a job within 60 days</li>
+                    <li>A company took adverse action against you based on your credit</li>
+                </ul>
+
+                <div class="article-faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Does getting my free credit report hurt my score?</p>
+                        <p class="article-faq-a">No. Checking your own credit report is a soft inquiry and has zero impact on your credit score, no matter how many times you do it.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Is AnnualCreditReport.com safe to enter my SSN?</p>
+                        <p class="article-faq-a">Yes — it's the only government-authorized site for free reports, jointly operated by the three major bureaus. Use HTTPS and type the URL directly rather than clicking a search result to be sure you're on the real site.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">What if I can't verify my identity online?</p>
+                        <p class="article-faq-a">You can request your free reports by mail. Download and complete the Annual Credit Report Request Form from the CFPB website, then mail it to: Annual Credit Report Request Service, P.O. Box 105281, Atlanta, GA 30348-5281.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How long does it take to get my free credit report?</p>
+                        <p class="article-faq-a">Online access through AnnualCreditReport.com is instant — you can view and download your reports immediately after identity verification. Mail requests take 15 business days.</p>
+                    </div>
+                </div>
+
+                <div class="article-cta-box">
+                    <p>Once you have your reports, don't dispute errors until you've read our free Pre-Dispute Guide. Most disputes fail because of mistakes made in the first 24 hours.</p>
+                    <a href="#guide" onclick="closePopup(null, 'article3-popup')">Get the Free Guide →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ARTICLE 4: How to Check Credit Report ===== -->
+    <div id="article4-popup" class="popup-overlay article-popup" onclick="closePopup(event, 'article4-popup')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="closePopup(null, 'article4-popup')">&times;</button>
+            <div class="article-body">
+                <div class="article-meta">
+                    <span class="article-tag">Credit Monitoring</span>
+                    <span class="article-date">January 2026</span>
+                    <span class="article-read-time">· 6 min read</span>
+                </div>
+
+                <h1 style="color:#1e3a8a;font-size:1.6rem;line-height:1.3;margin-bottom:16px;">How to Check Your Credit Report Without Hurting Your Score</h1>
+
+                <p>One of the most common credit myths is that checking your own credit report hurts your score. It doesn't — and avoiding your report out of fear is one of the costliest mistakes you can make. Here's everything you need to know about checking your credit the right way.</p>
+
+                <h2>Does Checking Your Credit Report Lower Your Score?</h2>
+                <p>No — when you check your own credit report, it's recorded as a <strong>soft inquiry</strong>, which has zero impact on your credit score. The only inquiries that affect your score are <strong>hard inquiries</strong>, which occur when a lender pulls your report because you applied for credit.</p>
+                <p>You can check your credit report every day for a year and your score will not drop by a single point. This myth persists because people confuse checking their own report with a lender running a hard inquiry.</p>
+
+                <h2>Hard vs. Soft Inquiries: The Key Difference</h2>
+                <ul>
+                    <li><strong>Soft inquiries (don't affect score):</strong> You checking your own report, pre-approval screenings, employer background checks, insurance company checks, account reviews by existing creditors</li>
+                    <li><strong>Hard inquiries (can lower score):</strong> Applying for a credit card, applying for a loan, applying to rent an apartment (in some cases), requesting a credit limit increase</li>
+                </ul>
+                <p>A single hard inquiry typically lowers your score by fewer than 5 points and disappears from your report after 2 years. Multiple hard inquiries in a short window (rate shopping for a mortgage or auto loan) are treated as a single inquiry by most scoring models if they occur within a 14 to 45 day window.</p>
+
+                <h2>How to Check Your Credit Report: Step by Step</h2>
+                <ol>
+                    <li>Go to <strong>AnnualCreditReport.com</strong> — the only official free source</li>
+                    <li>Click "Request your free credit reports"</li>
+                    <li>Enter your personal information (name, SSN, address, DOB)</li>
+                    <li>Select all three bureaus — Equifax, Experian, TransUnion</li>
+                    <li>Complete identity verification for each bureau</li>
+                    <li>Download each report as a PDF and save with the date in the filename</li>
+                </ol>
+
+                <h2>Best Free Tools to Monitor Your Credit Year-Round</h2>
+                <p>For ongoing monitoring between your full report checks, these free tools alert you to changes in real time:</p>
+                <ul>
+                    <li><strong>Credit Karma</strong> — free weekly TransUnion and Equifax scores, alerts for new accounts, inquiries, and balance changes</li>
+                    <li><strong>Experian Free</strong> — free monthly Experian report with dark web monitoring and FICO score</li>
+                    <li><strong>myEquifax</strong> — free Equifax report access plus Equifax credit score</li>
+                    <li><strong>Chase Credit Journey</strong> — free VantageScore 3.0, available even without a Chase account</li>
+                </ul>
+
+                <h2>How Often Should You Check Your Credit Report?</h2>
+                <p>At minimum, check each of your three credit reports once per year. If you're actively repairing credit, dispute errors, or suspect identity theft, check monthly. A good strategy is to stagger your free reports — pull Equifax in January, Experian in May, TransUnion in September — so you have coverage throughout the year.</p>
+                <p>If you're preparing to apply for a mortgage, auto loan, or any major credit product, check all three reports at least 3 to 6 months in advance. This gives you time to dispute errors and see improvements reflected before a lender pulls your report.</p>
+
+
+                <div class="kikoff-section" style="margin:24px 0;">
+                    <div class="kikoff-icon">💳</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label">Recommended Tool</p>
+                        <h3 style="font-size:0.97rem;">Build credit while you check your report</h3>
+                        <p class="kikoff-note">Kikoff adds a $750 credit line to your report — no credit check, no interest, plans from $5/month.</p>
+                    </div>
+                    <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994" class="kikoff-cta" target="_blank" rel="noopener">Try Kikoff →</a>
+                    <img height="0" width="0" src="https://imp.pxf.io/i/7007975/2344833/14994" style="position:absolute;visibility:hidden;" border="0" />
+                </div>
+                <h2>What to Look for When You Check</h2>
+                <ul>
+                    <li>Accounts you don't recognize — could be identity theft or a mixed file</li>
+                    <li>Incorrect personal information — wrong address, misspelled name</li>
+                    <li>Late payments you believe were made on time</li>
+                    <li>Negative items older than 7 years that should have been removed</li>
+                    <li>Duplicate accounts or collections for the same debt</li>
+                    <li>Hard inquiries you didn't authorize</li>
+                </ul>
+
+                <h2>What to Do If You Find an Error</h2>
+                <p>Don't dispute immediately. First, document the error — screenshot the report page and save it with the date. Then read our Pre-Dispute Guide below. Most disputes fail because people skip the 5 critical preparation steps — including freezing secondary bureaus and avoiding online dispute portals that waive your legal rights.</p>
+
+                <div class="article-faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How often can I check my credit report for free?</p>
+                        <p class="article-faq-a">As of 2023, you can check your report from all three bureaus once per week for free at AnnualCreditReport.com — permanently. That's up to 156 free credit report pulls per year.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Why are my three credit reports different?</p>
+                        <p class="article-faq-a">Not all creditors report to all three bureaus. Some only report to one or two, so the information across your three reports can vary. This is why you should check all three, not just one.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Can I check my credit score for free?</p>
+                        <p class="article-faq-a">Yes. Credit Karma, Credit Sesame, and Experian Free all offer free credit scores. Many banks and credit card issuers also provide free FICO scores to their customers in their online dashboard.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">What if my credit report is frozen — can I still check it?</p>
+                        <p class="article-faq-a">Yes. A credit freeze prevents lenders from accessing your report, but it never prevents you from checking your own report. You can pull your free reports anytime regardless of freeze status.</p>
+                    </div>
+                </div>
+
+                <div class="article-cta-box">
+                    <p>Found something on your report you want to dispute? Read our free Pre-Dispute Guide first — one wrong move can get your dispute rejected or reset the statute of limitations on old debts.</p>
+                    <a href="#guide" onclick="closePopup(null, 'article4-popup')">Get the Free Guide →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script>
         // Dynamic year
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -875,6 +1509,12 @@
         function showPopup(type) {
             document.getElementById(type + '-popup').classList.add('active');
             document.body.style.overflow = 'hidden';
+        }
+
+        // Close article popups on escape (extend existing escape handler)
+        function closeArticlePopup(id) {
+            const el = document.getElementById(id + '-popup');
+            if (el) { el.classList.remove('active'); document.body.style.overflow = ''; }
         }
         
         function closePopup(event, popupId) {
@@ -971,6 +1611,25 @@
                 document.body.style.overflow = '';
             }
         });
+
+        // Add schema markup for blog articles (AEO)
+        const blogSchema = {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "CreditGen 10X Credit Education Blog",
+            "url": "https://creditgen10x.com",
+            "description": "Free credit education articles on building credit, reading credit reports, and disputing errors.",
+            "blogPost": [
+                {"@type":"BlogPosting","headline":"How to Build Credit From Scratch","description":"Step-by-step guide to building credit with no credit history.","keywords":"how to build credit from scratch"},
+                {"@type":"BlogPosting","headline":"How to Read a Credit Report","description":"Every section of a credit report explained in plain English.","keywords":"how to read a credit report"},
+                {"@type":"BlogPosting","headline":"How to Get a Credit Report for Free","description":"The only official free source for your credit reports and how to avoid copycat sites.","keywords":"how to get a credit report free"},
+                {"@type":"BlogPosting","headline":"How to Check Your Credit Report Without Hurting Your Score","description":"Hard vs soft inquiries explained plus the best free monitoring tools.","keywords":"how to check credit report"}
+            ]
+        };
+        const s = document.createElement('script');
+        s.type = 'application/ld+json';
+        s.textContent = JSON.stringify(blogSchema);
+        document.head.appendChild(s);
     </script>
 
 </body>
