@@ -473,10 +473,14 @@
 
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 16px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
         }
 
         .blog-card {
@@ -734,6 +738,15 @@
             
             <h3>Accounts That Aren't Yours</h3>
             <p>Look for accounts you never opened. This could be identity theft, or a "mixed file" where your credit history got merged with someone who has a similar name or SSN.</p>
+                <div class="kikoff-section" style="margin:24px 0;border-left-color:#dc2626;">
+                    <div class="kikoff-icon">🛡️</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label" style="color:#dc2626;">Recommended Protection</p>
+                        <h3 style="font-size:0.97rem;">Protect your identity before someone steals it</h3>
+                        <p class="kikoff-note">IdentityIQ monitors all 3 bureaus, sends real-time fraud alerts, and includes $1M identity theft insurance.</p>
+                    </div>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" class="kikoff-cta" target="_blank" style="background:#dc2626;">Get Protected →</a>
+                </div>
 
             <h3>Incorrect Account Status</h3>
             <p>Accounts you paid off might still show as "open" or "past due." Closed accounts should say "closed by consumer" not "closed by creditor" (which looks bad).</p>
@@ -908,6 +921,20 @@
                     <span class="blog-card-read">Read article →</span>
                 </div>
 
+                <div class="blog-card" onclick="showPopup('article5')">
+                    <p class="blog-card-tag">Identity Protection</p>
+                    <p class="blog-card-title">What Is Identity Theft Protection — And Do You Actually Need It?</p>
+                    <p class="blog-card-excerpt">What these services actually do, who needs them most, and whether they're worth the cost.</p>
+                    <span class="blog-card-read">Read article →</span>
+                </div>
+
+                <div class="blog-card" onclick="showPopup('article6')">
+                    <p class="blog-card-tag">Identity Protection</p>
+                    <p class="blog-card-title">10 Warning Signs Your Identity Has Been Stolen</p>
+                    <p class="blog-card-excerpt">Most victims don't find out for months. These red flags can save you years of recovery.</p>
+                    <span class="blog-card-read">Read article →</span>
+                </div>
+
             </div>
         </div>
     </div>
@@ -953,7 +980,7 @@
             <p>By submitting your email, you agree to receive our free guide and occasional follow-up emails. We respect your inbox and will not send excessive messages. You can unsubscribe from marketing emails at any time by clicking the unsubscribe link in any email or contacting us directly.</p>
             
             <h3>4. Affiliate Disclosure</h3>
-            <p>CreditGen 10X participates in affiliate marketing programs. When you click on links to Kikoff or other partners, we may receive a commission at no additional cost to you. We only recommend products we believe provide genuine value.</p>
+            <p>CreditGen 10X participates in affiliate marketing programs including Kikoff, IdentityIQ, and Amazon Associates. When you click on affiliate links and make purchases, we may receive a commission at no additional cost to you. We only recommend products we believe provide genuine value to our readers.</p>
             
             <h3>5. Data Security</h3>
             <p>We implement appropriate security measures to protect your personal information. We use Netlify for secure form processing and hosting. No method of transmission over the Internet is 100% secure, but we use industry-standard practices.</p>
@@ -1235,6 +1262,15 @@
                 <p>This section contains your identifying information: full name, current and previous addresses, date of birth, Social Security Number (partially masked), phone numbers, and employer history.</p>
                 <p><strong>What to check:</strong> Look for addresses you've never lived at, misspelled names, or incorrect Social Security Numbers. These errors can indicate identity theft or a "mixed file" — where your credit history has been accidentally merged with someone else's.</p>
 
+                <div class="kikoff-section" style="margin:24px 0;border-left-color:#dc2626;">
+                    <div class="kikoff-icon">🛡️</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label" style="color:#dc2626;">Recommended Protection</p>
+                        <h3 style="font-size:0.97rem;">Spot identity theft before it wrecks your credit</h3>
+                        <p class="kikoff-note">IdentityIQ monitors all 3 bureaus, sends real-time fraud alerts, and includes $1M identity theft insurance.</p>
+                    </div>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" class="kikoff-cta" target="_blank" style="background:#dc2626;">Get Protected →</a>
+                </div>
                 <h2>Section 2: Account Summary (Tradelines)</h2>
                 <p>This is the largest section and the most important. It lists every credit account you have or have had, including credit cards, auto loans, mortgages, student loans, and personal loans.</p>
                 <p><strong>For each account, you'll see:</strong></p>
@@ -1381,6 +1417,16 @@
                     <li>Sites with names like "FreeCreditReport.com" (owned by Experian, not fully free)</li>
                 </ul>
 
+
+                <div class="kikoff-section" style="margin:24px 0;border-left-color:#dc2626;">
+                    <div class="kikoff-icon">🛡️</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label" style="color:#dc2626;">Recommended Protection</p>
+                        <h3 style="font-size:0.97rem;">Monitor your identity year-round — not just once a year</h3>
+                        <p class="kikoff-note">IdentityIQ monitors all 3 bureaus, sends real-time fraud alerts, and includes $1M identity theft insurance.</p>
+                    </div>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" class="kikoff-cta" target="_blank" style="background:#dc2626;">Get Protected →</a>
+                </div>
                 <h2>When You're Entitled to Extra Free Reports</h2>
                 <p>Beyond the weekly free reports, the FCRA entitles you to additional free reports in specific situations:</p>
                 <ul>
@@ -1489,6 +1535,15 @@
                     <li>Hard inquiries you didn't authorize</li>
                 </ul>
 
+                <div class="kikoff-section" style="margin:24px 0;border-left-color:#dc2626;">
+                    <div class="kikoff-icon">🛡️</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label" style="color:#dc2626;">Recommended Protection</p>
+                        <h3 style="font-size:0.97rem;">Unauthorized inquiries on your report? You may be a victim of identity theft</h3>
+                        <p class="kikoff-note">IdentityIQ monitors all 3 bureaus, sends real-time fraud alerts, and includes $1M identity theft insurance.</p>
+                    </div>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" class="kikoff-cta" target="_blank" style="background:#dc2626;">Get Protected →</a>
+                </div>
                 <h2>What to Do If You Find an Error</h2>
                 <p>Don't dispute immediately. First, document the error — screenshot the report page and save it with the date. Then read our Pre-Dispute Guide below. Most disputes fail because people skip the 5 critical preparation steps — including freezing secondary bureaus and avoiding online dispute portals that waive your legal rights.</p>
 
@@ -1537,6 +1592,234 @@
                 <div class="article-cta-box">
                     <p>Found something on your report you want to dispute? Read our free Pre-Dispute Guide first — one wrong move can get your dispute rejected or reset the statute of limitations on old debts.</p>
                     <a href="#guide" onclick="closePopup(null, 'article4-popup')">Get the Free Guide →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== ARTICLE 5: What Is Identity Theft Protection ===== -->
+    <div id="article5-popup" class="popup-overlay article-popup" onclick="closePopup(event, 'article5-popup')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="closePopup(null, 'article5-popup')">&times;</button>
+            <div class="article-body">
+                <div class="article-meta">
+                    <span class="article-tag">Identity Protection</span>
+                    <span class="article-date">February 2026</span>
+                    <span class="article-read-time">· 7 min read</span>
+                </div>
+
+                <h1 style="color:#1e3a8a;font-size:1.6rem;line-height:1.3;margin-bottom:16px;">What Is Identity Theft Protection — And Do You Actually Need It?</h1>
+
+                <p>Identity theft is now the most reported consumer complaint in the United States, with millions of victims every year. But identity theft protection services remain one of the most misunderstood products in personal finance. Most people don't know what they actually do — or whether they're worth it. This guide breaks down exactly what identity theft protection is, how it works, and who needs it most.</p>
+
+                <h2>What Is Identity Theft?</h2>
+                <p>Identity theft happens when someone uses your personal information — your name, Social Security Number, date of birth, credit card numbers, or other identifying data — without your permission, usually to commit fraud or steal money.</p>
+                <p>Common types of identity theft include:</p>
+                <ul>
+                    <li><strong>Financial identity theft</strong> — Opening credit cards or loans in your name</li>
+                    <li><strong>Tax identity theft</strong> — Filing a fraudulent tax return using your SSN to steal your refund</li>
+                    <li><strong>Medical identity theft</strong> — Using your insurance to receive medical care</li>
+                    <li><strong>Social Security identity theft</strong> — Claiming Social Security benefits under your number</li>
+                    <li><strong>Synthetic identity theft</strong> — Combining your real SSN with a fake name to create a new identity</li>
+                    <li><strong>Child identity theft</strong> — Using a minor's SSN, which often goes undetected for years</li>
+                </ul>
+
+                <h2>What Is Identity Theft Protection?</h2>
+                <p>Identity theft protection is a subscription service that monitors your personal information across multiple channels — credit bureaus, public records, the dark web, financial accounts, and more — and alerts you the moment suspicious activity is detected. If your identity is stolen, the service also helps you recover it.</p>
+                <p>Think of it as a 24/7 alarm system for your personal information. Just as a home security system doesn't prevent a break-in but detects it immediately and helps you respond, identity theft protection doesn't make you immune to fraud — but it catches it fast before it spirals into years of damage.</p>
+
+                <h2>What Does Identity Theft Protection Actually Do?</h2>
+                <p><strong>1. Credit monitoring</strong> — Watches your credit files at all three major bureaus (Equifax, Experian, TransUnion) for new accounts, hard inquiries, balance changes, and address updates. Alerts you within minutes to hours of any change.</p>
+                <p><strong>2. Dark web monitoring</strong> — Scans dark web forums, data breach databases, and hacker marketplaces for your SSN, email addresses, passwords, credit card numbers, and other personal data.</p>
+                <p><strong>3. Social Security Number monitoring</strong> — Tracks where your SSN is being used and alerts you to suspicious new applications tied to your number.</p>
+                <p><strong>4. Bank account monitoring</strong> — Monitors your financial accounts for suspicious transactions, unauthorized withdrawals, or new account openings.</p>
+                <p><strong>5. Identity theft insurance</strong> — Covers the financial cost of recovering from identity theft, including legal fees, lost wages, and out-of-pocket expenses. Top-tier plans like IdentityIQ include up to $1 million in coverage underwritten by AIG.</p>
+                <p><strong>6. Identity restoration services</strong> — Dedicated specialists who guide you step by step through the process of reclaiming your identity, disputing fraudulent accounts, and dealing with creditors and government agencies.</p>
+
+                <div class="kikoff-section" style="margin:24px 0;border-left-color:#dc2626;">
+                    <div class="kikoff-icon">🛡️</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label" style="color:#dc2626;">Recommended Protection</p>
+                        <h3 style="font-size:0.97rem;">Monitor your identity around the clock — before thieves do damage</h3>
+                        <p class="kikoff-note">IdentityIQ monitors all 3 bureaus, sends real-time fraud alerts, and includes $1M identity theft insurance.</p>
+                    </div>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" class="kikoff-cta" target="_blank" style="background:#dc2626;">Get Protected →</a>
+                </div>
+
+                <h2>How Much Does Identity Theft Cost Victims?</h2>
+                <p>The financial and emotional toll of identity theft is severe. Victims spend an average of 200 hours resolving identity theft over several years. The average out-of-pocket cost to victims — including legal fees, lost wages, and fraudulent charges — runs into thousands of dollars. And that's before accounting for the credit damage that can take years to repair and affect everything from loan approvals to apartment applications to employment background checks.</p>
+
+                <h2>Who Needs Identity Theft Protection Most?</h2>
+                <p>While anyone can be a victim, certain people face elevated risk:</p>
+                <ul>
+                    <li><strong>Recent data breach victims</strong> — If your information was exposed in a breach, the data is often sold and used months or years later</li>
+                    <li><strong>People actively repairing credit</strong> — A single fraudulent account can undo months of dispute work</li>
+                    <li><strong>Parents of minors</strong> — Children's SSNs are targeted precisely because the theft goes undetected until they turn 18</li>
+                    <li><strong>Seniors</strong> — Statistically the most targeted demographic for financial fraud</li>
+                    <li><strong>Anyone who has had their wallet stolen</strong> — Physical documents contain enough data to enable full identity theft</li>
+                    <li><strong>Frequent online shoppers</strong> — More exposure means more risk of card data being compromised</li>
+                </ul>
+
+                <h2>Is Identity Theft Protection Worth It?</h2>
+                <p>For most people, yes — especially those who are actively working on their credit. Here's the math: the average cost of a quality identity theft protection service is $10 to $30 per month. The average cost of resolving identity theft without professional help runs into thousands of dollars and hundreds of hours. The insurance coverage alone — up to $1 million with IdentityIQ — is worth multiples of the subscription cost.</p>
+                <p>The more important question isn't whether it's worth the price. It's whether you can afford to find out the hard way that you needed it.</p>
+
+                <h2>What to Look for in an Identity Theft Protection Service</h2>
+                <ul>
+                    <li>Three-bureau credit monitoring — not just one bureau</li>
+                    <li>Real-time alerts — not daily or weekly digests</li>
+                    <li>Dark web monitoring included</li>
+                    <li>At least $1 million in identity theft insurance</li>
+                    <li>Dedicated recovery specialists — not just a FAQ page</li>
+                    <li>SSN and public records monitoring</li>
+                    <li>Family plan options that cover children</li>
+                </ul>
+
+                <div class="article-faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">What is identity theft protection and how does it work?</p>
+                        <p class="article-faq-a">Identity theft protection is a subscription service that monitors your personal information — credit files, dark web, SSN, bank accounts — and alerts you when suspicious activity is detected. If your identity is stolen, the service also provides insurance and recovery assistance.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Does identity theft protection prevent identity theft?</p>
+                        <p class="article-faq-a">No service can fully prevent identity theft. What protection services do is detect it quickly — often within minutes — so you can stop the damage before it becomes catastrophic. Early detection is the difference between a minor inconvenience and years of financial recovery.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Is IdentityIQ a legitimate service?</p>
+                        <p class="article-faq-a">Yes. IdentityIQ is operated by IDIQ, one of the fastest-growing identity protection companies in the US with over 5 million members. It offers three-bureau credit monitoring, real-time fraud alerts, dark web monitoring, and up to $1 million in identity theft insurance underwritten by AIG.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How much does identity theft protection cost?</p>
+                        <p class="article-faq-a">Quality identity theft protection ranges from $8 to $35 per month depending on the plan and features. IdentityIQ's plans start at $8.50/month for basic coverage and go up to $31.50/month for full three-bureau monitoring, dark web scanning, and $1M insurance coverage.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Can I get identity theft protection for free?</p>
+                        <p class="article-faq-a">Some banks and credit card issuers offer limited identity monitoring as a free benefit. However, free services typically only monitor one bureau and lack insurance coverage, dark web scanning, and recovery services. For comprehensive protection, a paid service is worth the investment.</p>
+                    </div>
+                </div>
+
+                <div class="article-cta-box">
+                    <p>Don't wait until your identity is stolen to take action. IdentityIQ monitors all 3 bureaus around the clock with real-time alerts and $1M insurance — starting at $8.50/month.</p>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" target="_blank">Get Protected with IdentityIQ →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ARTICLE 6: Signs Your Identity Has Been Stolen ===== -->
+    <div id="article6-popup" class="popup-overlay article-popup" onclick="closePopup(event, 'article6-popup')">
+        <div class="popup-content" onclick="event.stopPropagation()">
+            <button class="popup-close" onclick="closePopup(null, 'article6-popup')">&times;</button>
+            <div class="article-body">
+                <div class="article-meta">
+                    <span class="article-tag">Identity Protection</span>
+                    <span class="article-date">February 2026</span>
+                    <span class="article-read-time">· 8 min read</span>
+                </div>
+
+                <h1 style="color:#1e3a8a;font-size:1.6rem;line-height:1.3;margin-bottom:16px;">10 Warning Signs Your Identity Has Been Stolen (And What to Do Immediately)</h1>
+
+                <p>Most identity theft victims don't realize what's happened until months — sometimes years — after the theft occurred. By then the damage is deep: fraudulent accounts in collections, a destroyed credit score, and a recovery process that can take years. Knowing the warning signs early is the single most effective way to limit the damage. Here are the 10 red flags that your identity may have already been compromised.</p>
+
+                <h2>1. Unfamiliar Accounts on Your Credit Report</h2>
+                <p>This is the most direct sign. If you pull your credit report and see a credit card, loan, or collection account you don't recognize, someone may have used your identity to open it. Even a single account you don't recognize warrants immediate investigation.</p>
+                <p><strong>What to do:</strong> Document it, freeze your credit at all three bureaus immediately, and file an identity theft report at IdentityTheft.gov before disputing the account.</p>
+
+                <h2>2. Hard Inquiries You Don't Recognize</h2>
+                <p>Hard inquiries appear on your credit report every time someone applies for credit in your name. If you see inquiries from lenders you never contacted — especially multiple in a short window — someone may be applying for credit using your identity.</p>
+                <p><strong>What to do:</strong> Contact each lender associated with the unknown inquiry to report fraud and request the application be flagged and closed.</p>
+
+                <div class="kikoff-section" style="margin:24px 0;border-left-color:#dc2626;">
+                    <div class="kikoff-icon">🛡️</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label" style="color:#dc2626;">Recommended Protection</p>
+                        <h3 style="font-size:0.97rem;">Get real-time alerts the moment a new inquiry or account appears on your report</h3>
+                        <p class="kikoff-note">IdentityIQ monitors all 3 bureaus, sends real-time fraud alerts, and includes $1M identity theft insurance.</p>
+                    </div>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" class="kikoff-cta" target="_blank" style="background:#dc2626;">Get Protected →</a>
+                </div>
+
+                <h2>3. Bills or Collection Calls for Accounts You Never Opened</h2>
+                <p>Receiving a bill, statement, or debt collection call for an account you have no memory of is a major red flag. Thieves often use stolen identities to open accounts, max them out, and then disappear — leaving you with the collections.</p>
+                <p><strong>What to do:</strong> Never confirm or deny the debt over the phone. Request everything in writing. Then check your credit report to see if the account appears there.</p>
+
+                <h2>4. Your Credit Score Drops Suddenly With No Explanation</h2>
+                <p>If your credit score drops significantly and you haven't missed any payments or opened new accounts, the cause may be fraudulent activity. High balances on accounts you didn't open, new derogatory marks, or a wave of hard inquiries can all tank your score without your knowledge.</p>
+                <p><strong>What to do:</strong> Pull all three of your credit reports immediately and compare them line by line looking for accounts, inquiries, or address changes you don't recognize.</p>
+
+                <h2>5. You're Denied Credit Unexpectedly</h2>
+                <p>Being denied for a loan or credit card when you believe your credit is in good standing is a serious warning sign. Lenders reject applications when they see derogatory marks, high utilization, or collection accounts — all of which can appear on your report without your knowledge if someone is using your identity.</p>
+                <p><strong>What to do:</strong> You're entitled to a free copy of the credit report used in the denial within 60 days. Request it and examine it carefully.</p>
+
+                <h2>6. IRS Notice of a Duplicate Tax Return</h2>
+                <p>Tax identity theft happens when a thief files a fraudulent return using your SSN to claim your refund before you file. The IRS will notify you if a return has already been filed under your SSN. This is one of the hardest forms of identity theft to resolve and can delay your legitimate refund by a year or more.</p>
+                <p><strong>What to do:</strong> Respond to the IRS notice immediately, complete IRS Form 14039 (Identity Theft Affidavit), and contact the IRS Identity Protection Specialized Unit.</p>
+
+                <h2>7. Medical Bills for Treatment You Never Received</h2>
+                <p>Medical identity theft is one of the most dangerous and overlooked forms of identity theft. Thieves use your insurance information to receive medical treatment, leaving you with bills, incorrect medical records, and potential insurance coverage problems. This can have life-threatening consequences if fraudulent medical information gets mixed into your real records.</p>
+                <p><strong>What to do:</strong> Request your medical records and Explanation of Benefits (EOB) statements from your insurer and review them for services you never received.</p>
+
+                <h2>8. Mail Stops Arriving or You Receive Others' Mail</h2>
+                <p>If your expected mail suddenly stops — statements, bills, tax documents — it could mean someone submitted a mail forwarding request in your name to intercept your financial correspondence. Receiving mail addressed to unfamiliar names at your address can mean your address is being used fraudulently.</p>
+                <p><strong>What to do:</strong> Contact USPS to check for any change-of-address requests filed in your name. Set up USPS Informed Delivery for a daily digital preview of incoming mail.</p>
+
+                <h2>9. Unfamiliar Addresses on Your Credit Report</h2>
+                <p>The personal information section of your credit report lists all addresses associated with your credit file. If you see addresses you've never lived at — especially in other cities or states — it could indicate someone is using your identity in another location, or that your file has been mixed with someone else's.</p>
+
+                <h2>10. Data Breach Notification</h2>
+                <p>Receiving a letter or email that your information was exposed in a data breach doesn't mean identity theft has happened yet — but it means your data is now circulating on the dark web. Stolen data from breaches is often sold and used months or years after the breach itself.</p>
+                <p><strong>What to do:</strong> Take breach notifications seriously. Freeze your credit, change affected passwords, and consider enrolling in identity theft monitoring immediately — before the data is used against you.</p>
+
+                <div class="kikoff-section" style="margin:24px 0;border-left-color:#dc2626;">
+                    <div class="kikoff-icon">🛡️</div>
+                    <div class="kikoff-body">
+                        <p class="kikoff-label" style="color:#dc2626;">Recommended Protection</p>
+                        <h3 style="font-size:0.97rem;">Already seeing warning signs? Get 24/7 monitoring and $1M insurance now</h3>
+                        <p class="kikoff-note">IdentityIQ monitors all 3 bureaus, sends real-time fraud alerts, and includes $1M identity theft insurance.</p>
+                    </div>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" class="kikoff-cta" target="_blank" style="background:#dc2626;">Get Protected →</a>
+                </div>
+
+                <h2>What to Do If Your Identity Has Been Stolen: Immediate Steps</h2>
+                <ol>
+                    <li><strong>Place a fraud alert</strong> — Contact one of the three bureaus (they notify the others). A fraud alert requires lenders to take extra steps to verify identity before extending credit.</li>
+                    <li><strong>Freeze your credit</strong> — Freeze all three bureaus plus secondary bureaus (Innovis, ChexSystems, LexisNexis). A freeze is the strongest protection available.</li>
+                    <li><strong>File an identity theft report</strong> — Go to IdentityTheft.gov (FTC) and create a personal recovery plan. This generates a legal affidavit you'll need for disputes.</li>
+                    <li><strong>Report to local police</strong> — Get a police report number. Some creditors and agencies require it during the recovery process.</li>
+                    <li><strong>Dispute fraudulent accounts</strong> — Use certified mail only. Include your FTC Identity Theft Report with each dispute letter.</li>
+                    <li><strong>Contact the IRS</strong> — If you suspect tax identity theft, proactively contact the IRS before filing season.</li>
+                    <li><strong>Notify your bank and creditors</strong> — Alert your existing financial institutions so they can flag your accounts for suspicious activity.</li>
+                </ol>
+
+                <div class="article-faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How do I know if my identity has been stolen?</p>
+                        <p class="article-faq-a">The most reliable way is to check your credit report for unfamiliar accounts, addresses, or inquiries. Other warning signs include unexpected credit denials, collection calls for unknown accounts, IRS notices about duplicate returns, and data breach notifications.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">How long does it take to recover from identity theft?</p>
+                        <p class="article-faq-a">The FTC reports that victims spend an average of 200 hours resolving identity theft over 1 to 3 years. Recovery time depends heavily on how quickly the theft was detected and how many fraudulent accounts were opened. Early detection through monitoring dramatically reduces recovery time.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">What is the first thing you should do if your identity is stolen?</p>
+                        <p class="article-faq-a">Freeze your credit at all three major bureaus immediately — this is the single most effective step to stop new fraudulent accounts from being opened. Then file an identity theft report at IdentityTheft.gov to create your official recovery plan and legal affidavit.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Can identity theft happen without your Social Security Number?</p>
+                        <p class="article-faq-a">Yes. While your SSN is the most valuable piece of data for identity thieves, theft can occur with just a name and date of birth, a credit card number, medical insurance information, or login credentials for financial accounts. Comprehensive monitoring protects against all these vectors.</p>
+                    </div>
+                    <div class="article-faq-item">
+                        <p class="article-faq-q">Does freezing your credit stop identity theft?</p>
+                        <p class="article-faq-a">A credit freeze stops new credit accounts from being opened in your name, but it doesn't protect against all forms of identity theft — such as tax fraud, medical identity theft, or fraudulent use of existing accounts. That's why comprehensive monitoring is still essential even with a freeze in place.</p>
+                    </div>
+                </div>
+
+                <div class="article-cta-box">
+                    <p>The best time to protect your identity is before it's stolen. IdentityIQ monitors all 3 bureaus 24/7, scans the dark web, and backs you with $1M in identity theft insurance.</p>
+                    <a rel="sponsored noopener" href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" target="_blank">Start Monitoring with IdentityIQ →</a>
                 </div>
             </div>
         </div>
@@ -1689,7 +1972,9 @@
                 {"@type":"BlogPosting","headline":"How to Build Credit From Scratch","description":"Step-by-step guide to building credit with no credit history.","keywords":"how to build credit from scratch"},
                 {"@type":"BlogPosting","headline":"How to Read a Credit Report","description":"Every section of a credit report explained in plain English.","keywords":"how to read a credit report"},
                 {"@type":"BlogPosting","headline":"How to Get a Credit Report for Free","description":"The only official free source for your credit reports and how to avoid copycat sites.","keywords":"how to get a credit report free"},
-                {"@type":"BlogPosting","headline":"How to Check Your Credit Report Without Hurting Your Score","description":"Hard vs soft inquiries explained plus the best free monitoring tools.","keywords":"how to check credit report"}
+                {"@type":"BlogPosting","headline":"How to Check Your Credit Report Without Hurting Your Score","description":"Hard vs soft inquiries explained plus the best free monitoring tools.","keywords":"how to check credit report"},
+                {"@type":"BlogPosting","headline":"What Is Identity Theft Protection","description":"What identity theft protection services do, who needs them, and whether they are worth the cost.","keywords":"what is identity theft protection"},
+                {"@type":"BlogPosting","headline":"10 Warning Signs Your Identity Has Been Stolen","description":"The warning signs of identity theft and what to do immediately if you suspect you are a victim.","keywords":"signs your identity has been stolen"}
             ]
         };
         const s = document.createElement('script');
