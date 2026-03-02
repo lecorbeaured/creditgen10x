@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Loading... | CreditGen 10X</title>
+    <meta name="description" id="page-description" content="">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta name="theme-color" content="#1e3a8a">
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="CreditGen 10X">
+    <meta id="og-title" property="og:title" content="">
+    <meta id="og-description" property="og:description" content="">
+    <meta id="og-image" property="og:image" content="">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #1a1a1a; }
+
+        header { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 30px 0; }
+        .logo { font-size: 1.4rem; font-weight: 800; }
+        .logo a { color: white; text-decoration: none; }
+
+        .container { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+
+        .back-link { display: inline-block; margin: 30px 0 0; color: #3b82f6; text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+
+        .post-header { padding: 40px 0 30px; }
+        .post-tag { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #3b82f6; margin-bottom: 12px; }
+        .post-title { font-size: 2rem; font-weight: 800; color: #1e3a8a; line-height: 1.25; margin-bottom: 16px; }
+        .post-meta { display: flex; align-items: center; gap: 12px; font-size: 0.85rem; color: #6b7280; flex-wrap: wrap; }
+        .post-meta-tag { background: #dbeafe; color: #1e40af; padding: 2px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; }
+        .post-thumbnail { width: 100%; border-radius: 12px; margin: 24px 0; max-height: 420px; object-fit: cover; }
+
+        .post-body { background: white; border-radius: 12px; padding: 40px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 30px; }
+        .post-body h2 { color: #1e3a8a; font-size: 1.3rem; margin: 32px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #e5e7eb; }
+        .post-body h3 { color: #1e40af; font-size: 1.1rem; margin: 22px 0 10px; }
+        .post-body p { color: #374151; font-size: 1rem; line-height: 1.8; margin-bottom: 18px; }
+        .post-body ul, .post-body ol { margin: 0 0 18px 26px; color: #374151; line-height: 1.9; font-size: 1rem; }
+        .post-body li { margin-bottom: 4px; }
+        .post-body strong { color: #1e3a8a; }
+        .post-body a { color: #3b82f6; }
+        .post-body blockquote { border-left: 4px solid #3b82f6; padding: 12px 20px; background: #eff6ff; border-radius: 0 8px 8px 0; margin: 20px 0; }
+        .post-body blockquote p { margin: 0; color: #1e40af; }
+        .post-body img { max-width: 100%; border-radius: 8px; margin: 16px 0; }
+        .post-body hr { border: none; border-top: 2px solid #e5e7eb; margin: 32px 0; }
+        .post-body code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+        .post-body pre { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+
+        /* FAQ Section */
+        .faq-section { background: #f8fafc; border-radius: 12px; padding: 24px 28px; margin: 30px 0; }
+        .faq-section h2 { color: #1e3a8a; font-size: 1.15rem; margin-bottom: 16px; }
+        .faq-item { border-bottom: 1px solid #e5e7eb; padding: 14px 0; }
+        .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+        .faq-q { font-weight: 700; color: #1e3a8a; font-size: 0.95rem; margin-bottom: 6px; }
+        .faq-a { color: #4b5563; font-size: 0.92rem; line-height: 1.65; }
+
+        /* Affiliate cards */
+        .affiliate-card { display: flex; align-items: center; gap: 16px; border-radius: 0 10px 10px 0; padding: 18px 22px; margin: 28px 0; }
+        .affiliate-card.kikoff { background: #f5f3ff; border: 1px solid #e5e7eb; border-left: 4px solid #7c3aed; }
+        .affiliate-card.idiq { background: #fef2f2; border: 1px solid #fee2e2; border-left: 4px solid #dc2626; }
+        .affiliate-card.amazon { background: #fffbeb; border: 1px solid #fcd34d; border-left: 4px solid #f59e0b; }
+        .affiliate-icon { font-size: 1.8rem; flex-shrink: 0; }
+        .affiliate-body { flex: 1; }
+        .affiliate-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+        .affiliate-card.kikoff .affiliate-label { color: #7c3aed; }
+        .affiliate-card.idiq .affiliate-label { color: #dc2626; }
+        .affiliate-card.amazon .affiliate-label { color: #b45309; }
+        .affiliate-title { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 4px; }
+        .affiliate-note { font-size: 0.82rem; color: #6b7280; }
+        .affiliate-btn { display: inline-block; padding: 8px 16px; border-radius: 6px; font-size: 0.85rem; font-weight: 700; text-decoration: none; flex-shrink: 0; white-space: nowrap; }
+        .kikoff .affiliate-btn { background: #7c3aed; color: white; }
+        .idiq .affiliate-btn { background: #dc2626; color: white; }
+        .amazon .affiliate-btn { background: #f59e0b; color: #1a1a1a; }
+
+        /* CTA box */
+        .cta-box { background: linear-gradient(135deg, #1e3a8a, #3b82f6); color: white; padding: 28px; border-radius: 12px; text-align: center; margin: 32px 0 0; }
+        .cta-box h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .cta-box p { opacity: 0.92; font-size: 0.97rem; margin-bottom: 18px; line-height: 1.6; }
+        .cta-box a { display: inline-block; background: #fbbf24; color: #1e3a8a; padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; }
+
+        footer { background: #0f172a; color: #94a3b8; padding: 30px 0; text-align: center; font-size: 0.85rem; margin-top: 60px; }
+        footer a { color: #60a5fa; text-decoration: none; }
+
+        .loading { text-align: center; padding: 80px 20px; color: #6b7280; }
+        .error { text-align: center; padding: 80px 20px; color: #dc2626; }
+
+        @media (max-width: 640px) {
+            .post-title { font-size: 1.5rem; }
+            .post-body { padding: 24px 18px; }
+            .affiliate-card { flex-direction: column; align-items: flex-start; }
+            .affiliate-btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo"><a href="/">CreditGen 10X</a></div>
+    </div>
+</header>
+
+<div class="container">
+    <a href="/blog.html" class="back-link">← Back to Blog</a>
+
+    <div id="post-header" class="post-header"></div>
+    <div id="post-content" class="loading">Loading article...</div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; <span id="year"></span> CreditGen 10X. All rights reserved. | <a href="/">Home</a> | <a href="/blog.html">Blog</a></p>
+        <p style="margin-top:8px;font-size:0.78rem;opacity:0.6;">Content is for educational purposes only. CreditGen 10X participates in affiliate programs including Kikoff, IdentityIQ, and Amazon Associates.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/marked@9.1.6/marked.min.js"></script>
+<script src="https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const KIKOFF_URL  = 'https://kikoff.pxf.io/c/7007975/2344833/14994';
+const IDIQ_URL    = 'https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY';
+const AMZN_MAIL   = 'https://amzn.to/3ZStm81';
+const AMZN_PAPER  = 'https://amzn.to/4c9I8hX';
+
+const CATEGORY_LABELS = {
+    'credit-building':     'Credit Building',
+    'credit-reports':      'Credit Reports',
+    'credit-repair':       'Credit Repair',
+    'identity-protection': 'Identity Protection',
+    'debt-collections':    'Debt & Collections',
+    'free-resources':      'Free Resources'
+};
+
+// Get slug from URL: /blog/my-post-slug
+function getSlug() {
+    const path = window.location.pathname;
+    const parts = path.split('/').filter(Boolean);
+    return parts[parts.length - 1];
+}
+
+// Parse YAML frontmatter from markdown string
+function parseFrontmatter(raw) {
+    const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+    if (!match) return { meta: {}, body: raw };
+    try {
+        const meta = jsyaml.load(match[1]);
+        return { meta, body: match[2] };
+    } catch {
+        return { meta: {}, body: raw };
+    }
+}
+
+function affiliateCard(type) {
+    const cards = {
+        kikoff: `
+            <div class="affiliate-card kikoff">
+                <span class="affiliate-icon">💳</span>
+                <div class="affiliate-body">
+                    <p class="affiliate-label">Recommended Tool</p>
+                    <p class="affiliate-title">Build credit while you repair it</p>
+                    <p class="affiliate-note">Kikoff adds a $750 credit line — no credit check, no interest, from $5/month.</p>
+                </div>
+                <a rel="sponsored noopener" href="${KIKOFF_URL}" target="_blank" class="affiliate-btn">Try Kikoff →</a>
+            </div>`,
+        idiq: `
+            <div class="affiliate-card idiq">
+                <span class="affiliate-icon">🛡️</span>
+                <div class="affiliate-body">
+                    <p class="affiliate-label">Recommended Protection</p>
+                    <p class="affiliate-title">Protect your identity 24/7</p>
+                    <p class="affiliate-note">IdentityIQ monitors all 3 bureaus with real-time alerts and $1M insurance.</p>
+                </div>
+                <a rel="sponsored noopener" href="${IDIQ_URL}" target="_blank" class="affiliate-btn">Get Protected →</a>
+            </div>`,
+        amazon: `
+            <div class="affiliate-card amazon" style="flex-direction:column;align-items:flex-start;gap:12px;">
+                <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;">🛒 Supplies You'll Need</p>
+                <a rel="sponsored noopener" href="${AMZN_MAIL}" target="_blank" style="display:flex;align-items:center;gap:14px;width:100%;text-decoration:none;">
+                    <span style="font-size:1.5rem;">📬</span>
+                    <div style="flex:1;"><p style="font-size:0.9rem;font-weight:700;color:#1a1a1a;margin-bottom:2px;">Certified Mail Envelopes</p><p style="font-size:0.8rem;color:#6b7280;">Send dispute letters with proof of delivery.</p></div>
+                    <span style="background:#f59e0b;color:#1a1a1a;padding:6px 12px;border-radius:6px;font-size:0.8rem;font-weight:700;white-space:nowrap;">Shop →</span>
+                </a>
+                <a rel="sponsored noopener" href="${AMZN_PAPER}" target="_blank" style="display:flex;align-items:center;gap:14px;width:100%;text-decoration:none;">
+                    <span style="font-size:1.5rem;">🖨️</span>
+                    <div style="flex:1;"><p style="font-size:0.9rem;font-weight:700;color:#1a1a1a;margin-bottom:2px;">Printer Paper (500 Sheets)</p><p style="font-size:0.8rem;color:#6b7280;">Print dispute letters and credit reports.</p></div>
+                    <span style="background:#f59e0b;color:#1a1a1a;padding:6px 12px;border-radius:6px;font-size:0.8rem;font-weight:700;white-space:nowrap;">Shop →</span>
+                </a>
+                <p style="font-size:0.72rem;color:#9ca3af;margin-top:4px;">As an Amazon Associate we earn from qualifying purchases.</p>
+            </div>`
+    };
+    return cards[type] || '';
+}
+
+async function renderPost() {
+    const slug = getSlug();
+    const contentEl = document.getElementById('post-content');
+    const headerEl  = document.getElementById('post-header');
+
+    if (!slug) {
+        contentEl.innerHTML = '<p class="error">Post not found.</p>';
+        return;
+    }
+
+    let raw;
+    try {
+        // Posts are stored as /posts/YYYY-MM-DD-slug.md
+        // Try to find by fetching the index first
+        const indexRes = await fetch('/posts/index.json');
+        let postFile = null;
+
+        if (indexRes.ok) {
+            const index = await indexRes.json();
+            const match = index.find(p => p.slug === slug);
+            if (match) postFile = match.file;
+        }
+
+        // Fallback: try common filename patterns
+        if (!postFile) {
+            const today = new Date().toISOString().split('T')[0];
+            postFile = `/posts/${slug}.md`;
+        }
+
+        const res = await fetch(postFile || `/posts/${slug}.md`);
+        if (!res.ok) throw new Error('Not found');
+        raw = await res.text();
+    } catch {
+        contentEl.innerHTML = '<p class="error" style="padding:60px 20px;text-align:center;">Article not found. <a href="/blog.html">← Back to blog</a></p>';
+        return;
+    }
+
+    const { meta, body } = parseFrontmatter(raw);
+
+    // Update page meta
+    document.getElementById('page-title').textContent       = `${meta.title || 'Article'} | CreditGen 10X`;
+    document.getElementById('page-description').content     = meta.description || '';
+    document.getElementById('og-title').content             = meta.title || '';
+    document.getElementById('og-description').content       = meta.description || '';
+    if (meta.thumbnail) document.getElementById('og-image').content = meta.thumbnail;
+
+    // Inject noindex if set
+    if (meta.noindex) {
+        const m = document.createElement('meta');
+        m.name = 'robots'; m.content = 'noindex';
+        document.head.appendChild(m);
+    }
+
+    // Add Article schema
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": meta.title,
+        "description": meta.description,
+        "author": { "@type": "Person", "name": meta.author || "CreditGen 10X Editorial Team" },
+        "publisher": { "@type": "Organization", "name": "CreditGen 10X", "url": "https://creditgen10x.com" },
+        "datePublished": meta.date,
+        "dateModified": meta.date
+    };
+    if (meta.thumbnail) schema.image = meta.thumbnail;
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify(schema);
+    document.head.appendChild(s);
+
+    // Render header
+    const catLabel = CATEGORY_LABELS[meta.category] || meta.category || '';
+    const dateStr  = meta.date ? new Date(meta.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+    headerEl.innerHTML = `
+        <p class="post-tag">${catLabel}</p>
+        <h1 class="post-title">${meta.title || ''}</h1>
+        <div class="post-meta">
+            <span class="post-meta-tag">${catLabel}</span>
+            ${dateStr ? `<span>${dateStr}</span>` : ''}
+            ${meta.read_time ? `<span>· ${meta.read_time} min read</span>` : ''}
+            ${meta.author ? `<span>· by ${meta.author}</span>` : ''}
+        </div>
+        ${meta.thumbnail ? `<img src="${meta.thumbnail}" alt="${meta.thumbnail_alt || meta.title}" class="post-thumbnail">` : ''}
+    `;
+
+    // Render markdown body
+    const htmlBody = marked.parse(body || '');
+
+    // Build FAQ schema if present
+    let faqSchema = '';
+    let faqHtml = '';
+    if (meta.faqs && meta.faqs.length) {
+        faqHtml = `
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                ${meta.faqs.map(f => `
+                    <div class="faq-item">
+                        <p class="faq-q">${f.question}</p>
+                        <p class="faq-a">${f.answer}</p>
+                    </div>`).join('')}
+            </div>`;
+
+        const faqSchemaObj = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": meta.faqs.map(f => ({
+                "@type": "Question",
+                "name": f.question,
+                "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+            }))
+        };
+        const sf = document.createElement('script');
+        sf.type = 'application/ld+json';
+        sf.textContent = JSON.stringify(faqSchemaObj);
+        document.head.appendChild(sf);
+    }
+
+    // Affiliate cards
+    const kikoffCard = meta.show_kikoff ? affiliateCard('kikoff') : '';
+    const idiqCard   = meta.show_idiq   ? affiliateCard('idiq')   : '';
+    const amazonCard = meta.show_amazon ? affiliateCard('amazon')  : '';
+
+    // CTA box
+    const ctaHtml = `
+        <div class="cta-box">
+            <h3>${meta.cta_headline || 'Get the Free Pre-Dispute Guide'}</h3>
+            <p>${meta.cta_text || 'Learn the 5 critical steps before disputing any credit report error.'}</p>
+            <a href="/#guide">Download Free Guide →</a>
+        </div>`;
+
+    contentEl.innerHTML = `
+        <div class="post-body">${htmlBody}</div>
+        ${kikoffCard}
+        ${idiqCard}
+        ${amazonCard}
+        ${faqHtml}
+        ${ctaHtml}`;
+}
+
+renderPost();
+</script>
+</body>
+</html>

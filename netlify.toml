@@ -1,0 +1,46 @@
+# Netlify configuration for CreditGen 10X + Decap CMS
+
+[build]
+  publish = "."
+  command = "node build.js"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Serve blog posts by slug: /blog/my-post-slug → blog-post.html
+[[redirects]]
+  from = "/blog/:slug"
+  to = "/blog-post.html"
+  status = 200
+
+# Serve blog index at /blog
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+# Admin panel
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Never cache posts/index.json — must always be fresh after publish
+[[headers]]
+  for = "/posts/index.json"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"

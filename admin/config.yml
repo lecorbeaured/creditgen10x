@@ -1,0 +1,174 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images are stored in the repo
+media_folder: "images/uploads"
+
+# The public URL path for images
+public_folder: "/images/uploads"
+
+# Show editorial workflow (Draft → Review → Ready → Published)
+publish_mode: editorial_workflow
+
+# Site URL for previews
+site_url: https://creditgen10x.com
+
+# CMS UI branding
+locale: en
+
+collections:
+  # ── BLOG POSTS ────────────────────────────────────────────────────────────
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "blog/{{slug}}"
+    summary: "{{title}} — {{date}}"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Use your target keyword naturally. Keep under 65 characters."
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        default: ""
+
+      - label: "SEO Description (Meta)"
+        name: "description"
+        widget: "string"
+        pattern: ['.{50,160}', "Must be between 50 and 160 characters"]
+        hint: "This appears in Google results. Include your main keyword. 50–160 characters."
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Credit Building", value: "credit-building" }
+          - { label: "Credit Reports", value: "credit-reports" }
+          - { label: "Credit Repair", value: "credit-repair" }
+          - { label: "Identity Protection", value: "identity-protection" }
+          - { label: "Debt & Collections", value: "debt-collections" }
+          - { label: "Free Resources", value: "free-resources" }
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        hint: "Add 3–5 keyword tags. Press Enter after each one."
+        default: []
+
+      - label: "Featured Image"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+        hint: "Recommended: 1200x630px JPG or PNG for social sharing."
+
+      - label: "Featured Image Alt Text"
+        name: "thumbnail_alt"
+        widget: "string"
+        required: false
+        hint: "Describe the image for accessibility and SEO."
+
+      - label: "Author"
+        name: "author"
+        widget: "select"
+        default: "CreditGen 10X Editorial Team"
+        options:
+          - "CreditGen 10X Editorial Team"
+          - "Eric Coste"
+
+      - label: "Read Time (minutes)"
+        name: "read_time"
+        widget: "number"
+        default: 5
+        value_type: "int"
+        min: 1
+        max: 30
+
+      - label: "Show Kikoff Affiliate Card?"
+        name: "show_kikoff"
+        widget: "boolean"
+        default: true
+        hint: "Inserts the Kikoff credit-building card into the article."
+
+      - label: "Show IdentityIQ Affiliate Card?"
+        name: "show_idiq"
+        widget: "boolean"
+        default: false
+        hint: "Inserts the IdentityIQ protection card into the article."
+
+      - label: "Show Amazon Products?"
+        name: "show_amazon"
+        widget: "boolean"
+        default: false
+        hint: "Inserts the certified mail and printer paper Amazon cards."
+
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        hint: "Write your article here. Use ## for H2 headings, ### for H3. Bold key terms with **double asterisks**."
+
+      - label: "FAQ Section"
+        name: "faqs"
+        widget: "list"
+        required: false
+        hint: "Add Q&A pairs for SEO featured snippets and AEO."
+        fields:
+          - label: "Question"
+            name: "question"
+            widget: "string"
+          - label: "Answer"
+            name: "answer"
+            widget: "text"
+
+      - label: "CTA Headline"
+        name: "cta_headline"
+        widget: "string"
+        required: false
+        default: "Get the Free Pre-Dispute Guide"
+        hint: "The call-to-action at the bottom of the article."
+
+      - label: "CTA Text"
+        name: "cta_text"
+        widget: "text"
+        required: false
+        default: "Learn the 5 critical steps before disputing any credit report error — and avoid the mistakes that get disputes rejected."
+
+      - label: "Noindex (hide from Google)?"
+        name: "noindex"
+        widget: "boolean"
+        default: false
+        hint: "Only check this for draft or test posts you don't want indexed."
+
+  # ── SITE SETTINGS (global) ────────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Affiliate Links"
+        name: "affiliates"
+        file: "settings/affiliates.json"
+        fields:
+          - label: "Kikoff Affiliate URL"
+            name: "kikoff_url"
+            widget: "string"
+            default: "https://kikoff.pxf.io/c/7007975/2344833/14994"
+          - label: "IdentityIQ Affiliate URL"
+            name: "idiq_url"
+            widget: "string"
+            default: "https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY"
+          - label: "Amazon Certified Mail URL"
+            name: "amazon_mail_url"
+            widget: "string"
+            default: "https://amzn.to/3ZStm81"
+          - label: "Amazon Printer Paper URL"
+            name: "amazon_paper_url"
+            widget: "string"
+            default: "https://amzn.to/4c9I8hX"
