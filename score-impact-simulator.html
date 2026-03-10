@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Credit Score Impact Simulator — See What Happens Before You Act | CreditGen 10X</title>
+<meta name="description" content="Simulate what happens to your credit score when you miss a payment, open a card, pay off debt, or file bankruptcy. Free score impact simulator — no account needed.">
+<link rel="canonical" href="https://creditgen10x.com/score-impact-simulator">
+<meta property="og:title" content="Free Credit Score Impact Simulator | CreditGen 10X">
+<meta property="og:description" content="Enter your current score, pick a scenario, and see the estimated impact before you make any credit decision. Completely free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://creditgen10x.com/score-impact-simulator">
+<meta name="robots" content="index, follow">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Credit Score Impact Simulator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Simulate how 8 common credit decisions affect your score — missed payment, new card, paying off debt, bankruptcy, and more. Enter your score and see the before/after instantly.",
+      "url": "https://creditgen10x.com/score-impact-simulator",
+      "provider": { "@type": "Organization", "name": "CreditGen 10X" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a missed payment hurt your credit score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A single 30-day late payment can drop your credit score by 60 to 110 points. The impact is larger for people with higher scores — someone at 780 might drop to 670–700, while someone already at 600 might drop 40–50 points. The mark stays on your report for 7 years but its scoring weight decreases significantly after 2 years of positive history following it." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does opening a new credit card hurt your score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Opening a new credit card typically causes a temporary drop of 5 to 10 points. This comes from a hard inquiry (3–5 points) and a reduction in average account age. Both effects are temporary — most people fully recover within 6–12 months, and the new available credit can actually help lower your utilization ratio over time." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does paying off a collection improve your credit score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the scoring model. Under FICO 8 (the most widely used model), paid and unpaid collections are weighted similarly and paying may provide little improvement. Under FICO 9 and VantageScore 4.0, paid collections are ignored entirely, which can produce a significant improvement. Before paying, try to negotiate 'pay for delete' — removing the entry completely — in writing." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does disputing a credit report error improve your score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Removing an inaccurate negative item can produce the largest single score improvement available — potentially 10 to 100 points or more depending on what was removed. A wrongly reported collection account that is removed can add 50–100 points. A late payment reported in error can add 30–60 points. This is often the fastest and most powerful credit repair action." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a hard inquiry affect your credit score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A hard inquiry typically affects your credit score for about 12 months. After 12 months, it stops influencing your score. After 24 months, it disappears from your report entirely. The impact is small — usually 3 to 10 points — and diminishes quickly. Rate-shopping for a mortgage, auto loan, or student loan within a 14–45 day window counts as a single inquiry." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best thing you can do to raise your credit score quickly?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The fastest single action is reducing credit card utilization — paying balances down below 30%, or ideally below 10%, can produce improvements within one billing cycle. The second fastest is successfully disputing and removing an inaccurate negative item. Combining both in the same month can produce the most dramatic short-term improvement." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does closing a credit card hurt your credit score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, closing a credit card typically hurts your score by 5 to 25 points. Closing a card removes its available credit limit from your utilization calculation, raising your overall utilization ratio. It may also shorten your average account age if it was one of your older accounts. Consider asking for a product change (card downgrade) instead of closing to keep the account age and credit limit intact." }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Use the Credit Score Impact Simulator",
+      "step": [
+        { "@type": "HowToStep", "name": "Enter your current credit score", "text": "Type in your approximate current credit score between 300 and 850." },
+        { "@type": "HowToStep", "name": "Select a credit scenario", "text": "Choose from 8 scenarios: paying off a card, opening a new card, missing a payment, closing a card, paying a collection, disputing an error, a hard inquiry, or filing bankruptcy." },
+        { "@type": "HowToStep", "name": "Click Simulate Impact", "text": "See your estimated before and after scores, the point change, a detailed explanation of why the impact works that way, and a strategic tip for what to do before taking action." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditgen10x.com" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://creditgen10x.com/tools.html" },
+        { "@type": "ListItem", "position": 3, "name": "Score Impact Simulator", "item": "https://creditgen10x.com/score-impact-simulator" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--teal:#0d9488;--teal-dark:#0f766e;--teal-light:#d1fae5;--sage:#f5f7f2;--navy:#1a2e1a;--muted:#4a5568;--border:#dde5e0;--white:#ffffff;--green:#16a34a;--red:#dc2626;--amber:#d97706}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--sage);color:var(--navy);line-height:1.6}
+.site-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;position:sticky;top:0;z-index:100;box-shadow:0 1px 10px rgba(0,0,0,.06)}
+.nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px}
+.site-logo{text-decoration:none}
+.logo-text{font-family:'Fraunces',serif;font-size:1.18rem;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.logo-text span{color:var(--teal);font-style:italic}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--teal)!important;color:white!important;padding:9px 22px!important;border-radius:100px!important;font-weight:700!important;font-size:.85rem!important}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.page-hero{background:var(--white);border-bottom:1px solid var(--border);padding:36px 0 30px}
+.breadcrumb{font-size:.76rem;color:var(--muted);margin-bottom:12px}
+.breadcrumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.page-hero h1{font-family:'Fraunces',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:10px}
+.page-hero h1 em{font-style:italic;color:var(--teal)}
+.page-hero>div>p{color:var(--muted);font-size:.97rem;margin-bottom:18px}
+.hbadges{display:flex;flex-wrap:wrap;gap:8px}
+.hbadge{display:inline-flex;align-items:center;gap:5px;background:var(--teal-light);color:#065f46;padding:5px 12px;border-radius:100px;font-size:.73rem;font-weight:700}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.stat-box{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:18px 20px;text-align:center}
+.stat-num{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:var(--teal);letter-spacing:-.02em}
+.stat-lbl{font-size:.77rem;color:var(--muted);margin-top:4px}
+/* Tool */
+.tool-card{background:var(--white);border-radius:20px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(0,0,0,.05);overflow:hidden;margin:28px 0}
+.tool-card-top{padding:24px 28px 0;display:flex;align-items:flex-start;gap:14px}
+.tool-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;background:var(--teal-light)}
+.tool-card-meta h2{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:900;letter-spacing:-.01em;margin-bottom:4px}
+.tool-card-meta p{font-size:.82rem;color:var(--muted);line-height:1.5}
+.tool-body{padding:20px 28px 28px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.04em;margin-bottom:5px;text-transform:uppercase}
+.field input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:.95rem;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);outline:none;transition:border-color .15s,box-shadow .15s;-moz-appearance:textfield}
+.field input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(13,148,136,.12)}
+.field input::-webkit-outer-spin-button,.field input::-webkit-inner-spin-button{-webkit-appearance:none}
+.calc-btn{width:100%;padding:13px;background:var(--teal);color:white;border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:12px;box-shadow:0 3px 12px rgba(13,148,136,.28)}
+.calc-btn:hover{background:var(--teal-dark);transform:translateY(-1px)}.calc-btn:active{transform:translateY(0)}
+.scenario-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;padding:10px 12px;background:var(--sage);border-radius:10px;border:1.5px solid var(--border);cursor:pointer;transition:border-color .15s}
+.scenario-row:hover{border-color:var(--teal)}
+.scenario-row input[type=radio]{accent-color:var(--teal);width:15px;height:15px;flex-shrink:0}
+.scenario-label{flex:1;font-size:.84rem;font-weight:500;color:var(--navy)}
+.scenario-impact{font-size:.78rem;font-weight:700;white-space:nowrap}
+.impact-positive{color:var(--green)}.impact-negative{color:var(--red)}
+.result{margin-top:16px;padding:16px 18px;border-radius:14px;display:none;animation:fadeUp .3s ease}
+.result.show{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.result-excellent{background:#f0fdf4;border:1.5px solid #86efac}
+.result-good{background:#eff6ff;border:1.5px solid #93c5fd}
+.result-fair{background:#fffbeb;border:1.5px solid #fcd34d}
+.result-poor{background:#fef2f2;border:1.5px solid #fca5a5}
+.score-compare{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.score-num{font-family:'Fraunces',serif;font-size:2rem;font-weight:900;line-height:1}
+.score-arrow{font-size:1.3rem;color:var(--muted)}
+.score-delta{font-size:1rem;font-weight:700;margin-top:4px}
+.result-explain{font-size:.87rem;color:#374151;line-height:1.65;margin-bottom:10px}
+.result-caveat{font-size:.83rem;background:rgba(0,0,0,.04);border-radius:8px;padding:10px 12px;color:var(--muted);line-height:1.6}
+/* Prose */
+.prose{background:var(--white);border-radius:20px;border:1px solid var(--border);padding:44px 48px;margin:28px 0;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.prose h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:900;letter-spacing:-.02em;color:var(--navy);margin:36px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+.prose h2:first-child{margin-top:0}
+.prose h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin:24px 0 10px}
+.prose p{font-size:.97rem;line-height:1.85;color:#374151;margin-bottom:18px}
+.prose ul,.prose ol{margin:0 0 18px 22px;line-height:1.9;color:#374151;font-size:.97rem}
+.prose li{margin-bottom:5px}
+.prose strong{color:var(--navy);font-weight:700}
+.prose a{color:var(--teal);font-weight:600;text-decoration:none}
+.prose a:hover{text-decoration:underline}
+/* Impact cheat-sheet */
+.impact-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.9rem}
+.impact-table th{background:var(--sage);padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border-bottom:2px solid var(--border)}
+.impact-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:#374151}
+.impact-table tr:last-child td{border-bottom:none}
+.imp-pos{color:var(--green);font-weight:700}.imp-neg{color:var(--red);font-weight:700}
+/* FAQ */
+.faq-wrap{margin:28px 0}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:18px 22px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q .arr{font-size:.8rem;transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-q .arr{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s}
+.faq-item.open .faq-a{max-height:500px;padding:0 22px 18px}
+.faq-a p{font-size:.91rem;color:#4b5563;line-height:1.7;margin:0}
+.cta-box{background:linear-gradient(135deg,var(--navy),#2d5a1b);border-radius:20px;padding:36px 40px;text-align:center;margin:28px 0;color:var(--white)}
+.cta-box h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;margin-bottom:10px}
+.cta-box p{font-size:.95rem;opacity:.85;margin-bottom:22px;line-height:1.65}
+.cta-box a{display:inline-block;background:var(--teal);color:white;padding:13px 32px;border-radius:100px;font-weight:700;font-size:.95rem;text-decoration:none;box-shadow:0 4px 16px rgba(13,148,136,.4)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.related-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--teal);border-radius:14px;padding:16px 18px;text-decoration:none;transition:box-shadow .15s;display:block}
+.related-card:hover{box-shadow:0 4px 16px rgba(13,148,136,.15)}
+.related-icon{font-size:1.4rem;margin-bottom:8px}
+.related-title{font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.related-desc{font-size:.74rem;color:var(--muted)}
+footer{background:#0f1f0f;border-top:1px solid #1e3a1e;padding:32px 24px;text-align:center;margin-top:60px}
+footer p{font-size:.79rem;color:#6b8f6b;line-height:1.8}
+footer a{color:#6b8f6b;text-decoration:none}
+footer a:hover{color:var(--teal-light)}
+@media(max-width:700px){
+  .prose{padding:26px 20px}.stat-row,.related-grid{grid-template-columns:1fr 1fr}
+  .site-nav{padding:0 16px}.nav-links a:not(.nav-cta){display:none}.cta-box{padding:28px 22px}
+}
+@media(max-width:480px){.stat-row,.related-grid{grid-template-columns:1fr}.score-compare{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="site-logo"><span class="logo-text">Credit<span>Gen</span> 10X</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a><a href="/blog.html">Blog</a><a href="/tools.html">All Tools</a>
+      <a href="/#guide" class="nav-cta">Free Guide &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> › <a href="/tools.html">Tools</a> › Score Impact Simulator</div>
+    <h1>Credit Score <em>Impact</em> Simulator</h1>
+    <p>What happens to your score when you miss a payment, open a card, pay off debt, or dispute an error? Simulate any scenario before you act — know the real numbers first.</p>
+    <div class="hbadges">
+      <span class="hbadge">🧮 8 Scenarios</span>
+      <span class="hbadge">⚡ Instant Results</span>
+      <span class="hbadge">💡 Strategic Tips</span>
+      <span class="hbadge">$0 Free</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" style="padding-top:32px;padding-bottom:60px;">
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="stat-num">−60 to −110</div><div class="stat-lbl">Points from one missed payment</div></div>
+    <div class="stat-box"><div class="stat-num">+20 to +50</div><div class="stat-lbl">Points from paying off a credit card</div></div>
+    <div class="stat-box"><div class="stat-num">+10 to +100</div><div class="stat-lbl">Points from removing an inaccurate error</div></div>
+  </div>
+
+  <!-- LIVE CALCULATOR -->
+  <div class="tool-card">
+    <div class="tool-card-top">
+      <div class="tool-icon">🧮</div>
+      <div class="tool-card-meta">
+        <h2>Score Impact Simulator</h2>
+        <p>What happens to your score if you miss a payment, open a card, or pay off a collection? Simulate before you act.</p>
+      </div>
+    </div>
+    <div class="tool-body">
+      <div class="field">
+        <label>Your Current Score (approximate)</label>
+        <input type="number" id="si-score" placeholder="680" min="300" max="850">
+      </div>
+      <div class="field" style="margin-bottom:8px;"><label>Choose a scenario</label></div>
+      <div id="si-scenarios">
+        <label class="scenario-row"><input type="radio" name="scenario" value="payoff_card"><span class="scenario-label">Pay off a credit card in full</span><span class="scenario-impact impact-positive">+20 to +50</span></label>
+        <label class="scenario-row"><input type="radio" name="scenario" value="open_card"><span class="scenario-label">Open a new credit card</span><span class="scenario-impact impact-negative">−5 to −10</span></label>
+        <label class="scenario-row"><input type="radio" name="scenario" value="miss_payment"><span class="scenario-label">Miss one payment (30 days late)</span><span class="scenario-impact impact-negative">−60 to −110</span></label>
+        <label class="scenario-row"><input type="radio" name="scenario" value="close_card"><span class="scenario-label">Close an old credit card</span><span class="scenario-impact impact-negative">−5 to −25</span></label>
+        <label class="scenario-row"><input type="radio" name="scenario" value="pay_collection"><span class="scenario-label">Pay off a collection account</span><span class="scenario-impact impact-positive">0 to +80</span></label>
+        <label class="scenario-row"><input type="radio" name="scenario" value="dispute_error"><span class="scenario-label">Successfully dispute a report error</span><span class="scenario-impact impact-positive">+10 to +100</span></label>
+        <label class="scenario-row"><input type="radio" name="scenario" value="hard_inquiry"><span class="scenario-label">Hard inquiry (new credit application)</span><span class="scenario-impact impact-negative">−3 to −10</span></label>
+        <label class="scenario-row"><input type="radio" name="scenario" value="bankruptcy"><span class="scenario-label">File for bankruptcy</span><span class="scenario-impact impact-negative">−130 to −200</span></label>
+      </div>
+      <button class="calc-btn" onclick="calcImpact()">Simulate Impact →</button>
+      <div class="result" id="si-result">
+        <div class="score-compare">
+          <div><div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:2px;">Before</div><div class="score-num" id="si-before">—</div></div>
+          <div class="score-arrow">→</div>
+          <div><div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:2px;">After</div><div class="score-num" id="si-after">—</div></div>
+          <div style="margin-left:auto;text-align:right;"><div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:2px;">Change</div><div class="score-delta" id="si-delta">—</div></div>
+        </div>
+        <p class="result-explain" id="si-explain"></p>
+        <div class="result-caveat" id="si-caveat"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="prose">
+
+    <h2>The Complete Credit Score Impact Cheat Sheet</h2>
+    <p>Every credit decision has a measurable consequence. The problem is that most people don't know the actual numbers until after they've already acted. This guide gives you the real impact ranges for each major credit event — and what to do strategically before making any move.</p>
+
+    <table class="impact-table">
+      <thead><tr><th>Action</th><th>Score Impact</th><th>Duration</th></tr></thead>
+      <tbody>
+        <tr><td>Pay off credit card</td><td class="imp-pos">+20 to +50 pts</td><td>Permanent (while balance stays low)</td></tr>
+        <tr><td>Successfully dispute an error</td><td class="imp-pos">+10 to +100 pts</td><td>Permanent (item removed)</td></tr>
+        <tr><td>Pay off collection (FICO 9)</td><td class="imp-pos">+20 to +80 pts</td><td>Permanent (model-dependent)</td></tr>
+        <tr><td>Become authorized user</td><td class="imp-pos">+10 to +40 pts</td><td>While account remains active</td></tr>
+        <tr><td>Open new credit card</td><td class="imp-neg">−5 to −10 pts</td><td>Temporary: 6–12 months</td></tr>
+        <tr><td>Hard inquiry</td><td class="imp-neg">−3 to −10 pts</td><td>Temporary: up to 12 months</td></tr>
+        <tr><td>Close old credit card</td><td class="imp-neg">−5 to −25 pts</td><td>Permanent (utilization + age change)</td></tr>
+        <tr><td>Miss one payment (30 days)</td><td class="imp-neg">−60 to −110 pts</td><td>7 years (fades significantly after 2)</td></tr>
+        <tr><td>Collection or charge-off</td><td class="imp-neg">−80 to −150 pts</td><td>7 years from original delinquency</td></tr>
+        <tr><td>Bankruptcy (Chapter 7)</td><td class="imp-neg">−130 to −200 pts</td><td>10 years on report</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The Actions That Hurt Your Score</h2>
+
+    <h3>Missing a Payment (30 Days Late): −60 to −110 Points</h3>
+    <p>This is the single most damaging common credit event. Payment history is 35% of your FICO score — the largest single factor — and a missed payment is direct evidence against it. The impact is counterintuitively larger for people with higher scores. A perfect 780 can drop to 670–700 from a single 30-day late. A 600 score might only drop 40–50 points.</p>
+    <p><strong>What to do if this happens:</strong> Pay immediately, even if late. Then call the lender and request a "goodwill adjustment" — asking them to remove the late mark as a courtesy. If it's your first late payment in a long history of on-time payments, many lenders will grant this. Get any agreement in writing.</p>
+
+    <h3>Closing an Old Credit Card: −5 to −25 Points</h3>
+    <p>Closing a card removes its available credit limit from your utilization calculation and may shorten your average account age. Both are negative. The impact is larger if the card was your oldest account or if its limit represents a significant portion of your total available credit.</p>
+    <p><strong>What to do instead:</strong> Ask for a product change — downgrade to a no-annual-fee version of the same card. This keeps the account history and available credit intact without paying a fee. If no no-fee version exists, keep the card open with a small recurring charge (a streaming subscription) to avoid closure for inactivity.</p>
+
+    <h3>Hard Inquiries: −3 to −10 Points (Temporary)</h3>
+    <p>The impact is small and temporary. Most inquiries stop affecting your score after 12 months and fall off your report entirely after 24. If you're shopping for a mortgage, auto loan, or student loan, submitting multiple applications within 14–45 days counts as a single inquiry — the models understand rate-shopping behavior.</p>
+
+    <h3>Bankruptcy: −130 to −200 Points</h3>
+    <p>Among the most severe single-event drops. Chapter 7 stays 10 years; Chapter 13 stays 7 years. However — many people's scores begin recovering within 12–18 months of filing, because the bankruptcy clears unmanageable debt and allows positive payment history to accumulate. It's a drastic step with a long-term impact, but it's sometimes the right financial decision despite the credit cost.</p>
+
+    <h2>The Actions That Help Your Score</h2>
+
+    <h3>Paying Off a Credit Card: +20 to +50 Points</h3>
+    <p>Paying off a card lowers your utilization ratio, which is 30% of your score. This improvement is visible within one to two billing cycles. The impact is largest when the card was at high utilization (above 50%) and when the card represents a significant portion of your total available credit. After paying it off, <strong>keep the account open</strong> — closing it would undo part of the benefit.</p>
+
+    <h3>Disputing an Error: +10 to +100 Points</h3>
+    <p>Removing an inaccurate negative item can produce the largest single score improvement available — potentially bigger than any other action. The exact improvement depends on what was removed. A wrongly reported collection account that gets deleted could add 50–100 points. A late payment reported in error that gets removed can add 30–60 points.</p>
+    <p>You have the right under the Fair Credit Reporting Act to dispute any inaccurate item with all three credit bureaus. Always dispute by certified mail rather than online portals. Online dispute systems require agreeing to terms that may waive important FCRA rights and don't create the legal paper trail you need if the bureau fails to respond within 30 days.</p>
+
+    <h3>Paying a Collection Account: 0 to +80 Points</h3>
+    <p>This is the most nuanced scenario because the impact varies dramatically by scoring model. Under FICO 8 (the most widely used model for lending decisions), paid and unpaid collections are weighted similarly. Under FICO 9 and VantageScore 4.0, paid collections are ignored entirely — which can produce a significant improvement.</p>
+    <p>The strategic move before paying any collection: attempt to negotiate "pay for delete" in writing. A pay-for-delete agreement means the collector removes the entry from your report entirely in exchange for payment. A deleted entry is better than a paid entry under every scoring model. Get the agreement in writing before sending any payment.</p>
+    <p>Also verify the collector is legitimate before paying anything. Check our <a href="/banned-debt-collectors.html">FTC Banned Collectors List</a> — over 170 agencies have been permanently banned from debt collection.</p>
+
+    <h2>Why the Same Action Can Have Different Impacts</h2>
+    <p>The same credit event can produce very different score changes depending on your starting score and credit history. Here's why:</p>
+    <ul>
+      <li><strong>Higher scores have more to lose.</strong> Someone at 780 experiences a larger drop from a missed payment than someone at 600, because the scoring model treats the late as a more unexpected signal from someone with a perfect history.</li>
+      <li><strong>Thin files are more volatile.</strong> If you have only 2–3 accounts on your report, any single change has an outsized effect. Thicker files with more positive history absorb negative events better.</li>
+      <li><strong>Utilization changes are immediate.</strong> Unlike most credit events that involve waiting for reporting cycles, paying down a balance produces a score change as soon as the creditor reports the lower balance — typically within one billing cycle.</li>
+      <li><strong>Scoring model version matters.</strong> FICO 8, FICO 9, FICO 10, and VantageScore 3.0 and 4.0 all treat certain factors differently. Mortgage lenders typically use older FICO versions. Auto lenders often use industry-specific models. The simulator uses FICO 8 as the reference since it's the most widely used model overall.</li>
+    </ul>
+
+  </article>
+
+  <!-- FAQ -->
+  <h2 style="font-family:'Fraunces',serif;font-size:1.45rem;font-weight:900;letter-spacing:-.02em;margin:8px 0 16px;">Frequently Asked Questions</h2>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <button class="faq-q">How much does a missed payment hurt your credit score? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>A single 30-day late payment can drop your score by 60 to 110 points. The impact is larger for higher-starting scores. The mark stays for 7 years but its weight decreases significantly after 2 years of positive history. If it's your first late, call and request a goodwill adjustment — many lenders will remove it.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Does paying off a collection account help your score? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>It depends on which scoring model your lender uses. Under FICO 8 (most common for lending), it may help very little. Under FICO 9 and VantageScore 4.0, paid collections are ignored entirely — which can produce a significant improvement. Always try to negotiate "pay for delete" in writing before paying, which removes the entry entirely.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is opening a new credit card really worth the score drop? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>Usually yes, if the card serves a real purpose. The initial dip of 5–10 points is temporary — most people recover fully within 6–12 months. And the new available credit limit permanently improves your utilization ratio as long as you don't max it out. A new card with a $5,000 limit can significantly lower your overall utilization percentage.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How much can disputing a credit error improve my score? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>Removing an inaccurate negative item can produce the largest single score improvement available — anywhere from 10 to 100+ points depending on what was removed. A wrongly reported collection account deleted from your file can add 50–100 points. The FTC estimates 1 in 5 Americans has a report error significant enough to affect their score.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What's the best way to raise my credit score quickly? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>The two fastest actions: (1) pay down credit card balances to below 30% utilization — this shows up within one billing cycle, and (2) successfully dispute and remove an inaccurate negative item. Combine both in the same month for the most dramatic short-term improvement. Adding an authorized user account with positive history can also produce rapid gains.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Does bankruptcy ruin your credit forever? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>No. Chapter 7 stays on your report for 10 years and Chapter 13 for 7 years, but many people see their scores begin recovering within 12–18 months of filing. The bankruptcy clears unmanageable debt and allows positive payment history to accumulate. By year 3–4 post-bankruptcy, many people have scores in the 650–700 range with consistent positive action.</p></div>
+    </div>
+  </div>
+
+  <div class="related-grid">
+    <a href="/credit-score-estimator" class="related-card">
+      <div class="related-icon">📊</div>
+      <div class="related-title">Credit Score Estimator</div>
+      <div class="related-desc">See your estimated FICO range based on your 5 key credit factors.</div>
+    </a>
+    <a href="/debt-payoff-calculator" class="related-card">
+      <div class="related-icon">💸</div>
+      <div class="related-title">Debt Payoff Calculator</div>
+      <div class="related-desc">Get your exact payoff date and total interest cost with any payment plan.</div>
+    </a>
+    <a href="/credit-repair-timeline-estimator" class="related-card">
+      <div class="related-icon">📅</div>
+      <div class="related-title">Credit Repair Timeline</div>
+      <div class="related-desc">Get a personalized month-by-month roadmap to your target score.</div>
+    </a>
+  </div>
+
+  <div class="cta-box">
+    <h3>The Fastest Improvement Is Free</h3>
+    <p>Disputing a credit report error can produce the biggest single score jump available — and it's completely free under federal law. Our guide shows you how to do it right, step by step.</p>
+    <a href="/#guide">Get the Free Dispute Guide →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog.html">Blog</a> &nbsp;·&nbsp; <a href="/tools.html">Free Tools</a> &nbsp;·&nbsp; <a href="/banned-debt-collectors.html">Banned Collectors</a></p>
+  <p style="margin-top:8px;">&copy; <span id="yr"></span> CreditGen 10X · Educational content only — not financial or legal advice.</p>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+const SD={
+  payoff_card:{lo:20,hi:50,ex:'Paying off a card lowers your overall utilization ratio — the second-biggest scoring factor at 30%. Impact is highest if the card had high utilization (over 50%).',cv:'💡 Keep the card open after paying it off. Closing it removes available credit and can raise your utilization.'},
+  open_card:{lo:-10,hi:-5,ex:'Opening a new card triggers a hard inquiry and lowers average account age. Both effects are temporary — most people recover within 6–12 months.',cv:'💡 The new available credit limit can help your utilization ratio long-term and often outweighs the short-term dip.'},
+  miss_payment:{lo:-110,hi:-60,ex:'A single 30-day late is the most damaging common event. Impact is larger for higher scores. The mark stays 7 years but fades significantly after 2 years of positive history.',cv:'💡 Call the lender immediately. If this is your first late and you have a clean history, many lenders will grant a goodwill removal — get it in writing.'},
+  close_card:{lo:-25,hi:-5,ex:'Closing a card removes available credit (raising utilization) and may shorten average account age. Impact is larger if it was your oldest card.',cv:'💡 Ask for a product change (downgrade to a no-fee version) instead of closing — keeps the account age and available credit intact.'},
+  pay_collection:{lo:0,hi:80,ex:'Impact depends on the scoring model. Newer models (FICO 9, VantageScore 4.0) ignore paid collections entirely. Older models (FICO 8) still count them similarly to unpaid.',cv:'💡 Before paying, negotiate "pay for delete" in writing. A deleted entry is better than a paid entry under every scoring model.'},
+  dispute_error:{lo:10,hi:100,ex:'Removing an inaccurate negative item can produce a dramatic improvement. The exact impact depends on what was removed — a wrongly reported collection could be worth 50–100+ points.',cv:'💡 You have the right under the FCRA to dispute any inaccurate item. Send disputes by certified mail with supporting documentation — never use online portals alone.'},
+  hard_inquiry:{lo:-10,hi:-3,ex:'Hard inquiries lower your score slightly but the effect is small and temporary — most stop impacting your score after 12 months.',cv:'💡 Multiple mortgage, auto, or student loan inquiries within 14–45 days count as a single inquiry for rate-shopping purposes.'},
+  bankruptcy:{lo:-200,hi:-130,ex:'Bankruptcy produces one of the most severe drops possible. Chapter 7 stays 10 years, Chapter 13 stays 7. Many scores begin recovering within 12–18 months as positive history is rebuilt.',cv:'💡 Consult a bankruptcy attorney before deciding — many offer free consultations. The credit impact is significant but not permanent.'},
+};
+
+function calcImpact(){
+  const cur=+document.getElementById('si-score').value;
+  const sel=document.querySelector('input[name="scenario"]:checked');
+  if(!cur||cur<300||cur>850){alert('Please enter your current score (300–850).');return;}
+  if(!sel){alert('Please select a scenario.');return;}
+  const s=SD[sel.value];
+  const mid=Math.round((s.lo+s.hi)/2);
+  const after=Math.max(300,Math.min(850,cur+mid));
+  const delta=after-cur;
+  document.getElementById('si-before').textContent=cur;
+  document.getElementById('si-after').textContent=after;
+  document.getElementById('si-after').style.color=delta>=0?'var(--green)':'var(--red)';
+  document.getElementById('si-delta').textContent=(delta>=0?'+':'')+delta+' pts';
+  document.getElementById('si-delta').style.color=delta>=0?'var(--green)':'var(--red)';
+  document.getElementById('si-explain').textContent=s.ex;
+  document.getElementById('si-caveat').textContent=s.cv;
+  const cls=delta>=30?'result-excellent':delta>=0?'result-good':delta>=-20?'result-fair':'result-poor';
+  document.getElementById('si-result').className='result '+cls+' show';
+}
+</script>
+</body>
+</html>

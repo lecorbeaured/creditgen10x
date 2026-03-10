@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Debt Payoff Calculator — See Your Exact Payoff Date | CreditGen 10X</title>
+<meta name="description" content="Calculate exactly when you'll be debt-free and how much interest you'll save with extra payments. Free debt payoff calculator — no signup required.">
+<link rel="canonical" href="https://creditgen10x.com/debt-payoff-calculator">
+<meta property="og:title" content="Free Debt Payoff Calculator | CreditGen 10X">
+<meta property="og:description" content="Enter your balance, APR, and monthly payment to see your exact payoff date and total interest cost. Free and instant.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://creditgen10x.com/debt-payoff-calculator">
+<meta name="robots" content="index, follow">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Free Debt Payoff Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "description": "Calculate your exact debt payoff date and total interest cost. See how much extra payments save in interest and months.",
+      "url": "https://creditgen10x.com/debt-payoff-calculator",
+      "provider": { "@type": "Organization", "name": "CreditGen 10X" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does a debt payoff calculator work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A debt payoff calculator uses amortization math to model how your balance decreases month by month. It takes your current balance, annual interest rate (APR), and monthly payment, then calculates the exact number of months until the balance reaches zero and the total interest paid over that period." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the debt snowball method?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The debt snowball method involves paying off your smallest debt balance first while making minimum payments on all others. When the smallest debt is paid off, you roll that payment into the next smallest. The quick wins from clearing accounts build motivation and momentum." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the debt avalanche method?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The debt avalanche method targets your highest-interest-rate debt first while making minimum payments on everything else. This approach minimizes the total interest paid over time and is mathematically more efficient than the snowball method, though it may take longer to eliminate your first account." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does an extra $100 per month save on debt?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your balance and APR. On a $5,000 balance at 22% APR with a $150 minimum payment, adding $100 extra per month cuts the payoff timeline from over 6 years to under 2 years and saves over $2,400 in interest. Use the calculator above to see the exact numbers for your specific debt." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I pay off debt or invest?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If your debt carries an APR above 8–10%, paying it off first typically produces a better return than investing, since stock market average returns are approximately 7–10% annually. Credit card debt at 20%+ APR is almost always worth paying off before investing beyond an employer 401(k) match." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does paying off debt improve your credit score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Paying off credit card balances reduces your credit utilization ratio, which is 30% of your FICO score. You'll typically see score improvement within one to two billing cycles. Paying off installment loans has a smaller but still positive effect on your credit score." }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Use the Debt Payoff Calculator",
+      "step": [
+        { "@type": "HowToStep", "name": "Enter your total debt balance", "text": "Input the current balance of the debt you want to pay off, or the total across multiple debts." },
+        { "@type": "HowToStep", "name": "Enter your average APR", "text": "Find your interest rate on your most recent statement or in your card's app. For multiple debts, calculate a weighted average." },
+        { "@type": "HowToStep", "name": "Enter your monthly payment", "text": "Enter the amount you currently pay or plan to pay each month — must be more than the minimum to make progress." },
+        { "@type": "HowToStep", "name": "Enter an extra monthly payment", "text": "Optionally enter any additional amount you can add each month to accelerate payoff." },
+        { "@type": "HowToStep", "name": "Click Calculate Payoff", "text": "See your exact payoff date, total interest cost, and how much extra payments save in both money and time." }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://creditgen10x.com" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://creditgen10x.com/tools.html" },
+        { "@type": "ListItem", "position": 3, "name": "Debt Payoff Calculator", "item": "https://creditgen10x.com/debt-payoff-calculator" }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{--teal:#0d9488;--teal-dark:#0f766e;--teal-light:#d1fae5;--sage:#f5f7f2;--navy:#1a2e1a;--muted:#4a5568;--border:#dde5e0;--white:#ffffff;--green:#16a34a;--red:#dc2626}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:var(--sage);color:var(--navy);line-height:1.6}
+.site-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;position:sticky;top:0;z-index:100;box-shadow:0 1px 10px rgba(0,0,0,.06)}
+.nav-inner{max-width:860px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px}
+.site-logo{text-decoration:none}
+.logo-text{font-family:'Fraunces',serif;font-size:1.18rem;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.logo-text span{color:var(--teal);font-style:italic}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--teal)!important;color:white!important;padding:9px 22px!important;border-radius:100px!important;font-weight:700!important;font-size:.85rem!important}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+.page-hero{background:var(--white);border-bottom:1px solid var(--border);padding:36px 0 30px}
+.breadcrumb{font-size:.76rem;color:var(--muted);margin-bottom:12px}
+.breadcrumb a{color:var(--teal);text-decoration:none;font-weight:600}
+.page-hero h1{font-family:'Fraunces',serif;font-size:clamp(1.7rem,4vw,2.5rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:10px}
+.page-hero h1 em{font-style:italic;color:var(--teal)}
+.page-hero>div>p{color:var(--muted);font-size:.97rem;margin-bottom:18px}
+.hbadges{display:flex;flex-wrap:wrap;gap:8px}
+.hbadge{display:inline-flex;align-items:center;gap:5px;background:var(--teal-light);color:#065f46;padding:5px 12px;border-radius:100px;font-size:.73rem;font-weight:700}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+.stat-box{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:18px 20px;text-align:center}
+.stat-num{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:var(--teal);letter-spacing:-.02em}
+.stat-lbl{font-size:.77rem;color:var(--muted);margin-top:4px}
+.tool-card{background:var(--white);border-radius:20px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(0,0,0,.05);overflow:hidden;margin:28px 0}
+.tool-card-top{padding:24px 28px 0;display:flex;align-items:flex-start;gap:14px}
+.tool-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;background:var(--teal-light)}
+.tool-card-meta{flex:1}
+.tool-card-meta h2{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:900;letter-spacing:-.01em;margin-bottom:4px}
+.tool-card-meta p{font-size:.82rem;color:var(--muted);line-height:1.5}
+.tool-body{padding:20px 28px 28px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.04em;margin-bottom:5px;text-transform:uppercase}
+.field input{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:.95rem;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);outline:none;transition:border-color .15s,box-shadow .15s;-moz-appearance:textfield}
+.field input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(13,148,136,.12)}
+.field input::-webkit-outer-spin-button,.field input::-webkit-inner-spin-button{-webkit-appearance:none}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.prefix-wrap{position:relative}
+.prefix-wrap .prefix{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:600;font-size:.95rem;pointer-events:none}
+.prefix-wrap input{padding-left:26px!important}
+.calc-btn{width:100%;padding:13px;background:var(--teal);color:white;border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:4px;box-shadow:0 3px 12px rgba(13,148,136,.28)}
+.calc-btn:hover{background:var(--teal-dark);transform:translateY(-1px)}.calc-btn:active{transform:translateY(0)}
+.result{margin-top:16px;padding:16px 18px;border-radius:14px;display:none;animation:fadeUp .3s ease;background:var(--sage);border:1.5px solid var(--border)}
+.result.show{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.87rem}
+.result-row:last-child{border-bottom:none}
+.result-row-label{color:var(--muted)}.result-row-val{font-weight:700;color:var(--navy)}
+.result-text{font-size:.88rem;color:var(--muted);line-height:1.6;margin-top:8px}
+.prose{background:var(--white);border-radius:20px;border:1px solid var(--border);padding:44px 48px;margin:28px 0;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.prose h2{font-family:'Fraunces',serif;font-size:1.45rem;font-weight:900;letter-spacing:-.02em;color:var(--navy);margin:36px 0 14px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+.prose h2:first-child{margin-top:0}
+.prose h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin:24px 0 10px}
+.prose p{font-size:.97rem;line-height:1.85;color:#374151;margin-bottom:18px}
+.prose ul,.prose ol{margin:0 0 18px 22px;line-height:1.9;color:#374151;font-size:.97rem}
+.prose li{margin-bottom:5px}
+.prose strong{color:var(--navy);font-weight:700}
+.prose a{color:var(--teal);font-weight:600;text-decoration:none}
+.prose a:hover{text-decoration:underline}
+.prose blockquote{border-left:4px solid var(--teal);background:var(--teal-light);padding:14px 20px;border-radius:0 10px 10px 0;margin:20px 0}
+.prose blockquote p{margin:0;color:#065f46;font-style:italic}
+.compare-box{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.cmethod{background:var(--sage);border:1px solid var(--border);border-radius:14px;padding:18px 20px}
+.cmethod h4{font-size:.92rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.cmethod p{font-size:.83rem;color:var(--muted);line-height:1.6;margin:0}
+.cmethod.winner{border-color:var(--teal);background:#f0fdfa}
+.faq-wrap{margin:28px 0}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:18px 22px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q .arr{font-size:.8rem;transition:transform .2s;flex-shrink:0}
+.faq-item.open .faq-q .arr{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s}
+.faq-item.open .faq-a{max-height:400px;padding:0 22px 18px}
+.faq-a p{font-size:.91rem;color:#4b5563;line-height:1.7;margin:0}
+.cta-box{background:linear-gradient(135deg,var(--navy),#2d5a1b);border-radius:20px;padding:36px 40px;text-align:center;margin:28px 0;color:var(--white)}
+.cta-box h3{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;margin-bottom:10px}
+.cta-box p{font-size:.95rem;opacity:.85;margin-bottom:22px;line-height:1.65}
+.cta-box a{display:inline-block;background:var(--teal);color:white;padding:13px 32px;border-radius:100px;font-weight:700;font-size:.95rem;text-decoration:none;box-shadow:0 4px 16px rgba(13,148,136,.4)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+.related-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--teal);border-radius:14px;padding:16px 18px;text-decoration:none;transition:box-shadow .15s;display:block}
+.related-card:hover{box-shadow:0 4px 16px rgba(13,148,136,.15)}
+.related-icon{font-size:1.4rem;margin-bottom:8px}
+.related-title{font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.related-desc{font-size:.74rem;color:var(--muted)}
+footer{background:#0f1f0f;border-top:1px solid #1e3a1e;padding:32px 24px;text-align:center;margin-top:60px}
+footer p{font-size:.79rem;color:#6b8f6b;line-height:1.8}
+footer a{color:#6b8f6b;text-decoration:none}
+footer a:hover{color:var(--teal-light)}
+@media(max-width:700px){
+  .prose{padding:26px 20px}.stat-row,.related-grid,.compare-box{grid-template-columns:1fr 1fr}
+  .site-nav{padding:0 16px}.nav-links a:not(.nav-cta){display:none}.field-row{grid-template-columns:1fr}
+  .cta-box{padding:28px 22px}
+}
+@media(max-width:480px){.stat-row,.related-grid,.compare-box{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="site-logo"><span class="logo-text">Credit<span>Gen</span> 10X</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a><a href="/blog.html">Blog</a><a href="/tools.html">All Tools</a>
+      <a href="/#guide" class="nav-cta">Free Guide &rarr;</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="/">Home</a> › <a href="/tools.html">Tools</a> › Debt Payoff Calculator</div>
+    <h1>Free Debt Payoff <em>Calculator</em></h1>
+    <p>See your exact payoff date, total interest cost, and how much extra payments save. Takes 30 seconds. No signup required.</p>
+    <div class="hbadges">
+      <span class="hbadge">💸 Amortization Math</span>
+      <span class="hbadge">📅 Exact Payoff Date</span>
+      <span class="hbadge">💡 Interest Savings</span>
+      <span class="hbadge">$0 Free</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap" style="padding-top:32px;padding-bottom:60px;">
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="stat-num">$6,000+</div><div class="stat-lbl">Avg. U.S. household credit card debt</div></div>
+    <div class="stat-box"><div class="stat-num">20%+</div><div class="stat-lbl">Average credit card APR in 2026</div></div>
+    <div class="stat-box"><div class="stat-num">$50/mo</div><div class="stat-lbl">Extra payment can save hundreds in interest</div></div>
+  </div>
+
+  <!-- LIVE CALCULATOR -->
+  <div class="tool-card">
+    <div class="tool-card-top">
+      <div class="tool-icon">💸</div>
+      <div class="tool-card-meta">
+        <h2>Debt Payoff Calculator</h2>
+        <p>See exactly when you'll be debt-free and how much interest you'll save by adding extra payments.</p>
+      </div>
+    </div>
+    <div class="tool-body">
+      <div class="field-row">
+        <div class="field">
+          <label>Total Debt Balance</label>
+          <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="dp-balance" placeholder="8500" min="0"></div>
+        </div>
+        <div class="field">
+          <label>Average APR (%)</label>
+          <input type="number" id="dp-apr" placeholder="22.5" min="0" max="100" step="0.1">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Monthly Payment</label>
+          <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="dp-payment" placeholder="250" min="0"></div>
+        </div>
+        <div class="field">
+          <label>Extra / Month (optional)</label>
+          <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="dp-extra" placeholder="0" min="0"></div>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcDebt()">Calculate Payoff →</button>
+      <div class="result" id="dp-result">
+        <div class="result-row"><span class="result-row-label">Payoff date (current payments)</span><span class="result-row-val" id="dp-min-date">—</span></div>
+        <div class="result-row"><span class="result-row-label">Total interest you'll pay</span><span class="result-row-val" id="dp-min-interest">—</span></div>
+        <div class="result-row" style="background:rgba(13,148,136,.07);border-radius:8px;padding:8px 10px;margin-top:8px;border:none;">
+          <span class="result-row-label" style="color:var(--teal-dark);font-weight:600;">Adding extra payment — saves</span>
+          <span class="result-row-val" id="dp-savings" style="color:var(--teal-dark);">—</span>
+        </div>
+        <div class="result-row"><span class="result-row-label">New payoff date with extra</span><span class="result-row-val" id="dp-extra-date">—</span></div>
+        <p class="result-text" id="dp-tip"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE -->
+  <article class="prose">
+
+    <h2>Why Minimum Payments Are Designed to Keep You in Debt</h2>
+    <p>Credit card minimum payments are calculated as a small percentage of your balance — typically 1–3% — plus that month's interest charge. As your balance decreases, so does your minimum payment. The result: you're constantly chasing a shrinking target, paying mostly interest, and barely touching principal.</p>
+    <p>Federal law requires lenders to show you on every statement how long it will take to pay off your balance making only minimum payments. That number is often alarming: 15, 20, or even 30 years. This is by design. The longer you carry debt, the more interest the lender earns.</p>
+
+    <blockquote>
+      <p>A $6,000 balance at 22% APR with a $150 minimum payment takes over 6 years to pay off and costs more than $3,800 in interest. Adding just $100/month extra cuts the timeline to under 2.5 years and reduces total interest by more than $2,400.</p>
+    </blockquote>
+
+    <h2>Snowball vs. Avalanche — Which Method Is Right for You?</h2>
+    <p>Once you've committed to paying off debt, you need a strategy for which debt to attack first. The two proven approaches are the snowball and avalanche methods. Here's how they compare:</p>
+
+    <div class="compare-box">
+      <div class="cmethod">
+        <h4>🔵 Debt Snowball</h4>
+        <p>Pay off smallest balance first. Roll that payment into the next smallest. Provides quick wins and psychological momentum. Best for people who need motivation to stick with a plan.</p>
+      </div>
+      <div class="cmethod winner">
+        <h4>📈 Debt Avalanche</h4>
+        <p>Pay off highest APR first. Minimizes total interest paid. Mathematically superior. Best for disciplined, motivated people who won't quit without the early wins.</p>
+      </div>
+    </div>
+
+    <p>Research shows that the best method is the one you'll actually complete. A person who uses the snowball method and stays committed will outperform someone who picks the avalanche but abandons it after six months. If your debts have similar balances and APRs, the avalanche is a clear winner. If motivation is an issue, start with snowball.</p>
+
+    <h2>How Much Can Extra Payments Actually Save?</h2>
+    <p>The impact of extra payments is more dramatic than most people realize. Interest compounds monthly — which means every extra dollar you pay today eliminates future months of interest on top of interest.</p>
+
+    <h3>Example: $5,000 at 22% APR</h3>
+    <ul>
+      <li>Minimum payment only (~$125/mo): Payoff in ~8 years, $5,800 in interest</li>
+      <li>Adding $50/mo extra: Payoff in ~4 years, $2,600 in interest — saves $3,200</li>
+      <li>Adding $100/mo extra: Payoff in ~2.5 years, $1,400 in interest — saves $4,400</li>
+      <li>Adding $200/mo extra: Payoff in ~18 months, $900 in interest — saves $4,900</li>
+    </ul>
+    <p>The numbers above illustrate why even small additional payments have outsized impact on high-APR debt. Use the calculator above to run the exact numbers for your situation.</p>
+
+    <h2>5 Practical Ways to Find Extra Payment Money</h2>
+
+    <h3>1. Apply Windfalls Immediately</h3>
+    <p>Tax refunds, bonuses, and side income often get absorbed into everyday spending if they sit in a checking account. Set a rule: any lump sum above a threshold goes directly to your highest-priority debt before you can spend it. A single $1,000 tax refund applied to a 22% APR card eliminates far more total cost than the same amount spent on discretionary purchases.</p>
+
+    <h3>2. Cancel Forgotten Subscriptions</h3>
+    <p>Review your last two months of bank and credit card statements. Most people find $30–$80 in recurring charges they've forgotten about — streaming services, gym memberships, app subscriptions. Even $40/month redirected to debt payoff is $480 per year and potentially thousands in avoided interest over the full payoff period.</p>
+
+    <h3>3. Try a Balance Transfer</h3>
+    <p>If your credit score is above 670, you may qualify for a balance transfer card with 0% APR for 12–21 months. During that promotional window, every dollar of your payment goes toward principal — not interest. Watch for transfer fees (typically 3–5%) and make sure you can pay off the balance before the promotion ends, when the rate often jumps to 25%+.</p>
+
+    <h3>4. Negotiate a Lower APR</h3>
+    <p>Call your credit card company and ask directly for a lower interest rate. This works more often than people expect — particularly if you've been a customer for over a year and have a history of on-time payments. A 3-point reduction on a $5,000 balance saves $150/year in interest with zero effort.</p>
+
+    <h3>5. Temporarily Reduce Retirement Contributions</h3>
+    <p>If you're carrying credit card debt above 15% APR, you're likely paying more in interest than you earn in investment returns. Temporarily reducing 401(k) contributions to the minimum employer-match level while paying off high-APR debt can make mathematical sense — then resume full contributions once the debt is gone.</p>
+
+    <h2>What Happens to Your Credit Score While Paying Off Debt</h2>
+    <p>Paying off credit card balances reduces your credit utilization ratio, which is 30% of your FICO score. This improvement is visible within one to two billing cycles after your balance drops. If you're carrying balances on multiple cards, prioritizing the one closest to its limit produces the fastest utilization improvement.</p>
+    <p>One important note: after paying off a credit card, <strong>keep the account open</strong>. Closing a paid card removes its available credit from your utilization calculation, which can actually raise your utilization ratio and hurt your score despite having less debt.</p>
+
+    <h2>Dealing With Debt Already in Collections</h2>
+    <p>If some of your debt has been sent to collections, the strategy changes. Before paying any collection account, check:</p>
+    <ul>
+      <li><strong>Debt validation:</strong> You have the right under the Fair Debt Collection Practices Act to request written validation that the debt is yours and the amount is accurate. Send a validation letter by certified mail within 30 days of first contact.</li>
+      <li><strong>Statute of limitations:</strong> Each state has a deadline after which collectors cannot sue you for old debt. Check our <a href="/statute-of-limitations-checker.html">Debt SOL Checker</a> to look up your state.</li>
+      <li><strong>Pay for delete:</strong> Negotiate with the collector in writing to remove the entry from your credit report entirely in exchange for payment. Get the agreement in writing before paying.</li>
+      <li><strong>Banned collectors:</strong> Some agencies have been permanently banned from debt collection by the FTC. Check the <a href="/banned-debt-collectors.html">Banned Collectors List</a> before paying any unfamiliar agency.</li>
+    </ul>
+
+  </article>
+
+  <!-- FAQ -->
+  <h2 style="font-family:'Fraunces',serif;font-size:1.45rem;font-weight:900;letter-spacing:-.02em;margin:8px 0 16px;">Frequently Asked Questions</h2>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <button class="faq-q">How does a debt payoff calculator work? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>It uses amortization math to model how your balance decreases month by month. Given your balance, APR, and monthly payment, it calculates exactly how many months until you're debt-free and the total interest paid over that period.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What is the difference between snowball and avalanche methods? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>Snowball targets smallest balance first (motivational wins). Avalanche targets highest APR first (saves more money). Both work — the best method is the one you'll stick with. If your APRs are similar, avalanche is clearly better. If motivation is a concern, start with snowball.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">How much does an extra $100/month actually save? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>It depends on your balance and APR. On a $5,000 balance at 22% APR with a $150 minimum, adding $100/month cuts the payoff time from 6+ years to under 2.5 years and saves over $2,400 in interest. Use the calculator above to see your exact numbers.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Should I pay off debt or build an emergency fund first? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>Build a small emergency buffer of $500–$1,000 first. Without it, unexpected expenses will push you back into debt. Then aggressively pay off high-APR debt. Once high-interest debt is cleared, rebuild a full 3–6 month emergency fund before increasing investments.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Does paying off debt hurt your credit score? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>No — paying off credit card debt improves your utilization ratio, which is 30% of your FICO score. You'll see improvement within 1–2 billing cycles. The one exception: closing a paid card can hurt your score by removing available credit. Keep paid cards open with zero balance.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What is a good APR on a credit card? <span class="arr">▼</span></button>
+      <div class="faq-a"><p>The average credit card APR in 2026 is over 20%. If you carry a balance, anything below 15% is good. Anything above 20% is worth prioritizing for payoff or balance transfer. If you pay in full every month, APR is irrelevant since you never pay interest.</p></div>
+    </div>
+  </div>
+
+  <!-- RELATED TOOLS -->
+  <h2 style="font-family:'Fraunces',serif;font-size:1.3rem;font-weight:900;letter-spacing:-.02em;margin:36px 0 14px;">Related Free Tools</h2>
+  <div class="related-grid">
+    <a href="/credit-score-estimator" class="related-card">
+      <div class="related-icon">📊</div>
+      <div class="related-title">Credit Score Estimator</div>
+      <div class="related-desc">See your estimated FICO range based on your 5 key credit factors.</div>
+    </a>
+    <a href="/credit-repair-timeline-estimator" class="related-card">
+      <div class="related-icon">📅</div>
+      <div class="related-title">Credit Repair Timeline</div>
+      <div class="related-desc">How long until you hit your target score? Get a personalized roadmap.</div>
+    </a>
+    <a href="/statute-of-limitations-checker.html" class="related-card">
+      <div class="related-icon">⚖️</div>
+      <div class="related-title">Debt SOL Checker</div>
+      <div class="related-desc">Look up how long collectors can legally sue you in your state.</div>
+    </a>
+  </div>
+
+  <div class="cta-box">
+    <h3>Your Report Has the Answers</h3>
+    <p>While paying off debt, make sure there are no errors on your credit report adding to your problem. Our free guide shows you how to read your report and dispute inaccuracies — a step many people miss that can save hundreds.</p>
+    <a href="/#guide">Get the Free Guide →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog.html">Blog</a> &nbsp;·&nbsp; <a href="/tools.html">Free Tools</a> &nbsp;·&nbsp; <a href="/banned-debt-collectors.html">Banned Collectors</a></p>
+  <p style="margin-top:8px;">&copy; <span id="yr"></span> CreditGen 10X · Educational content only — not financial or legal advice.</p>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+function calcDebt(){
+  const bal=+document.getElementById('dp-balance').value;
+  const apr=+document.getElementById('dp-apr').value;
+  const pmt=+document.getElementById('dp-payment').value;
+  const extra=+document.getElementById('dp-extra').value||0;
+  if(!bal||!apr||!pmt){alert('Please fill in balance, APR, and monthly payment.');return;}
+  const rate=apr/100/12;
+  function amortize(b,p,r){let m=0,int=0;while(b>0&&m<1200){const i=b*r;int+=i;b=b+i-p;if(b<0)b=0;m++;}return{m,int};}
+  const base=amortize(bal,pmt,rate);
+  const boost=amortize(bal,pmt+extra,rate);
+  function addM(n){const d=new Date();d.setMonth(d.getMonth()+n);return d.toLocaleDateString('en-US',{month:'short',year:'numeric'})+' ('+n+' mo)';}
+  function fmt(n){return'$'+Math.round(n).toLocaleString();}
+  document.getElementById('dp-min-date').textContent=addM(base.m);
+  document.getElementById('dp-min-interest').textContent=fmt(base.int);
+  document.getElementById('dp-extra-date').textContent=extra?addM(boost.m):'—';
+  document.getElementById('dp-savings').textContent=extra?fmt(base.int-boost.int)+' interest, '+(base.m-boost.m)+' months sooner':'Enter extra amount above';
+  let tip=apr>20?'⚠️ APR over 20% — consider balance transfer or avalanche method to minimize interest.':extra===0?'💡 Even $25/month extra can cut months off and save hundreds in interest.':'🎯 Great move. Adding '+fmt(extra)+'/month accelerates payoff significantly.';
+  document.getElementById('dp-tip').textContent=tip;
+  document.getElementById('dp-result').classList.add('show');
+}
+</script>
+</body>
+</html>

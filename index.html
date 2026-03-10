@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#1e3a8a">
+    <meta name="theme-color" content="#0d9488">
     
     <!-- GEO: AI crawler access -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -180,97 +180,180 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
+            color: #1a2e1a;
+            background: #f5f7f2;
         }
-        
-        .container {
-            max-width: 800px;
+
+        :root {
+            --teal:       #0d9488;
+            --teal-dark:  #0f766e;
+            --teal-light: #d1fae5;
+            --sage:       #f5f7f2;
+            --navy:       #1a2e1a;
+            --muted:      #4a5568;
+            --border:     #dde5e0;
+            --white:      #ffffff;
+        }
+
+        /* ── NAV ─────────────────────────────────────────── */
+        .site-nav {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.06);
+        }
+        .site-nav-inner {
+            max-width: 1060px;
             margin: 0 auto;
-            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 66px;
         }
-        
-        /* Header */
+        .site-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .site-logo-text {
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.18rem;
+            font-weight: 900;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+        }
+        .site-logo-text span { color: var(--teal); font-style: italic; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .nav-links a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+        .nav-links a:hover { color: var(--navy); }
+        .nav-cta {
+            background: var(--teal) !important;
+            color: white !important;
+            padding: 9px 22px !important;
+            border-radius: 100px !important;
+            font-weight: 600 !important;
+            font-size: 0.85rem !important;
+            box-shadow: 0 2px 10px rgba(13,148,136,0.3) !important;
+            transition: background 0.15s, transform 0.15s !important;
+        }
+        .nav-cta:hover {
+            background: var(--teal-dark) !important;
+            transform: translateY(-1px) !important;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── HERO ────────────────────────────────────────── */
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
+            background: var(--sage);
+            color: var(--navy);
+            padding: 0;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
         }
-        
-        .logo {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-        
+
+        /* invisible — replaced by new hero */
+        .logo { display: none; }
+
         h1 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 18px;
+            color: var(--navy);
+            letter-spacing: -0.02em;
         }
-        
+
         .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto 30px;
+            font-size: 1.05rem;
+            color: var(--muted);
+            max-width: 500px;
+            margin: 0 0 28px;
         }
         
         .cta-button {
             display: inline-block;
-            background: #fbbf24;
-            color: #1e3a8a;
-            padding: 18px 40px;
-            font-size: 1.2rem;
+            background: var(--teal);
+            color: white;
+            padding: 16px 36px;
+            font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 100px;
             border: none;
             cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s;
+            box-shadow: 0 4px 16px rgba(13,148,136,0.35);
         }
         
         .cta-button:hover {
-            background: #f59e0b;
+            background: var(--teal-dark);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13,148,136,0.4);
         }
         
         /* Content Sections */
         .content-section {
-            padding: 50px 0;
+            padding: 50px 32px;
+            background: var(--white);
+            border-radius: 16px;
+            margin: 0 0 20px;
+            box-shadow: 0 1px 8px rgba(0,0,0,0.05);
         }
         
         .content-section h2 {
-            color: #1e3a8a;
-            font-size: 1.8rem;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #3b82f6;
+            color: var(--navy);
+            font-family: 'Fraunces', Georgia, serif;
+            font-size: 1.65rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--teal-light);
+            letter-spacing: -0.01em;
         }
         
         .content-section h3 {
-            color: #1e40af;
-            font-size: 1.3rem;
-            margin: 30px 0 15px;
+            color: var(--teal-dark);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 28px 0 12px;
         }
         
         .content-section p {
-            color: #374151;
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            line-height: 1.7;
+            color: var(--muted);
+            margin-bottom: 18px;
+            font-size: 1rem;
+            line-height: 1.8;
         }
         
         .content-section ul {
-            margin-left: 30px;
-            color: #374151;
-            line-height: 2;
-            margin-bottom: 20px;
+            margin-left: 28px;
+            color: var(--muted);
+            line-height: 1.9;
+            margin-bottom: 18px;
         }
         
         .warning-box {
@@ -320,7 +403,7 @@
         .kikoff-section {
             background: #ffffff;
             border: 1px solid #e5e7eb;
-            border-left: 4px solid #7c3aed;
+            border-left: 4px solid #0d9488;
             padding: 20px 24px;
             border-radius: 0 10px 10px 0;
             margin: 30px 0;
@@ -343,7 +426,7 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: #7c3aed;
+            color: #0d9488;
             margin-bottom: 4px;
         }
 
@@ -363,7 +446,7 @@
 
         .kikoff-cta {
             display: inline-block;
-            background: #7c3aed;
+            background: #0d9488;
             color: white;
             padding: 8px 18px;
             border-radius: 6px;
@@ -376,7 +459,7 @@
         }
 
         .kikoff-cta:hover {
-            background: #6d28d9;
+            background: #0f766e;
             color: white;
         }
 
@@ -387,86 +470,100 @@
         
         /* Email Capture Section */
         .email-capture {
-            background: #1e3a8a;
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
             color: white;
-            padding: 60px 0;
+            padding: 70px 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
         
         .email-capture h2 {
+            font-family: 'Fraunces', Georgia, serif;
             font-size: 2rem;
-            margin-bottom: 15px;
+            font-weight: 900;
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
         }
         
         .email-capture p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 30px;
+            font-size: 1rem;
+            opacity: 0.88;
+            max-width: 520px;
+            margin: 0 auto 28px;
         }
         
         .email-form {
-            max-width: 500px;
+            max-width: 460px;
             margin: 0 auto;
         }
         
         .email-form input {
             width: 100%;
-            padding: 15px;
-            font-size: 1.1rem;
+            padding: 15px 18px;
+            font-size: 1rem;
             border: none;
-            border-radius: 8px;
-            margin-bottom: 15px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+            outline: none;
+            font-family: 'DM Sans', sans-serif;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.12);
         }
         
         .email-form button {
             width: 100%;
-            background: #fbbf24;
-            color: #1e3a8a;
+            background: white;
+            color: #0d9488;
             padding: 15px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             border: none;
-            border-radius: 8px;
+            border-radius: 100px;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.2s;
+            font-family: 'DM Sans', sans-serif;
         }
         
         .email-form button:hover {
-            background: #f59e0b;
+            background: #f0fdf4;
+            transform: translateY(-1px);
         }
         
         .trust-text {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            margin-top: 18px;
+            font-size: 0.85rem;
+            opacity: 0.75;
         }
         
         /* FAQ Section */
         .faq-section {
-            background: #f8fafc;
-            padding: 60px 0;
+            background: var(--sage);
+            padding: 70px 0;
         }
         
         .faq-section h2 {
             text-align: center;
-            color: #1e3a8a;
+            color: var(--navy);
+            font-family: 'Fraunces', Georgia, serif;
             font-size: 2rem;
+            font-weight: 900;
             margin-bottom: 40px;
+            letter-spacing: -0.02em;
         }
         
         .faq-item {
             background: white;
-            margin-bottom: 20px;
-            border-radius: 10px;
+            margin-bottom: 12px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
         }
         
         .faq-question {
-            padding: 25px;
+            padding: 22px 24px;
             font-weight: 600;
-            color: #1e3a8a;
+            color: var(--navy);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -475,13 +572,15 @@
             border: none;
             width: 100%;
             text-align: left;
-            font-size: 1rem;
+            font-size: 0.97rem;
+            font-family: 'DM Sans', sans-serif;
+            transition: color 0.15s;
         }
         
         .faq-answer {
-            padding: 0 25px 25px;
-            color: #4b5563;
-            line-height: 1.7;
+            padding: 0 24px 22px;
+            color: var(--muted);
+            line-height: 1.75;
             display: none;
         }
         
@@ -491,21 +590,22 @@
         
         /* Footer */
         footer {
-            background: #0f172a;
-            color: #94a3b8;
-            padding: 40px 0;
+            background: #0f1f0f;
+            color: #8a9e8a;
+            padding: 44px 0;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
         
         footer a {
-            color: #60a5fa;
+            color: #5eead4;
             text-decoration: none;
             cursor: pointer;
+            transition: color 0.15s;
         }
         
         footer a:hover {
-            color: #93c5fd;
+            color: #99f6e4;
             text-decoration: underline;
         }
         
@@ -517,7 +617,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.7);
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
             z-index: 1000;
             justify-content: center;
             align-items: center;
@@ -531,18 +632,22 @@
         .popup-content {
             background: white;
             padding: 40px;
-            border-radius: 16px;
+            border-radius: 20px;
             max-width: 700px;
             width: 100%;
-            max-height: 80vh;
+            max-height: 82vh;
             overflow-y: auto;
             position: relative;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.2);
         }
         
         .popup-content h2 {
-            color: #1e3a8a;
+            color: var(--navy);
+            font-family: 'Fraunces', Georgia, serif;
             margin-bottom: 20px;
-            font-size: 1.8rem;
+            font-size: 1.7rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
         }
         
         .popup-content h3 {
@@ -552,9 +657,9 @@
         }
         
         .popup-content p, .popup-content li {
-            color: #374151;
-            line-height: 1.7;
-            margin-bottom: 15px;
+            color: #4a5568;
+            line-height: 1.75;
+            margin-bottom: 14px;
         }
         
         .popup-content ul {
@@ -581,25 +686,130 @@
             color: #1f2937;
         }
         
+        /* ===========================================
+           MOBILE OPTIMIZATIONS
+        =========================================== */
+
+        /* Tablet <=900px */
+        @media (max-width: 900px) {
+            .container { padding: 0 20px; }
+            .content-section { padding: 36px 20px; border-radius: 12px; }
+        }
+
+        /* Mobile <=768px */
         @media (max-width: 768px) {
-            h1 { font-size: 1.8rem; }
-            .content-section h2 { font-size: 1.5rem; }
-            .popup-content { padding: 30px 20px; }
+            /* Nav */
+            .site-nav { padding: 0 16px; }
+            .site-nav-inner { height: 58px; }
+            .site-logo-text { font-size: 1rem; }
+            .nav-links a:not(.nav-cta) { display: none; }
+            .nav-cta { padding: 8px 16px !important; font-size: 0.82rem !important; }
+
+            /* Hero copy */
+            h1 { font-size: 1.9rem !important; }
+            .cta-button { display: block; width: 100%; text-align: center; box-sizing: border-box; }
+
+            /* Content */
+            .content-section { padding: 28px 16px; margin: 0 0 10px; border-radius: 10px; }
+            .content-section h2 { font-size: 1.3rem; }
+            .content-section h3 { font-size: 1rem; }
+            .content-section p, .content-section ul { font-size: 0.95rem; }
+
+            /* Boxes */
+            .warning-box, .tip-box { padding: 14px 16px; margin: 16px 0; }
+
+            /* Affiliate cards */
+            .kikoff-section { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; padding: 16px !important; }
+            .kikoff-cta { width: 100% !important; text-align: center !important; }
+
+            /* Email section */
+            .email-capture { padding: 48px 20px; }
+            .email-capture h2 { font-size: 1.55rem; }
+            .email-capture p { font-size: 0.92rem; }
+            .email-form input { font-size: 0.95rem; padding: 13px 16px; }
+            .email-form button { font-size: 0.95rem; padding: 13px; }
+
+            /* FAQ */
+            .faq-section { padding: 44px 0; }
+            .faq-section h2 { font-size: 1.55rem; }
+            .faq-question { padding: 18px 16px; font-size: 0.92rem; }
+            .faq-answer { padding: 0 16px 18px; font-size: 0.9rem; }
+
+            /* Blog */
+            .footer-blog { padding: 36px 16px 0; }
+            .blog-grid { gap: 10px; }
+            .blog-card { padding: 14px 16px; }
+
+            /* Popups */
+            .popup-content { padding: 24px 16px; border-radius: 14px; max-height: 91vh; }
+            .popup-content h2 { font-size: 1.35rem; }
+            .popup-content h3 { font-size: 0.97rem; }
+            .popup-content p, .popup-content li { font-size: 0.9rem; }
+            .article-cta-box { padding: 18px 14px; }
+            .article-cta-box a { display: block; width: 100%; box-sizing: border-box; }
+
+            /* Layout */
+            main { padding: 16px 0 36px !important; }
+        }
+
+        /* Small mobile <=480px */
+        /* Tools footer grid */
+        .tools-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        /* Amazon affiliate cards */
+        .amzn-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #fff8e1;
+            border: 1px solid #fcd34d;
+            border-left: 4px solid #f59e0b;
+            border-radius: 0 10px 10px 0;
+            padding: 16px 20px;
+            margin: 12px 0;
+            text-decoration: none;
+            transition: box-shadow 0.2s;
+        }
+        .amzn-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .amzn-card-icon { font-size: 1.8rem; flex-shrink: 0; }
+        .amzn-card-body { flex: 1; min-width: 0; }
+        .amzn-card-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #b45309; margin: 0 0 3px; }
+        .amzn-card-title { font-size: 0.93rem; font-weight: 700; color: #1a1a1a; margin: 0 0 4px; line-height: 1.3; }
+        .amzn-card-desc { font-size: 0.82rem; color: #6b7280; margin: 0; }
+        .amzn-card-btn { background: #f59e0b; color: #1a1a1a; padding: 7px 14px; border-radius: 6px; font-size: 0.82rem; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
+
+        @media (max-width: 900px) {
+            .tools-footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .site-logo-svg ~ .site-logo-text { max-width: 130px; }
+            h1 { font-size: 1.7rem !important; }
+            .content-section h2 { font-size: 1.2rem; }
+            .faq-section h2, .email-capture h2 { font-size: 1.4rem; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .tools-footer-grid { grid-template-columns: 1fr; }
+            .amzn-card { flex-wrap: wrap; gap: 10px; }
+            .amzn-card-btn { width: 100%; text-align: center; padding: 10px 14px; }
         }
 
         /* Blog Footer Section */
         .footer-blog {
-            background: #0f172a;
-            border-top: 1px solid #1e293b;
+            background: #0f1f0f;
+            border-top: 1px solid #1a3320;
             padding: 50px 0 0;
         }
 
         .footer-blog-title {
-            color: #f1f5f9;
+            color: #d1fae5;
             font-size: 1rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -617,9 +827,9 @@
         }
 
         .blog-card {
-            background: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 10px;
+            background: #172817;
+            border: 1px solid #1e3820;
+            border-radius: 12px;
             padding: 18px 20px;
             cursor: pointer;
             transition: all 0.2s;
@@ -627,8 +837,8 @@
         }
 
         .blog-card:hover {
-            background: #273548;
-            border-color: #3b82f6;
+            background: #1e3320;
+            border-color: #0d9488;
             transform: translateY(-2px);
         }
 
@@ -637,12 +847,12 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: #3b82f6;
+            color: #5eead4;
             margin-bottom: 8px;
         }
 
         .blog-card-title {
-            color: #f1f5f9;
+            color: #ecfdf5;
             font-size: 0.95rem;
             font-weight: 600;
             line-height: 1.4;
@@ -650,7 +860,7 @@
         }
 
         .blog-card-excerpt {
-            color: #94a3b8;
+            color: #8aa08a;
             font-size: 0.82rem;
             line-height: 1.5;
         }
@@ -658,7 +868,7 @@
         .blog-card-read {
             display: inline-block;
             margin-top: 10px;
-            color: #3b82f6;
+            color: #5eead4;
             font-size: 0.82rem;
             font-weight: 600;
         }
@@ -684,8 +894,8 @@
         }
 
         .article-tag {
-            background: #dbeafe;
-            color: #1e40af;
+            background: #d1fae5;
+            color: #065f46;
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
@@ -700,21 +910,21 @@
         }
 
         .article-body h2 {
-            color: #1e3a8a;
-            font-size: 1.25rem;
+            color: #1a2e1a;
+            font-size: 1.2rem;
             margin: 28px 0 12px;
             padding-bottom: 8px;
-            border-bottom: 2px solid #e5e7eb;
+            border-bottom: 2px solid #d1fae5;
         }
 
         .article-body h3 {
-            color: #1e40af;
+            color: #0f766e;
             font-size: 1.05rem;
             margin: 20px 0 8px;
         }
 
         .article-body p {
-            color: #374151;
+            color: #4a5568;
             font-size: 0.97rem;
             line-height: 1.75;
             margin-bottom: 16px;
@@ -722,14 +932,14 @@
 
         .article-body ul, .article-body ol {
             margin: 0 0 16px 24px;
-            color: #374151;
+            color: #4a5568;
             font-size: 0.97rem;
             line-height: 1.9;
         }
 
         .article-faq {
-            background: #f8fafc;
-            border-radius: 10px;
+            background: #f5f7f2;
+            border-radius: 12px;
             padding: 20px 24px;
             margin: 24px 0;
         }
@@ -742,7 +952,7 @@
         }
 
         .article-faq-item {
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid #dde5e0;
             padding: 14px 0;
         }
 
@@ -753,20 +963,20 @@
 
         .article-faq-q {
             font-weight: 700;
-            color: #1e3a8a;
+            color: #1a2e1a;
             font-size: 0.95rem;
             margin-bottom: 6px;
         }
 
         .article-faq-a {
-            color: #4b5563;
+            color: #4a5568;
             font-size: 0.92rem;
             line-height: 1.65;
             margin: 0;
         }
 
         .article-cta-box {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, #0d9488, #0f766e);
             color: white;
             padding: 24px;
             border-radius: 12px;
@@ -782,39 +992,151 @@
 
         .article-cta-box a {
             display: inline-block;
-            background: #fbbf24;
-            color: #1e3a8a;
-            padding: 11px 28px;
-            border-radius: 7px;
+            background: white;
+            color: #0d9488;
+            padding: 12px 30px;
+            border-radius: 100px;
             font-weight: 700;
             text-decoration: none;
             font-size: 0.97rem;
         }
 
-        .article-cta-box a:hover { background: #f59e0b; }
+        .article-cta-box a:hover { background: #f0fdf4; }
     </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="logo">CreditGen 10X</div>
-            <h1>How to Read a Credit Report & Understand Collections</h1>
-            <p class="hero-subtitle">Stop guessing. Learn exactly what every line means—and get the 5 critical steps you MUST take before disputing any errors. (Most people skip these and fail.)</p>
-            <a href="#guide" class="cta-button">Get the Free Pre-Dispute Guide →</a>
+    <!-- ── STICKY NAV ──────────────────────────────────────── -->
+    <nav class="site-nav">
+        <div class="site-nav-inner">
+            <a href="/" class="site-logo">
+                <!-- SVG Logo -->
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="site-logo-svg">
+                    <rect width="38" height="38" rx="10" fill="#d1fae5"/>
+                    <path d="M19 7L9.5 12.5V19c0 6.4 4.2 12.4 9.5 13.8C24.3 31.4 28.5 25.4 28.5 19v-6.5L19 7z" fill="#0d9488" opacity="0.95"/>
+                    <path d="M14.5 19.5l3 3L23 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="site-logo-text">CreditGen <span>10X</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#guide">Free Guide</a>
+                <a href="/blog.html">Blog</a>
+                <a href="/tools.html">Tools</a>
+                <a href="#guide" class="nav-cta">Get Started →</a>
+            </div>
         </div>
+    </nav>
+
+    <!-- ── HERO ───────────────────────────────────────────── -->
+    <header>
+        <!-- Ambient blobs -->
+        <div style="position:absolute;top:-80px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(13,148,136,0.1) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
+        <div style="position:absolute;bottom:-60px;left:10%;width:300px;height:300px;background:radial-gradient(circle,rgba(99,102,241,0.07) 0%,transparent 70%);border-radius:50%;pointer-events:none;"></div>
+
+        <div style="max-width:1060px;margin:0 auto;padding:60px 32px 70px;display:flex;align-items:center;gap:48px;position:relative;z-index:1;">
+
+            <!-- Left: copy -->
+            <div style="flex:1;min-width:0;">
+                <!-- Live badge -->
+                <div style="display:inline-flex;align-items:center;gap:8px;background:white;border:1px solid #d1fae5;color:#065f46;padding:7px 16px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-bottom:24px;box-shadow:0 1px 6px rgba(0,0,0,0.06);">
+                    <span style="width:8px;height:8px;background:#10b981;border-radius:50%;display:inline-block;animation:heroPulse 2s infinite;"></span>
+                    Free · No credit repair company needed
+                </div>
+
+                <h1 style="font-family:'Fraunces',Georgia,serif;font-size:clamp(2.2rem,4vw,3.1rem);font-weight:900;line-height:1.08;letter-spacing:-0.03em;color:#1a2e1a;margin-bottom:18px;">
+                    Dispute Errors.<br>
+                    Build Credit.<br>
+                    <em style="color:#0d9488;font-style:italic;">Take Control.</em>
+                </h1>
+
+                <p style="font-size:1.05rem;color:#4a5568;max-width:460px;line-height:1.75;margin-bottom:30px;">
+                    Plain-English guides to fix your credit report, build your score from scratch, and protect your identity — all free, based on FCRA law.
+                </p>
+
+                <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:32px;">
+                    <a href="#guide" class="cta-button">Get the Free Guide</a>
+                    <a href="/blog.html" style="display:inline-block;background:white;color:#1a2e1a;padding:15px 28px;border-radius:100px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1.5px solid #dde5e0;transition:border-color 0.15s;">Explore Articles →</a>
+                </div>
+
+                <!-- Trust signals -->
+                <div style="display:flex;gap:22px;flex-wrap:wrap;">
+                    <div style="display:flex;align-items:center;gap:7px;font-size:0.82rem;color:#4a5568;font-weight:500;">
+                        <span style="color:#10b981;font-size:1rem;">✓</span> Based on FCRA law
+                    </div>
+                    <div style="display:flex;align-items:center;gap:7px;font-size:0.82rem;color:#4a5568;font-weight:500;">
+                        <span style="color:#10b981;font-size:1rem;">✓</span> No upsells or hidden fees
+                    </div>
+                    <div style="display:flex;align-items:center;gap:7px;font-size:0.82rem;color:#4a5568;font-weight:500;">
+                        <span style="color:#10b981;font-size:1rem;">✓</span> Results in 30 days
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: stat cards -->
+            <div style="display:flex;flex-direction:column;gap:12px;flex-shrink:0;width:200px;">
+                <div style="background:white;border-radius:16px;padding:18px 20px;box-shadow:0 2px 16px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.04);">
+                    <p style="font-size:0.68rem;color:#9ca3af;text-transform:uppercase;letter-spacing:0.1em;margin:0 0 6px;">Dispute Timeline</p>
+                    <p style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:#1a2e1a;margin:0;line-height:1;">30 Days</p>
+                    <span style="display:inline-block;background:#d1fae5;color:#065f46;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:100px;margin-top:6px;">FCRA requirement</span>
+                </div>
+                <div style="background:white;border-radius:16px;padding:18px 20px;box-shadow:0 2px 16px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.04);">
+                    <p style="font-size:0.68rem;color:#9ca3af;text-transform:uppercase;letter-spacing:0.1em;margin:0 0 6px;">Reports with Errors</p>
+                    <p style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:#1a2e1a;margin:0;line-height:1;">1 in 5</p>
+                    <span style="display:inline-block;background:#d1fae5;color:#065f46;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:100px;margin-top:6px;">FTC research</span>
+                </div>
+                <div style="background:white;border-radius:16px;padding:18px 20px;box-shadow:0 2px 16px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.04);">
+                    <p style="font-size:0.68rem;color:#9ca3af;text-transform:uppercase;letter-spacing:0.1em;margin:0 0 6px;">Credit Invisible</p>
+                    <p style="font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;color:#1a2e1a;margin:0;line-height:1;">26M</p>
+                    <span style="display:inline-block;background:#d1fae5;color:#065f46;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:100px;margin-top:6px;">Americans</span>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes heroPulse {
+                0%,100% { opacity:1; transform:scale(1); }
+                50% { opacity:0.5; transform:scale(1.4); }
+            }
+            @media (max-width: 768px) {
+                /* Stack hero columns */
+                header > div {
+                    flex-direction: column !important;
+                    padding: 32px 20px 40px !important;
+                    gap: 24px !important;
+                }
+                /* Stat cards: horizontal scroll */
+                header > div > div:last-child {
+                    width: 100% !important;
+                    flex-direction: row !important;
+                    overflow-x: auto !important;
+                    gap: 10px !important;
+                    -webkit-overflow-scrolling: touch;
+                    scrollbar-width: none;
+                    padding-bottom: 4px;
+                }
+                header > div > div:last-child::-webkit-scrollbar { display: none; }
+                header > div > div:last-child > div {
+                    min-width: 138px !important;
+                    flex-shrink: 0 !important;
+                    padding: 14px !important;
+                }
+            }
+        </style>
     </header>
 
     <!-- Article Content -->
-    <article class="content-section">
+    <main style="background:#f5f7f2;padding:32px 0 48px;">
+    <article class="content-section" style="max-width:860px;margin:0 auto;">
         <div class="container">
 
             <!-- GEO: TL;DR Summary — AI engines extract this as a cited passage -->
-            <div style="background:#eff6ff;border-left:4px solid #3b82f6;border-radius:0 10px 10px 0;padding:20px 24px;margin-bottom:36px;">
-                <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#1e40af;margin:0 0 8px;">📋 Quick Summary</p>
-                <p style="color:#1e3a8a;font-weight:600;font-size:1rem;margin:0 0 10px;">What this page covers:</p>
-                <ul style="color:#374151;font-size:0.95rem;line-height:1.9;margin:0 0 0 20px;padding:0;">
+            <div style="background:#f0fdfa;border-left:4px solid #0d9488;border-radius:0 10px 10px 0;padding:20px 24px;margin-bottom:36px;">
+                <p style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#065f46;margin:0 0 8px;">📋 Quick Summary</p>
+                <p style="color:#1a2e1a;font-weight:600;font-size:1rem;margin:0 0 10px;">What this page covers:</p>
+                <ul style="color:#4a5568;font-size:0.95rem;line-height:1.9;margin:0 0 0 20px;padding:0;">
                     <li>What a collection is and how long it stays on your report (7 years)</li>
                     <li>How to read every section of a credit report</li>
                     <li>The 5 critical steps you <strong>must</strong> take before disputing any error</li>
@@ -914,23 +1236,23 @@
 
                 <div style="background:#fffbeb;border-radius:10px;padding:18px 20px;margin:24px 0;">
                     <p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#92400e;margin:0 0 12px;">🛒 What You'll Need — Get It on Amazon</p>
-                    <a rel="sponsored noopener" href="https://amzn.to/3ZStm81" target="_blank" style="display:flex;align-items:center;gap:16px;background:#fff8e1;border:1px solid #fcd34d;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:16px 20px;margin:12px 0;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
-                        <span style="font-size:1.8rem;flex-shrink:0;">📬</span>
-                        <div style="flex:1;">
-                            <p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin:0 0 3px;">Amazon Pick</p>
-                            <p style="font-size:0.93rem;font-weight:700;color:#1a1a1a;margin:0 0 4px;line-height:1.3;">Certified Mail Envelopes</p>
-                            <p style="font-size:0.82rem;color:#6b7280;margin:0;">Send dispute letters the right way — proof of delivery required by law.</p>
+                    <a rel="sponsored noopener" href="https://amzn.to/3ZStm81" target="_blank" class="amzn-card">
+                        <span class="amzn-card-icon">📬</span>
+                        <div class="amzn-card-body">
+                            <p class="amzn-card-label">Amazon Pick</p>
+                            <p class="amzn-card-title">Certified Mail Envelopes</p>
+                            <p class="amzn-card-desc">Send dispute letters the right way — proof of delivery required by law.</p>
                         </div>
-                        <span style="background:#f59e0b;color:#1a1a1a;padding:7px 14px;border-radius:6px;font-size:0.82rem;font-weight:700;white-space:nowrap;flex-shrink:0;">Shop on Amazon →</span>
+                        <span class="amzn-card-btn">Shop on Amazon →</span>
                     </a>
-                    <a rel="sponsored noopener" href="https://amzn.to/4c9I8hX" target="_blank" style="display:flex;align-items:center;gap:16px;background:#fff8e1;border:1px solid #fcd34d;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:16px 20px;margin:12px 0;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
-                        <span style="font-size:1.8rem;flex-shrink:0;">🖨️</span>
-                        <div style="flex:1;">
-                            <p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin:0 0 3px;">Amazon Pick</p>
-                            <p style="font-size:0.93rem;font-weight:700;color:#1a1a1a;margin:0 0 4px;line-height:1.3;">Printer Paper (500 sheets)</p>
-                            <p style="font-size:0.82rem;color:#6b7280;margin:0;">Print dispute letters, credit reports, and certified mail receipts — keep physical copies of everything.</p>
+                    <a rel="sponsored noopener" href="https://amzn.to/4c9I8hX" target="_blank" class="amzn-card">
+                        <span class="amzn-card-icon">🖨️</span>
+                        <div class="amzn-card-body">
+                            <p class="amzn-card-label">Amazon Pick</p>
+                            <p class="amzn-card-title">Printer Paper (500 sheets)</p>
+                            <p class="amzn-card-desc">Print dispute letters, credit reports, and certified mail receipts — keep physical copies of everything.</p>
                         </div>
-                        <span style="background:#f59e0b;color:#1a1a1a;padding:7px 14px;border-radius:6px;font-size:0.82rem;font-weight:700;white-space:nowrap;flex-shrink:0;">Shop on Amazon →</span>
+                        <span class="amzn-card-btn">Shop on Amazon →</span>
                     </a>
                     <p style="font-size:0.75rem;color:#9ca3af;margin:10px 0 0;">As an Amazon Associate we earn from qualifying purchases.</p>
                 </div>
@@ -1037,50 +1359,85 @@
     <!-- Footer Blog Section -->
     <div class="footer-blog">
         <div class="container">
-            <p class="footer-blog-title">📚 Credit Education Blog</p>
+            <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:20px;">
+                <p class="footer-blog-title" style="margin-bottom:0;">📚 Credit Education Blog</p>
+                <a href="/blog.html" style="font-size:.82rem;font-weight:700;color:#0d9488;text-decoration:none;letter-spacing:.03em;">View all articles →</a>
+            </div>
             <div class="blog-grid">
 
-                <div class="blog-card" onclick="showPopup('article1')">
-                    <p class="blog-card-tag">Credit Building</p>
-                    <p class="blog-card-title">How to Build Credit From Scratch: The Complete Step-by-Step Guide</p>
-                    <p class="blog-card-excerpt">No credit history? Here's exactly how to establish a score from zero — even without a credit card.</p>
+                <a href="/blog/what-is-my-credit-score-estimator" class="blog-card" style="text-decoration:none;display:block;">
+                    <p class="blog-card-tag">🔧 Tool Guide</p>
+                    <p class="blog-card-title">What Is My Credit Score? How to Estimate It (And What's Actually Hurting It)</p>
+                    <p class="blog-card-excerpt">Your score is driven by 5 weighted factors. Learn exactly how each one works — then estimate your range with our free tool.</p>
                     <span class="blog-card-read">Read article →</span>
-                </div>
+                </a>
 
-                <div class="blog-card" onclick="showPopup('article2')">
-                    <p class="blog-card-tag">Credit Reports</p>
-                    <p class="blog-card-title">How to Read a Credit Report: Every Section Explained</p>
-                    <p class="blog-card-excerpt">Confused by the numbers, codes, and abbreviations? This guide decodes every line of your report.</p>
+                <a href="/blog/how-to-pay-off-debt-fast-calculator" class="blog-card" style="text-decoration:none;display:block;">
+                    <p class="blog-card-tag">🔧 Tool Guide</p>
+                    <p class="blog-card-title">How to Pay Off Debt Fast: Snowball vs. Avalanche (With Free Calculator)</p>
+                    <p class="blog-card-excerpt">One method saves more money. The other keeps you motivated. Here's which to choose — and your exact payoff date.</p>
                     <span class="blog-card-read">Read article →</span>
-                </div>
+                </a>
 
-                <div class="blog-card" onclick="showPopup('article3')">
-                    <p class="blog-card-tag">Free Resources</p>
-                    <p class="blog-card-title">How to Get a Credit Report for Free (Official & Safe Methods)</p>
-                    <p class="blog-card-excerpt">The only government-authorized source — and how to avoid the copycat sites that charge you.</p>
+                <a href="/blog/how-long-to-rebuild-credit-timeline" class="blog-card" style="text-decoration:none;display:block;">
+                    <p class="blog-card-tag">🔧 Tool Guide</p>
+                    <p class="blog-card-title">How Long Does It Take to Rebuild Credit? A Realistic Month-by-Month Guide</p>
+                    <p class="blog-card-excerpt">Credit recovery is more predictable than it feels. Get a personalized timeline based on your starting point.</p>
                     <span class="blog-card-read">Read article →</span>
-                </div>
+                </a>
 
-                <div class="blog-card" onclick="showPopup('article4')">
-                    <p class="blog-card-tag">Credit Monitoring</p>
-                    <p class="blog-card-title">How to Check Your Credit Report Without Hurting Your Score</p>
-                    <p class="blog-card-excerpt">Hard vs. soft inquiries explained — and the best free tools to monitor your credit year-round.</p>
+                <a href="/blog/credit-score-impact-simulator" class="blog-card" style="text-decoration:none;display:block;">
+                    <p class="blog-card-tag">🔧 Tool Guide</p>
+                    <p class="blog-card-title">What Happens to Your Score When You Miss a Payment, Open a Card, or Pay Off Debt?</p>
+                    <p class="blog-card-excerpt">Every credit decision has a measurable impact. Here are the exact numbers — and what to do before you act.</p>
                     <span class="blog-card-read">Read article →</span>
-                </div>
+                </a>
 
-                <div class="blog-card" onclick="showPopup('article5')">
-                    <p class="blog-card-tag">Identity Protection</p>
-                    <p class="blog-card-title">What Is Identity Theft Protection — And Do You Actually Need It?</p>
-                    <p class="blog-card-excerpt">What these services actually do, who needs them most, and whether they're worth the cost.</p>
+                <a href="/blog/how-to-dispute-credit-report-errors-the-right-way" class="blog-card" style="text-decoration:none;display:block;">
+                    <p class="blog-card-tag">Credit Repair</p>
+                    <p class="blog-card-title">How to Dispute Credit Report Errors the Right Way</p>
+                    <p class="blog-card-excerpt">Most disputes fail because people skip the preparation steps. Here are the exact methods that work — and the mistakes that get disputes rejected.</p>
                     <span class="blog-card-read">Read article →</span>
-                </div>
+                </a>
 
-                <div class="blog-card" onclick="showPopup('article6')">
-                    <p class="blog-card-tag">Identity Protection</p>
-                    <p class="blog-card-title">10 Warning Signs Your Identity Has Been Stolen</p>
-                    <p class="blog-card-excerpt">Most victims don't find out for months. These red flags can save you years of recovery.</p>
-                    <span class="blog-card-read">Read article →</span>
-                </div>
+                <a href="/blog.html" class="blog-card" style="text-decoration:none;display:block;background:linear-gradient(135deg,#0f2a0f,#1a3a1a);border:1px dashed #2d5a2d;">
+                    <p style="font-size:1.6rem;margin-bottom:10px;">📖</p>
+                    <p class="blog-card-title" style="color:#d1fae5;">See All Articles</p>
+                    <p class="blog-card-excerpt" style="color:#6b8f6b;">Credit repair, score building, debt payoff, identity protection, and more.</p>
+                    <span class="blog-card-read" style="color:#0d9488;">Browse the blog →</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Free Tools Section -->
+    <div style="background:#0f1f0f;padding:52px 24px 44px;border-top:1px solid #1e3a1e;">
+        <div class="container">
+            <p style="font-family:'Fraunces',Georgia,serif;font-size:1.25rem;font-weight:900;color:#d1fae5;margin-bottom:6px;letter-spacing:-.01em;">🔧 Free Credit Tools</p>
+            <p style="font-size:.88rem;color:#6b8f6b;margin-bottom:24px;">Calculators and lookup tools to understand your credit — no signup required.</p>
+            <div class="tools-footer-grid">
+
+                <a href="/credit-utilization-calculator.html" style="display:block;background:#1a2e1a;border:1px solid #2d4a2d;border-top:3px solid #0d9488;border-radius:12px;padding:18px 20px;text-decoration:none;transition:border-color .15s;" onmouseover="this.style.borderTopColor='#5eead4'" onmouseout="this.style.borderTopColor='#0d9488'">
+                    <div style="font-size:1.4rem;margin-bottom:8px;">🔢</div>
+                    <div style="font-size:.93rem;font-weight:700;color:#d1fae5;margin-bottom:5px;">Credit Utilization Calculator</div>
+                    <div style="font-size:.8rem;color:#6b8f6b;line-height:1.55;">Enter your balances and limits. Get your ratio, per-card breakdown, and exact paydown plan.</div>
+                    <div style="font-size:.75rem;font-weight:700;color:#0d9488;margin-top:10px;letter-spacing:.04em;">Use Free Tool →</div>
+                </a>
+
+                <a href="/statute-of-limitations-checker.html" style="display:block;background:#1a2e1a;border:1px solid #2d4a2d;border-top:3px solid #0d9488;border-radius:12px;padding:18px 20px;text-decoration:none;transition:border-color .15s;" onmouseover="this.style.borderTopColor='#5eead4'" onmouseout="this.style.borderTopColor='#0d9488'">
+                    <div style="font-size:1.4rem;margin-bottom:8px;">⚖️</div>
+                    <div style="font-size:.93rem;font-weight:700;color:#d1fae5;margin-bottom:5px;">Debt SOL Checker</div>
+                    <div style="font-size:.8rem;color:#6b8f6b;line-height:1.55;">Check if collectors can still legally sue you. All 50 states + D.C. covered.</div>
+                    <div style="font-size:.75rem;font-weight:700;color:#0d9488;margin-top:10px;letter-spacing:.04em;">Check Your State →</div>
+                </a>
+
+                <a href="/banned-debt-collectors.html" style="display:block;background:#1a2e1a;border:1px solid #2d4a2d;border-top:3px solid #dc2626;border-radius:12px;padding:18px 20px;text-decoration:none;transition:border-color .15s;" onmouseover="this.style.borderTopColor='#f87171'" onmouseout="this.style.borderTopColor='#dc2626'">
+                    <div style="font-size:1.4rem;margin-bottom:8px;">🚫</div>
+                    <div style="font-size:.93rem;font-weight:700;color:#d1fae5;margin-bottom:5px;">FTC Banned Collectors List</div>
+                    <div style="font-size:.8rem;color:#6b8f6b;line-height:1.55;">170+ companies and individuals permanently banned from debt collection by federal court order.</div>
+                    <div style="font-size:.75rem;font-weight:700;color:#dc2626;margin-top:10px;letter-spacing:.04em;">Search the List →</div>
+                </a>
 
             </div>
         </div>
@@ -1092,6 +1449,10 @@
             <p>&copy; <span id="year"></span> CreditGen 10X. All rights reserved.</p>
             <p style="margin-top:6px;font-size:0.8rem;opacity:0.6;">Credit education for the 26 million credit-invisible Americans. All content is for educational purposes only and does not constitute legal or financial advice.</p>
             <p style="margin-top: 10px;">
+                <a href="/credit-utilization-calculator.html">Utilization Calculator</a> |
+                <a href="/statute-of-limitations-checker.html">SOL Checker</a> |
+                <a href="/banned-debt-collectors.html">Banned Collectors</a> |
+                <a href="/blog.html">Blog</a> |
                 <a onclick="showPopup('privacy')">Privacy Policy</a> | 
                 <a onclick="showPopup('terms')">Terms of Service</a> | 
                 <a onclick="showPopup('contact')">Contact Us</a>
@@ -1336,23 +1697,23 @@
 
                 <div style="background:#fffbeb;border-radius:10px;padding:18px 20px;margin:24px 0;">
                     <p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#92400e;margin:0 0 12px;">🛒 What You'll Need — Get It on Amazon</p>
-                    <a rel="sponsored noopener" href="https://amzn.to/3ZStm81" target="_blank" style="display:flex;align-items:center;gap:16px;background:#fff8e1;border:1px solid #fcd34d;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:16px 20px;margin:12px 0;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
-                        <span style="font-size:1.8rem;flex-shrink:0;">📬</span>
-                        <div style="flex:1;">
-                            <p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin:0 0 3px;">Amazon Pick</p>
-                            <p style="font-size:0.93rem;font-weight:700;color:#1a1a1a;margin:0 0 4px;line-height:1.3;">Certified Mail Envelopes</p>
-                            <p style="font-size:0.82rem;color:#6b7280;margin:0;">Send dispute letters the right way — proof of delivery required by law.</p>
+                    <a rel="sponsored noopener" href="https://amzn.to/3ZStm81" target="_blank" class="amzn-card">
+                        <span class="amzn-card-icon">📬</span>
+                        <div class="amzn-card-body">
+                            <p class="amzn-card-label">Amazon Pick</p>
+                            <p class="amzn-card-title">Certified Mail Envelopes</p>
+                            <p class="amzn-card-desc">Send dispute letters the right way — proof of delivery required by law.</p>
                         </div>
-                        <span style="background:#f59e0b;color:#1a1a1a;padding:7px 14px;border-radius:6px;font-size:0.82rem;font-weight:700;white-space:nowrap;flex-shrink:0;">Shop on Amazon →</span>
+                        <span class="amzn-card-btn">Shop on Amazon →</span>
                     </a>
-                    <a rel="sponsored noopener" href="https://amzn.to/4c9I8hX" target="_blank" style="display:flex;align-items:center;gap:16px;background:#fff8e1;border:1px solid #fcd34d;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:16px 20px;margin:12px 0;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
-                        <span style="font-size:1.8rem;flex-shrink:0;">🖨️</span>
-                        <div style="flex:1;">
-                            <p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin:0 0 3px;">Amazon Pick</p>
-                            <p style="font-size:0.93rem;font-weight:700;color:#1a1a1a;margin:0 0 4px;line-height:1.3;">Printer Paper (500 sheets)</p>
-                            <p style="font-size:0.82rem;color:#6b7280;margin:0;">Print dispute letters, credit reports, and certified mail receipts — keep physical copies of everything.</p>
+                    <a rel="sponsored noopener" href="https://amzn.to/4c9I8hX" target="_blank" class="amzn-card">
+                        <span class="amzn-card-icon">🖨️</span>
+                        <div class="amzn-card-body">
+                            <p class="amzn-card-label">Amazon Pick</p>
+                            <p class="amzn-card-title">Printer Paper (500 sheets)</p>
+                            <p class="amzn-card-desc">Print dispute letters, credit reports, and certified mail receipts — keep physical copies of everything.</p>
                         </div>
-                        <span style="background:#f59e0b;color:#1a1a1a;padding:7px 14px;border-radius:6px;font-size:0.82rem;font-weight:700;white-space:nowrap;flex-shrink:0;">Shop on Amazon →</span>
+                        <span class="amzn-card-btn">Shop on Amazon →</span>
                     </a>
                     <p style="font-size:0.75rem;color:#9ca3af;margin:10px 0 0;">As an Amazon Associate we earn from qualifying purchases.</p>
                 </div>
@@ -1697,23 +2058,23 @@
 
                 <div style="background:#fffbeb;border-radius:10px;padding:18px 20px;margin:24px 0;">
                     <p style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#92400e;margin:0 0 12px;">🛒 What You'll Need — Get It on Amazon</p>
-                    <a rel="sponsored noopener" href="https://amzn.to/3ZStm81" target="_blank" style="display:flex;align-items:center;gap:16px;background:#fff8e1;border:1px solid #fcd34d;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:16px 20px;margin:12px 0;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
-                        <span style="font-size:1.8rem;flex-shrink:0;">📬</span>
-                        <div style="flex:1;">
-                            <p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin:0 0 3px;">Amazon Pick</p>
-                            <p style="font-size:0.93rem;font-weight:700;color:#1a1a1a;margin:0 0 4px;line-height:1.3;">Certified Mail Envelopes</p>
-                            <p style="font-size:0.82rem;color:#6b7280;margin:0;">Send dispute letters the right way — proof of delivery required by law.</p>
+                    <a rel="sponsored noopener" href="https://amzn.to/3ZStm81" target="_blank" class="amzn-card">
+                        <span class="amzn-card-icon">📬</span>
+                        <div class="amzn-card-body">
+                            <p class="amzn-card-label">Amazon Pick</p>
+                            <p class="amzn-card-title">Certified Mail Envelopes</p>
+                            <p class="amzn-card-desc">Send dispute letters the right way — proof of delivery required by law.</p>
                         </div>
-                        <span style="background:#f59e0b;color:#1a1a1a;padding:7px 14px;border-radius:6px;font-size:0.82rem;font-weight:700;white-space:nowrap;flex-shrink:0;">Shop on Amazon →</span>
+                        <span class="amzn-card-btn">Shop on Amazon →</span>
                     </a>
-                    <a rel="sponsored noopener" href="https://amzn.to/4c9I8hX" target="_blank" style="display:flex;align-items:center;gap:16px;background:#fff8e1;border:1px solid #fcd34d;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:16px 20px;margin:12px 0;text-decoration:none;transition:box-shadow 0.2s;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='none'">
-                        <span style="font-size:1.8rem;flex-shrink:0;">🖨️</span>
-                        <div style="flex:1;">
-                            <p style="font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b45309;margin:0 0 3px;">Amazon Pick</p>
-                            <p style="font-size:0.93rem;font-weight:700;color:#1a1a1a;margin:0 0 4px;line-height:1.3;">Printer Paper (500 sheets)</p>
-                            <p style="font-size:0.82rem;color:#6b7280;margin:0;">Print dispute letters, credit reports, and certified mail receipts — keep physical copies of everything.</p>
+                    <a rel="sponsored noopener" href="https://amzn.to/4c9I8hX" target="_blank" class="amzn-card">
+                        <span class="amzn-card-icon">🖨️</span>
+                        <div class="amzn-card-body">
+                            <p class="amzn-card-label">Amazon Pick</p>
+                            <p class="amzn-card-title">Printer Paper (500 sheets)</p>
+                            <p class="amzn-card-desc">Print dispute letters, credit reports, and certified mail receipts — keep physical copies of everything.</p>
                         </div>
-                        <span style="background:#f59e0b;color:#1a1a1a;padding:7px 14px;border-radius:6px;font-size:0.82rem;font-weight:700;white-space:nowrap;flex-shrink:0;">Shop on Amazon →</span>
+                        <span class="amzn-card-btn">Shop on Amazon →</span>
                     </a>
                     <p style="font-size:0.75rem;color:#9ca3af;margin:10px 0 0;">As an Amazon Associate we earn from qualifying purchases.</p>
                 </div>

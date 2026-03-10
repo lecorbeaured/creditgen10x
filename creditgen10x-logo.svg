@@ -1,0 +1,19 @@
+<svg width="200" height="44" viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Shield icon (38x38 centered vertically) -->
+  <rect x="0" y="3" width="38" height="38" rx="10" fill="#d1fae5"/>
+  <path d="M19 10L9.5 15.5V22c0 6.4 4.2 12.4 9.5 13.8C24.3 34.4 28.5 28.4 28.5 22v-6.5L19 10z" fill="#0d9488" opacity="0.95"/>
+  <path d="M14.5 22.5l3 3L23 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Wordmark: "CreditGen" in Fraunces-style weight, "10X" italic teal -->
+  <text
+    x="48"
+    y="29"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="19"
+    font-weight="900"
+    letter-spacing="-0.4"
+    fill="#1a2e1a"
+  >CreditGen <tspan fill="#0d9488" font-style="italic">10X</tspan></text>
+
+</svg>

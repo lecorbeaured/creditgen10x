@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Credit Tools & Calculators | CreditGen 10X</title>
+<meta name="description" content="6 free credit calculators and tools: credit score estimator, debt payoff calculator, utilization ratio checker, statute of limitations lookup, credit repair timeline, and score impact simulator. No signup required.">
+<meta name="keywords" content="free credit calculators, credit score estimator, debt payoff calculator, credit repair timeline estimator, score impact simulator, credit tools">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://creditgen10x.com/tools">
+<meta property="og:title" content="Free Credit Tools & Calculators | CreditGen 10X">
+<meta property="og:description" content="6 free interactive credit tools — no signup, no cost. Estimate your score, plan your payoff, check your timeline, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://creditgen10x.com/tools">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Free Credit Tools & Calculators",
+  "description": "6 free interactive credit calculators and lookup tools from CreditGen 10X.",
+  "url": "https://creditgen10x.com/tools",
+  "publisher": { "@type": "Organization", "name": "CreditGen 10X", "url": "https://creditgen10x.com" },
+  "hasPart": [
+    { "@type": "WebApplication", "name": "Credit Score Estimator", "applicationCategory": "FinanceApplication", "offers": { "@type": "Offer", "price": "0" } },
+    { "@type": "WebApplication", "name": "Debt Payoff Calculator", "applicationCategory": "FinanceApplication", "offers": { "@type": "Offer", "price": "0" } },
+    { "@type": "WebApplication", "name": "Credit Repair Timeline Estimator", "applicationCategory": "FinanceApplication", "offers": { "@type": "Offer", "price": "0" } },
+    { "@type": "WebApplication", "name": "Score Impact Simulator", "applicationCategory": "FinanceApplication", "offers": { "@type": "Offer", "price": "0" } }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--teal:#0d9488;--teal-dark:#0f766e;--teal-light:#d1fae5;--sage:#f5f7f2;--navy:#1a2e1a;--muted:#4a5568;--border:#dde5e0;--white:#ffffff;--warn:#f59e0b;--red:#dc2626;--green:#16a34a}
+body{font-family:'DM Sans',sans-serif;background:var(--sage);color:var(--navy);line-height:1.6}
+
+.site-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;position:sticky;top:0;z-index:100;box-shadow:0 1px 10px rgba(0,0,0,.06)}
+.site-nav-inner{max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px}
+.site-logo{display:flex;align-items:center;gap:8px;text-decoration:none}
+.site-logo-text{font-family:'Fraunces',serif;font-size:1.18rem;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.site-logo-text span{color:var(--teal);font-style:italic}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--navy);font-weight:600}
+.nav-cta{background:var(--teal)!important;color:white!important;padding:9px 22px!important;border-radius:100px!important;font-weight:600!important;font-size:.85rem!important;box-shadow:0 2px 10px rgba(13,148,136,.3)!important;transition:background .15s!important}
+.nav-cta:hover{background:var(--teal-dark)!important}
+
+.page-hero{background:var(--white);border-bottom:1px solid var(--border);padding:56px 32px 52px;text-align:center;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-80px;right:-80px;width:360px;height:360px;background:radial-gradient(circle,rgba(13,148,136,.07) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.page-hero::after{content:'';position:absolute;bottom:-60px;left:5%;width:280px;height:280px;background:radial-gradient(circle,rgba(99,102,241,.05) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--teal-light);color:#065f46;padding:6px 16px;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:18px}
+.page-hero h1{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,2.8rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:14px;position:relative}
+.page-hero h1 em{font-style:italic;color:var(--teal)}
+.page-hero>p{color:var(--muted);font-size:1.02rem;max-width:500px;margin:0 auto 24px;position:relative}
+.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat-num{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:900;color:var(--navy);line-height:1}
+.hero-stat-label{font-size:.75rem;color:var(--muted);font-weight:500;margin-top:3px}
+
+.tools-wrap{max-width:1060px;margin:0 auto;padding:48px 24px 80px}
+.section-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);margin-bottom:16px}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:40px}
+
+.tool-card{background:var(--white);border-radius:20px;border:1px solid var(--border);box-shadow:0 2px 16px rgba(0,0,0,.05);display:flex;flex-direction:column;overflow:hidden}
+.tool-card-top{padding:24px 28px 0;display:flex;align-items:flex-start;gap:14px}
+.tool-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0}
+.tool-icon-teal{background:var(--teal-light)}
+.tool-icon-amber{background:#fef3c7}
+.tool-card-meta{flex:1}
+.tool-card-meta h2{font-family:'Fraunces',serif;font-size:1.12rem;font-weight:900;letter-spacing:-.01em;margin-bottom:4px}
+.tool-card-meta p{font-size:.82rem;color:var(--muted);line-height:1.5}
+.tool-body{padding:20px 28px 28px;flex:1;display:flex;flex-direction:column}
+
+.standalone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px}
+.standalone-card{display:flex;align-items:center;gap:14px;background:var(--white);border:1px solid var(--border);border-top:3px solid var(--teal);border-radius:14px;padding:16px 20px;text-decoration:none;transition:box-shadow .15s,border-top-color .15s}
+.standalone-card:hover{box-shadow:0 4px 18px rgba(13,148,136,.12);border-top-color:#5eead4}
+.standalone-card.red-top{border-top-color:var(--red)}
+.standalone-card.red-top:hover{border-top-color:#f87171;box-shadow:0 4px 18px rgba(220,38,38,.1)}
+.standalone-card-icon{font-size:1.5rem;flex-shrink:0}
+.standalone-card-body{flex:1;min-width:0}
+.standalone-card-title{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:3px}
+.standalone-card-desc{font-size:.76rem;color:var(--muted);line-height:1.5}
+.standalone-card-cta{font-size:.72rem;font-weight:700;color:var(--teal);margin-top:6px;letter-spacing:.04em}
+.standalone-card.red-top .standalone-card-cta{color:var(--red)}
+
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.04em;margin-bottom:5px;text-transform:uppercase}
+.field input,.field select{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:.95rem;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);transition:border-color .15s,box-shadow .15s;outline:none;-moz-appearance:textfield}
+.field input:focus,.field select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(13,148,136,.12)}
+.field input::-webkit-outer-spin-button,.field input::-webkit-inner-spin-button{-webkit-appearance:none}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.prefix-wrap{position:relative}
+.prefix-wrap .prefix{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:600;font-size:.95rem;pointer-events:none}
+.prefix-wrap input{padding-left:26px!important}
+
+.calc-btn{width:100%;padding:13px;background:var(--teal);color:white;border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:4px;box-shadow:0 3px 12px rgba(13,148,136,.28)}
+.calc-btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
+.calc-btn:active{transform:translateY(0)}
+
+.result{margin-top:16px;padding:16px 18px;border-radius:14px;display:none;animation:fadeUp .3s ease}
+.result.show{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.result-excellent{background:#f0fdf4;border:1.5px solid #86efac}
+.result-good{background:#eff6ff;border:1.5px solid #93c5fd}
+.result-fair{background:#fffbeb;border:1.5px solid #fcd34d}
+.result-poor{background:#fef2f2;border:1.5px solid #fca5a5}
+.result-neutral{background:var(--sage);border:1.5px solid var(--border)}
+.result-big{font-family:'Fraunces',serif;font-size:2rem;font-weight:900;line-height:1;margin-bottom:4px}
+.result-badge{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.badge-excellent{background:#dcfce7;color:#15803d}
+.badge-good{background:#dbeafe;color:#1d4ed8}
+.badge-fair{background:#fef9c3;color:#a16207}
+.badge-poor{background:#fee2e2;color:#b91c1c}
+.result-text{font-size:.88rem;color:var(--muted);line-height:1.6;margin-top:6px}
+.result-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.87rem}
+.result-row:last-child{border-bottom:none}
+.result-row-label{color:var(--muted)}
+.result-row-val{font-weight:700;color:var(--navy)}
+.progress-wrap{background:var(--border);border-radius:100px;height:8px;margin:8px 0;overflow:hidden}
+.progress-bar{height:100%;border-radius:100px;transition:width .6s ease}
+
+.factor-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.factor-label{font-size:.78rem;font-weight:600;color:var(--navy);width:130px;flex-shrink:0}
+.factor-select{flex:1;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:.84rem;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);outline:none}
+.factor-select:focus{border-color:var(--teal)}
+.factor-weight{font-size:.7rem;color:var(--muted);width:36px;text-align:right;flex-shrink:0}
+
+.milestone-list{list-style:none;padding:0}
+.milestone-list li{display:flex;align-items:flex-start;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);font-size:.86rem}
+.milestone-list li:last-child{border-bottom:none}
+.milestone-dot{width:24px;height:24px;border-radius:50%;background:var(--teal);color:white;font-size:.68rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+
+.scenario-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;padding:10px 12px;background:var(--sage);border-radius:10px;border:1.5px solid var(--border);cursor:pointer;transition:border-color .15s}
+.scenario-row:hover{border-color:var(--teal)}
+.scenario-row input[type=radio]{accent-color:var(--teal);width:15px;height:15px;flex-shrink:0}
+.scenario-label{flex:1;font-size:.84rem;font-weight:500;color:var(--navy)}
+.scenario-impact{font-size:.78rem;font-weight:700;white-space:nowrap}
+.impact-positive{color:var(--green)}
+.impact-negative{color:var(--red)}
+
+.aff-card{display:flex;align-items:center;gap:14px;background:#f0fdfa;border:1px solid #99f6e4;border-radius:14px;padding:14px 18px;margin-top:14px;text-decoration:none;transition:box-shadow .15s}
+.aff-card:hover{box-shadow:0 4px 16px rgba(13,148,136,.15)}
+.aff-card-body{flex:1;min-width:0}
+.aff-card-label{font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal-dark);margin-bottom:2px}
+.aff-card-title{font-size:.9rem;font-weight:700;color:var(--navy)}
+.aff-card-desc{font-size:.77rem;color:var(--muted);margin-top:2px}
+.aff-btn{background:var(--teal);color:white;padding:8px 16px;border-radius:100px;font-size:.8rem;font-weight:700;white-space:nowrap;flex-shrink:0}
+
+footer{background:#0f1f0f;border-top:1px solid #1e3a1e;padding:32px 24px;text-align:center}
+footer p{font-size:.8rem;color:#6b8f6b;line-height:1.8}
+footer a{color:#6b8f6b;text-decoration:none}
+footer a:hover{color:var(--teal-light)}
+
+@media(max-width:900px){.tools-grid{grid-template-columns:1fr}.standalone-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:680px){
+  .site-nav{padding:0 16px}.nav-links a:not(.nav-cta){display:none}
+  .page-hero{padding:36px 20px 32px}.tools-wrap{padding:28px 16px 60px}
+  .tool-body{padding:16px 18px 22px}.tool-card-top{padding:20px 18px 0}
+  .field-row{grid-template-columns:1fr}.factor-row{flex-wrap:wrap}.factor-label{width:100%}
+  .hero-stats{gap:20px}.standalone-grid{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .hero-stat-num{font-size:1.3rem}
+  .aff-card{flex-direction:column;align-items:flex-start;gap:10px}
+  .aff-btn{width:100%;text-align:center;padding:10px 16px}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="/" class="site-logo"><span class="site-logo-text">Credit<span>Gen</span> 10X</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/tools" class="active">Tools</a>
+      <a href="/#guide" class="nav-cta">Free Guide →</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-pill">🔧 Free Credit Tools</div>
+  <h1>6 Tools to <em>Understand</em><br>Your Credit</h1>
+  <p>Interactive calculators and simulators — no signup, no email, no cost. Just answers.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-num">6</div><div class="hero-stat-label">Free Tools</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-label">No Signup</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">All 50</div><div class="hero-stat-label">States Covered</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">∞</div><div class="hero-stat-label">Unlimited Uses</div></div>
+  </div>
+</div>
+
+<div class="tools-wrap">
+
+  <p class="section-label">Standalone deep-dive tools</p>
+  <div class="standalone-grid">
+    <a href="/credit-utilization-calculator.html" class="standalone-card">
+      <span class="standalone-card-icon">🔢</span>
+      <div class="standalone-card-body">
+        <div class="standalone-card-title">Credit Utilization Calculator</div>
+        <div class="standalone-card-desc">Multi-card breakdown, ratio rating, and paydown plan.</div>
+        <div class="standalone-card-cta">Open Full Tool →</div>
+      </div>
+    </a>
+    <a href="/statute-of-limitations-checker.html" class="standalone-card">
+      <span class="standalone-card-icon">⚖️</span>
+      <div class="standalone-card-body">
+        <div class="standalone-card-title">Debt SOL Checker</div>
+        <div class="standalone-card-desc">All 50 states + D.C. — can they still sue you?</div>
+        <div class="standalone-card-cta">Open Full Tool →</div>
+      </div>
+    </a>
+    <a href="/banned-debt-collectors.html" class="standalone-card red-top">
+      <span class="standalone-card-icon">🚫</span>
+      <div class="standalone-card-body">
+        <div class="standalone-card-title">FTC Banned Collectors List</div>
+        <div class="standalone-card-desc">170+ companies banned by federal court order.</div>
+        <div class="standalone-card-cta">Search the List →</div>
+      </div>
+    </a>
+  </div>
+
+  <p class="section-label">Use right here — no page reload needed</p>
+  <div class="tools-grid">
+
+    <!-- CREDIT SCORE ESTIMATOR -->
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <div class="tool-icon tool-icon-teal">📊</div>
+        <div class="tool-card-meta">
+          <h2>Credit Score Estimator</h2>
+          <p>Answer 5 questions about your credit habits to get an estimated score range and your top improvement lever.</p>
+        </div>
+      </div>
+      <div class="tool-body">
+        <div style="margin-bottom:14px;">
+          <div class="factor-row">
+            <span class="factor-label">Payment history</span>
+            <select class="factor-select" id="se-payment">
+              <option value="100">Always on time</option>
+              <option value="80">1–2 late payments (30 days)</option>
+              <option value="60">Several lates (60–90 days)</option>
+              <option value="30">Collections or charge-offs</option>
+            </select>
+            <span class="factor-weight">35%</span>
+          </div>
+          <div class="factor-row">
+            <span class="factor-label">Utilization</span>
+            <select class="factor-select" id="se-util">
+              <option value="100">Under 10%</option>
+              <option value="85">10–30%</option>
+              <option value="60">30–50%</option>
+              <option value="30">Over 50%</option>
+            </select>
+            <span class="factor-weight">30%</span>
+          </div>
+          <div class="factor-row">
+            <span class="factor-label">Credit age</span>
+            <select class="factor-select" id="se-age">
+              <option value="100">7+ years</option>
+              <option value="80">4–7 years</option>
+              <option value="60">2–4 years</option>
+              <option value="30">Under 2 years</option>
+            </select>
+            <span class="factor-weight">15%</span>
+          </div>
+          <div class="factor-row">
+            <span class="factor-label">Credit mix</span>
+            <select class="factor-select" id="se-mix">
+              <option value="100">Cards + loans</option>
+              <option value="70">Cards only</option>
+              <option value="50">Loan only</option>
+              <option value="30">None / authorized user</option>
+            </select>
+            <span class="factor-weight">10%</span>
+          </div>
+          <div class="factor-row">
+            <span class="factor-label">Hard inquiries</span>
+            <select class="factor-select" id="se-inq">
+              <option value="100">0 in past 12 months</option>
+              <option value="85">1–2 in past 12 months</option>
+              <option value="65">3–4 in past 12 months</option>
+              <option value="40">5+ in past 12 months</option>
+            </select>
+            <span class="factor-weight">10%</span>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcScore()">Estimate My Score →</button>
+        <div class="result" id="se-result">
+          <div class="result-big" id="se-range"></div>
+          <div id="se-badge"></div>
+          <div class="progress-wrap" style="margin:10px 0;"><div class="progress-bar" id="se-bar" style="background:var(--teal);"></div></div>
+          <div class="result-text" id="se-advice"></div>
+        </div>
+        <a href="https://www.identityiq.com/sc-securemax.aspx?offercode=431297RY" rel="sponsored noopener" target="_blank" class="aff-card">
+          <div style="font-size:1.3rem;">🛡️</div>
+          <div class="aff-card-body">
+            <div class="aff-card-label">Recommended</div>
+            <div class="aff-card-title">See Your Real Score — IdentityIQ</div>
+            <div class="aff-card-desc">3-bureau monitoring + identity theft protection.</div>
+          </div>
+          <span class="aff-btn">Start →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- DEBT PAYOFF CALCULATOR -->
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <div class="tool-icon tool-icon-teal">💸</div>
+        <div class="tool-card-meta">
+          <h2>Debt Payoff Calculator</h2>
+          <p>See exactly when you'll be debt-free and how much interest you'll save by adding extra payments.</p>
+        </div>
+      </div>
+      <div class="tool-body">
+        <div class="field-row">
+          <div class="field">
+            <label>Total Debt Balance</label>
+            <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="dp-balance" placeholder="8500" min="0"></div>
+          </div>
+          <div class="field">
+            <label>Average APR (%)</label>
+            <input type="number" id="dp-apr" placeholder="22.5" min="0" max="100" step="0.1">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label>Monthly Payment</label>
+            <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="dp-payment" placeholder="250" min="0"></div>
+          </div>
+          <div class="field">
+            <label>Extra / Month (optional)</label>
+            <div class="prefix-wrap"><span class="prefix">$</span><input type="number" id="dp-extra" placeholder="0" min="0"></div>
+          </div>
+        </div>
+        <button class="calc-btn" onclick="calcDebt()">Calculate Payoff →</button>
+        <div class="result result-neutral" id="dp-result">
+          <div class="result-row"><span class="result-row-label">Payoff date (current payments)</span><span class="result-row-val" id="dp-min-date">—</span></div>
+          <div class="result-row"><span class="result-row-label">Total interest you'll pay</span><span class="result-row-val" id="dp-min-interest">—</span></div>
+          <div class="result-row" style="background:rgba(13,148,136,.07);border-radius:8px;padding:8px 10px;margin-top:8px;border:none;">
+            <span class="result-row-label" style="color:var(--teal-dark);font-weight:600;">Adding extra payment — saves</span>
+            <span class="result-row-val" id="dp-savings" style="color:var(--teal-dark);">—</span>
+          </div>
+          <div class="result-row"><span class="result-row-label">New payoff date</span><span class="result-row-val" id="dp-extra-date">—</span></div>
+          <p class="result-text" id="dp-tip" style="margin-top:8px;"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CREDIT REPAIR TIMELINE -->
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <div class="tool-icon tool-icon-amber">📅</div>
+        <div class="tool-card-meta">
+          <h2>Credit Repair Timeline</h2>
+          <p>How long will it realistically take to hit your target score? Get a personalized month-by-month roadmap.</p>
+        </div>
+      </div>
+      <div class="tool-body">
+        <div class="field-row">
+          <div class="field">
+            <label>Current Score Range</label>
+            <select id="tl-score">
+              <option value="300">Under 500</option>
+              <option value="530">500–579</option>
+              <option value="610">580–619</option>
+              <option value="640">620–659</option>
+              <option value="680">660–699</option>
+              <option value="720">700+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Target Score</label>
+            <select id="tl-target">
+              <option value="620">620 — Basic approvals</option>
+              <option value="670">670 — Good rates</option>
+              <option value="720">720 — Great rates</option>
+              <option value="750">750 — Excellent</option>
+              <option value="800">800+ — Elite</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label>Negative items on your report</label>
+          <select id="tl-negs">
+            <option value="none">None — clean report</option>
+            <option value="late">1–2 late payments only</option>
+            <option value="collection">Collections or charge-offs</option>
+            <option value="bk">Bankruptcy or judgment</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Age of negative items</label>
+          <select id="tl-age">
+            <option value="recent">Under 1 year old</option>
+            <option value="mid">1–3 years old</option>
+            <option value="old">3–6 years old</option>
+            <option value="aging">6+ years (aging off soon)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>What you're doing now</label>
+          <select id="tl-actions">
+            <option value="none">Nothing yet</option>
+            <option value="card">Have 1 card, paying on time</option>
+            <option value="secured">Have secured card or credit builder loan</option>
+            <option value="multiple">Multiple accounts, all current</option>
+          </select>
+        </div>
+        <button class="calc-btn" onclick="calcTimeline()">Build My Timeline →</button>
+        <div class="result result-neutral" id="tl-result">
+          <div style="font-family:'Fraunces',serif;font-size:1.1rem;font-weight:900;color:var(--navy);margin-bottom:12px;" id="tl-headline"></div>
+          <ul class="milestone-list" id="tl-milestones"></ul>
+          <p class="result-text" id="tl-note" style="margin-top:10px;"></p>
+        </div>
+        <a href="https://kikoff.pxf.io/c/7007975/2344833/14994" rel="sponsored noopener" target="_blank" class="aff-card">
+          <div style="font-size:1.3rem;">🏗️</div>
+          <div class="aff-card-body">
+            <div class="aff-card-label">Credit Builder</div>
+            <div class="aff-card-title">Kikoff — Start Building Credit</div>
+            <div class="aff-card-desc">No hard pull. Reports to all 3 bureaus. $5/month.</div>
+          </div>
+          <span class="aff-btn">Get Started →</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- SCORE IMPACT SIMULATOR -->
+    <div class="tool-card">
+      <div class="tool-card-top">
+        <div class="tool-icon tool-icon-teal">🧮</div>
+        <div class="tool-card-meta">
+          <h2>Score Impact Simulator</h2>
+          <p>What happens to your score if you miss a payment, open a card, or pay off a collection? Simulate before you act.</p>
+        </div>
+      </div>
+      <div class="tool-body">
+        <div class="field">
+          <label>Your Current Score (approximate)</label>
+          <input type="number" id="si-score" placeholder="680" min="300" max="850">
+        </div>
+        <div class="field" style="margin-bottom:8px;"><label>Choose a scenario</label></div>
+        <div id="si-scenarios">
+          <label class="scenario-row"><input type="radio" name="scenario" value="payoff_card"><span class="scenario-label">Pay off a credit card in full</span><span class="scenario-impact impact-positive">+20 to +50</span></label>
+          <label class="scenario-row"><input type="radio" name="scenario" value="open_card"><span class="scenario-label">Open a new credit card</span><span class="scenario-impact impact-negative">−5 to −10</span></label>
+          <label class="scenario-row"><input type="radio" name="scenario" value="miss_payment"><span class="scenario-label">Miss one payment (30 days late)</span><span class="scenario-impact impact-negative">−60 to −110</span></label>
+          <label class="scenario-row"><input type="radio" name="scenario" value="close_card"><span class="scenario-label">Close an old credit card</span><span class="scenario-impact impact-negative">−5 to −25</span></label>
+          <label class="scenario-row"><input type="radio" name="scenario" value="pay_collection"><span class="scenario-label">Pay off a collection account</span><span class="scenario-impact impact-positive">0 to +80</span></label>
+          <label class="scenario-row"><input type="radio" name="scenario" value="dispute_error"><span class="scenario-label">Successfully dispute an error</span><span class="scenario-impact impact-positive">+10 to +100</span></label>
+          <label class="scenario-row"><input type="radio" name="scenario" value="hard_inquiry"><span class="scenario-label">Hard inquiry (loan application)</span><span class="scenario-impact impact-negative">−3 to −10</span></label>
+          <label class="scenario-row"><input type="radio" name="scenario" value="bankruptcy"><span class="scenario-label">File for bankruptcy</span><span class="scenario-impact impact-negative">−130 to −200</span></label>
+        </div>
+        <button class="calc-btn" onclick="calcImpact()" style="margin-top:12px;">Simulate Impact →</button>
+        <div class="result" id="si-result">
+          <div style="display:flex;gap:20px;align-items:flex-start;margin-bottom:12px;flex-wrap:wrap;">
+            <div><div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px;">Before</div><div class="result-big" id="si-before" style="color:var(--muted);"></div></div>
+            <div style="font-size:1.4rem;color:var(--muted);padding-top:10px;">→</div>
+            <div><div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px;">After (est.)</div><div class="result-big" id="si-after"></div></div>
+            <div><div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:3px;">Change</div><div class="result-big" id="si-delta"></div></div>
+          </div>
+          <div class="result-text" id="si-explain"></div>
+          <div style="margin-top:10px;padding:10px 12px;background:rgba(245,158,11,.08);border-radius:10px;border-left:3px solid var(--warn);">
+            <p style="font-size:.77rem;color:#92400e;font-style:italic;" id="si-caveat"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /tools-grid -->
+
+  <div style="background:white;border:1px solid var(--border);border-radius:14px;padding:18px 22px;text-align:center;">
+    <p style="font-size:.8rem;color:var(--muted);line-height:1.7;"><strong style="color:var(--navy);">Educational use only.</strong> These tools produce estimates based on FICO® scoring models and general financial principles. Actual scores vary by bureau, model version, and individual credit profile. This is not financial or legal advice.</p>
+  </div>
+
+</div><!-- /tools-wrap -->
+
+<footer>
+  <p><a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog.html">Blog</a> &nbsp;·&nbsp; <a href="/tools">Tools</a> &nbsp;·&nbsp; <a href="/banned-debt-collectors.html">Banned Collectors</a></p>
+  <p style="margin-top:8px;">&copy; <span id="yr"></span> CreditGen 10X · All content is for educational purposes only.</p>
+  <p style="margin-top:6px;font-size:.73rem;">This page contains affiliate links. We may earn a commission at no cost to you.</p>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ── 1. SCORE ESTIMATOR ── */
+function calcScore(){
+  const w={payment:.35,util:.30,age:.15,mix:.10,inq:.10};
+  const v={payment:+document.getElementById('se-payment').value,util:+document.getElementById('se-util').value,age:+document.getElementById('se-age').value,mix:+document.getElementById('se-mix').value,inq:+document.getElementById('se-inq').value};
+  const weighted=Object.keys(w).reduce((s,k)=>s+v[k]*w[k],0);
+  const raw=Math.round(300+(weighted/100)*550);
+  const lo=Math.max(300,raw-25),hi=Math.min(850,raw+25);
+  let badge,cls,advice;
+  if(raw>=800){badge='Exceptional';cls='badge-excellent result-excellent';advice='You\'re in the top tier. Keep utilization under 10% and maintain perfect payment history to stay here.'}
+  else if(raw>=740){badge='Very Good';cls='badge-excellent result-excellent';advice='Strong score. Nudge utilization under 10% and avoid new hard inquiries to reach Exceptional.'}
+  else if(raw>=670){badge='Good';cls='badge-good result-good';advice='You qualify for most products. Reducing utilization or removing a negative item is your fastest lever.'}
+  else if(raw>=580){badge='Fair';cls='badge-fair result-fair';advice='12 months of consistent on-time payments + lower utilization produces the fastest improvement from here.'}
+  else{badge='Poor / Rebuilding';cls='badge-poor result-poor';advice='Start with a secured card or credit builder loan to add positive payment history. Give it 12–18 months.'}
+  const r=document.getElementById('se-result');
+  r.className='result show '+cls.split(' ')[1];
+  document.getElementById('se-range').textContent=lo+' – '+hi;
+  document.getElementById('se-badge').innerHTML='<span class="result-badge '+cls.split(' ')[0]+'">'+badge+'</span>';
+  document.getElementById('se-bar').style.width=((raw-300)/550*100)+'%';
+  document.getElementById('se-advice').textContent=advice;
+}
+
+/* ── 2. DEBT PAYOFF ── */
+function calcDebt(){
+  const bal=+document.getElementById('dp-balance').value;
+  const apr=+document.getElementById('dp-apr').value;
+  const pmt=+document.getElementById('dp-payment').value;
+  const extra=+document.getElementById('dp-extra').value||0;
+  if(!bal||!apr||!pmt){alert('Please fill in balance, APR, and monthly payment.');return;}
+  const rate=apr/100/12;
+  function amortize(b,p,r){let m=0,int=0;while(b>0&&m<1200){const i=b*r;int+=i;b=b+i-p;if(b<0)b=0;m++;}return{m,int};}
+  const base=amortize(bal,pmt,rate);
+  const boost=amortize(bal,pmt+extra,rate);
+  function addM(n){const d=new Date();d.setMonth(d.getMonth()+n);return d.toLocaleDateString('en-US',{month:'short',year:'numeric'})+' ('+n+' mo)';}
+  function fmt(n){'$'+Math.round(n).toLocaleString();return '$'+Math.round(n).toLocaleString();}
+  document.getElementById('dp-min-date').textContent=addM(base.m);
+  document.getElementById('dp-min-interest').textContent=fmt(base.int);
+  document.getElementById('dp-extra-date').textContent=extra?addM(boost.m):'—';
+  document.getElementById('dp-savings').textContent=extra?fmt(base.int-boost.int)+' interest, '+(base.m-boost.m)+' months sooner':'Enter extra amount above';
+  let tip=apr>20?'⚠️ APR over 20% — consider balance transfer or avalanche method (highest APR first) to minimize interest.':extra===0?'💡 Even $25/month extra can cut months off and save hundreds in interest.':'🎯 Great move. Adding '+fmt(extra)+'/month accelerates payoff significantly.';
+  document.getElementById('dp-tip').textContent=tip;
+  document.getElementById('dp-result').classList.add('show');
+}
+
+/* ── 3. TIMELINE ── */
+function calcTimeline(){
+  const cur=+document.getElementById('tl-score').value;
+  const tgt=+document.getElementById('tl-target').value;
+  const negs=document.getElementById('tl-negs').value;
+  const age=document.getElementById('tl-age').value;
+  const act=document.getElementById('tl-actions').value;
+  if(cur>=tgt){
+    document.getElementById('tl-headline').textContent='You\'re already at or above your target!';
+    document.getElementById('tl-milestones').innerHTML='<li><div class="milestone-dot">✓</div><div>Keep maintaining low utilization and on-time payments to stay there.</div></li>';
+    document.getElementById('tl-note').textContent='';
+    document.getElementById('tl-result').className='result result-excellent show';
+    return;
+  }
+  const gap=tgt-cur;
+  let mo=Math.round(gap/8);
+  if(negs==='bk')mo+=24;else if(negs==='collection')mo+=12;else if(negs==='late')mo+=4;
+  if(age==='recent')mo+=12;else if(age==='mid')mo+=4;else if(age==='aging')mo-=4;
+  if(act==='multiple')mo-=6;else if(act==='secured'||act==='card')mo-=3;
+  mo=Math.max(3,mo);
+  const q=Math.round(mo*.25),h=Math.round(mo*.5),t=Math.round(mo*.75);
+  const ms=[];
+  if(act==='none')ms.push({m:1,t:'Open a secured card or credit builder loan to start adding positive payment history immediately'});
+  ms.push({m:Math.min(2,q),t:'First on-time payments reported to bureaus — score begins to stabilize'});
+  if(negs==='collection'||negs==='late')ms.push({m:q,t:'Send debt validation letters to any collection accounts and dispute any inaccurate items with the bureaus'});
+  ms.push({m:h,t:'Consistent positive history building — expect your first meaningful increase of '+Math.round(gap*.3)+'–'+Math.round(gap*.45)+' points'});
+  ms.push({m:t,t:'Utilization optimized, negative impact of older items fading — approximately '+Math.round(gap*.65)+' points gained from start'});
+  ms.push({m:mo,t:'Target of '+tgt+' reached — continue habits to push even higher'});
+  const end=new Date();end.setMonth(end.getMonth()+mo);
+  const ds=end.toLocaleDateString('en-US',{month:'long',year:'numeric'});
+  document.getElementById('tl-headline').textContent='Estimated: '+mo+' months (by '+ds+')';
+  document.getElementById('tl-milestones').innerHTML=ms.map((m,i)=>'<li><div class="milestone-dot'+(i===ms.length-1?'" style="background:var(--teal-dark)"':'"')+'>'+m.m+'</div><div><strong>Month '+m.m+':</strong> '+m.t+'</div></li>').join('');
+  document.getElementById('tl-note').textContent='This is an estimate. Actual results depend on consistent on-time payments, utilization under 30%, and successfully disputing any inaccurate negatives.';
+  document.getElementById('tl-result').className='result result-neutral show';
+}
+
+/* ── 4. IMPACT SIMULATOR ── */
+const SD={
+  payoff_card:{lo:20,hi:50,ex:'Paying off a card lowers your overall utilization ratio — the second-biggest scoring factor at 30%. Impact is highest if the card had high utilization (over 50%).',cv:'Keep the card open after paying it off. Closing it removes available credit and can raise your utilization.'},
+  open_card:{lo:-10,hi:-5,ex:'Opening a new card triggers a hard inquiry and lowers average account age. Both effects are temporary — most people recover within 6–12 months.',cv:'If you already have thin credit, the new tradeline can help utilization long-term and may outweigh the short-term dip.'},
+  miss_payment:{lo:-110,hi:-60,ex:'A single 30-day late is the most damaging common event. Impact is larger for higher scores. The mark stays 7 years but fades significantly after 2 years.',cv:'Call the lender immediately. If this is your first late payment and you have a good history, many lenders will remove it with a goodwill request.'},
+  close_card:{lo:-25,hi:-5,ex:'Closing a card removes available credit (raising utilization) and may shorten average account age. Impact is larger if it was your oldest card.',cv:'Ask for a product change (downgrade) to a no-fee version instead of closing — keeps the account age and available credit intact.'},
+  pay_collection:{lo:0,hi:80,ex:'Impact depends on the scoring model. Newer models (FICO 9, VantageScore 4.0) ignore paid collections entirely. Older models (FICO 8) still count them.',cv:'Before paying, try to negotiate a "pay for delete" — ask the collector in writing to remove the entry entirely in exchange for payment.'},
+  dispute_error:{lo:10,hi:100,ex:'Removing an inaccurate negative item can produce a dramatic improvement. The impact depends on what was removed — a wrongly reported collection could be worth 50–100+ points.',cv:'You have the right under the FCRA to dispute any inaccurate item. Send disputes to each bureau in writing with supporting documentation.'},
+  hard_inquiry:{lo:-10,hi:-3,ex:'Hard inquiries lower your score slightly and the effect is small and temporary — most stop impacting your score after 12 months.',cv:'Multiple mortgage, auto, or student loan inquiries within 14–45 days count as a single inquiry for rate-shopping purposes.'},
+  bankruptcy:{lo:-200,hi:-130,ex:'Bankruptcy produces one of the most severe drops possible. Chapter 7 stays 10 years, Chapter 13 stays 7. Many scores begin recovering within 1–2 years as positive history is rebuilt.',cv:'Consult a bankruptcy attorney before deciding — many offer free consultations. It is sometimes the right financial choice despite the credit impact.'},
+};
+function calcImpact(){
+  const cur=+document.getElementById('si-score').value;
+  const sel=document.querySelector('input[name="scenario"]:checked');
+  if(!cur||cur<300||cur>850){alert('Please enter your current score (300–850).');return;}
+  if(!sel){alert('Please select a scenario.');return;}
+  const s=SD[sel.value];
+  const mid=Math.round((s.lo+s.hi)/2);
+  const after=Math.max(300,Math.min(850,cur+mid));
+  const delta=after-cur;
+  document.getElementById('si-before').textContent=cur;
+  document.getElementById('si-after').textContent=after;
+  document.getElementById('si-after').style.color=delta>=0?'var(--green)':'var(--red)';
+  document.getElementById('si-delta').textContent=(delta>=0?'+':'')+delta+' pts';
+  document.getElementById('si-delta').style.color=delta>=0?'var(--green)':'var(--red)';
+  document.getElementById('si-explain').textContent=s.ex;
+  document.getElementById('si-caveat').textContent='💡 '+s.cv;
+  const cls=delta>=30?'result-excellent':delta>=0?'result-good':delta>=-20?'result-fair':'result-poor';
+  document.getElementById('si-result').className='result '+cls+' show';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Utilization Calculator — Free & Instant | CreditGen 10X</title>
+<meta name="description" content="Calculate your credit utilization ratio instantly. Enter your balances and limits across all cards to see your overall and per-card utilization with a personalized action plan to improve your credit score.">
+<meta name="keywords" content="credit utilization calculator, credit utilization ratio, how to calculate credit utilization, what is credit utilization, lower credit utilization">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="CreditGen 10X Editorial Team">
+<link rel="canonical" href="https://creditgen10x.com/credit-utilization-calculator">
+<meta property="og:title" content="Credit Utilization Calculator — Free & Instant | CreditGen 10X">
+<meta property="og:description" content="Find out your credit utilization ratio instantly. See what's hurting your score and exactly what to pay down first.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://creditgen10x.com/credit-utilization-calculator">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Credit Utilization Calculator",
+  "description": "Free calculator that computes your overall and per-card credit utilization ratio with a personalized action plan to improve your credit score.",
+  "url": "https://creditgen10x.com/credit-utilization-calculator",
+  "applicationCategory": "FinanceApplication",
+  "operatingSystem": "Web",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "CreditGen 10X", "url": "https://creditgen10x.com" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is a good credit utilization ratio?", "acceptedAnswer": { "@type": "Answer", "text": "Below 10% is ideal for maximizing your credit score. Below 30% is generally acceptable. Above 30% starts to meaningfully hurt your score. People with excellent credit (760+) typically carry utilization under 7%." } },
+    { "@type": "Question", "name": "How is credit utilization calculated?", "acceptedAnswer": { "@type": "Answer", "text": "Credit utilization is calculated by dividing your total revolving credit card balances by your total revolving credit limits, then multiplying by 100. For example, $2,000 in balances with a $10,000 combined limit equals 20% utilization." } },
+    { "@type": "Question", "name": "How quickly does paying down balances improve your credit score?", "acceptedAnswer": { "@type": "Answer", "text": "Credit utilization updates every billing cycle when card issuers report to the bureaus. Once a lower balance is reported — typically within 30 days — your score can improve almost immediately, sometimes within a single billing cycle." } },
+    { "@type": "Question", "name": "Does credit utilization affect your credit score?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Credit utilization is the second most important factor in your FICO score, accounting for approximately 30% of your total score. High utilization signals financial stress to lenders and directly lowers your score." } },
+    { "@type": "Question", "name": "What counts as revolving credit for utilization?", "acceptedAnswer": { "@type": "Answer", "text": "Only revolving credit accounts count — primarily credit cards and lines of credit. Installment loans like auto loans, mortgages, and student loans do not affect your credit utilization ratio." } },
+    { "@type": "Question", "name": "Do closed credit cards count toward utilization?", "acceptedAnswer": { "@type": "Answer", "text": "Closed accounts with a zero balance don't count. However, closing a card removes its available credit from your total limit, which can increase your overall utilization ratio. This is why closing cards can temporarily lower your score." } }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--teal:#0d9488;--teal-dark:#0f766e;--teal-light:#d1fae5;--sage:#f5f7f2;--navy:#1a2e1a;--muted:#4a5568;--border:#dde5e0;--white:#ffffff}
+body{font-family:'DM Sans',sans-serif;background:var(--sage);color:var(--navy);line-height:1.6}
+.site-nav{background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;position:sticky;top:0;z-index:100;box-shadow:0 1px 10px rgba(0,0,0,.06)}
+.site-nav-inner{max-width:1060px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.site-logo-text{font-family:'Fraunces',serif;font-size:1.18rem;font-weight:900;color:var(--navy);letter-spacing:-.02em}
+.site-logo-text span{color:var(--teal);font-style:italic}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .15s}
+.nav-links a:hover{color:var(--navy)}
+.nav-cta{background:var(--teal)!important;color:white!important;padding:9px 22px!important;border-radius:100px!important;font-weight:600!important;font-size:.85rem!important;box-shadow:0 2px 10px rgba(13,148,136,.3)!important}
+.tool-hero{background:var(--white);border-bottom:1px solid var(--border);padding:52px 32px 46px;text-align:center;position:relative;overflow:hidden}
+.tool-hero::before{content:'';position:absolute;top:-80px;right:-60px;width:360px;height:360px;background:radial-gradient(circle,rgba(13,148,136,.09) 0%,transparent 70%);border-radius:50%}
+.tool-hero::after{content:'';position:absolute;bottom:-60px;left:5%;width:280px;height:280px;background:radial-gradient(circle,rgba(16,185,129,.06) 0%,transparent 70%);border-radius:50%}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--teal-light);color:#065f46;padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+.tool-hero h1{font-family:'Fraunces',serif;font-size:clamp(1.9rem,4vw,2.7rem);font-weight:900;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px;position:relative}
+.tool-hero h1 em{color:var(--teal);font-style:italic}
+.tool-hero .sub{color:var(--muted);font-size:1rem;max-width:520px;margin:0 auto;position:relative}
+.page-wrap{max-width:860px;margin:0 auto;padding:40px 24px 80px}
+.calc-card{background:var(--white);border-radius:20px;border:1px solid var(--border);box-shadow:0 2px 20px rgba(0,0,0,.06);overflow:hidden;margin-bottom:24px}
+.calc-head{background:linear-gradient(135deg,var(--teal),var(--teal-dark));padding:22px 28px;color:white}
+.calc-head h2{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:900;margin-bottom:3px}
+.calc-head p{font-size:.84rem;opacity:.85}
+.calc-body{padding:26px 28px}
+.card-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 40px;gap:10px;align-items:end;margin-bottom:12px;padding:16px;background:var(--sage);border-radius:12px;border:1px solid var(--border)}
+.card-row-label{font-size:.7rem;font-weight:700;color:var(--teal);letter-spacing:.08em;text-transform:uppercase;grid-column:1/-1;margin-bottom:-2px}
+.field label{display:block;font-size:.71rem;font-weight:700;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.field input{width:100%;padding:10px 12px;border:1.5px solid var(--border);border-radius:8px;font-size:.93rem;font-family:'DM Sans',sans-serif;color:var(--navy);background:var(--white);transition:border-color .15s;outline:none;-moz-appearance:textfield}
+.field input::-webkit-outer-spin-button,.field input::-webkit-inner-spin-button{-webkit-appearance:none}
+.field input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(13,148,136,.1)}
+.pw{position:relative}
+.pw span{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.9rem;pointer-events:none}
+.pw input{padding-left:22px!important}
+.rm-btn{height:40px;width:40px;background:#fef2f2;border:1.5px solid #fca5a5;border-radius:8px;color:#dc2626;font-size:1rem;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;align-self:end}
+.rm-btn:hover{background:#dc2626;color:white}
+.add-btn{display:flex;align-items:center;gap:8px;background:transparent;border:1.5px dashed var(--border);color:var(--teal);padding:10px 18px;border-radius:10px;font-size:.88rem;font-weight:600;cursor:pointer;transition:all .15s;font-family:'DM Sans',sans-serif}
+.add-btn:hover{border-color:var(--teal);background:rgba(13,148,136,.04)}
+.calc-btn{width:100%;padding:14px;background:var(--teal);color:white;border:none;border-radius:100px;font-family:'DM Sans',sans-serif;font-size:.95rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:16px;box-shadow:0 3px 14px rgba(13,148,136,.3)}
+.calc-btn:hover{background:var(--teal-dark);transform:translateY(-1px)}
+.results{display:none;margin-top:22px;animation:fadeUp .3s ease}
+.results.show{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.score-banner{border-radius:16px;padding:22px 26px;margin-bottom:18px;text-align:center}
+.score-banner.excellent{background:#f0fdf4;border:2px solid #86efac}
+.score-banner.good{background:#eff6ff;border:2px solid #93c5fd}
+.score-banner.fair{background:#fffbeb;border:2px solid #fcd34d}
+.score-banner.poor{background:#fef2f2;border:2px solid #fca5a5}
+.score-pct{font-family:'Fraunces',serif;font-size:3rem;font-weight:900;line-height:1}
+.excellent .score-pct{color:#16a34a}.good .score-pct{color:#2563eb}.fair .score-pct{color:#d97706}.poor .score-pct{color:#dc2626}
+.score-lbl{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;opacity:.65;margin-top:4px}
+.bar-wrap{background:#e5e7eb;border-radius:100px;height:9px;margin:14px 0 8px;overflow:hidden}
+.bar{height:100%;border-radius:100px;transition:width .7s cubic-bezier(.34,1.56,.64,1);width:0}
+.excellent .bar{background:linear-gradient(90deg,#16a34a,#4ade80)}
+.good .bar{background:linear-gradient(90deg,#2563eb,#60a5fa)}
+.fair .bar{background:linear-gradient(90deg,#d97706,#fbbf24)}
+.poor .bar{background:linear-gradient(90deg,#dc2626,#f87171)}
+.score-verdict{font-size:.95rem;font-weight:600;margin-top:6px}
+.section-box{background:var(--sage);border-radius:14px;padding:18px 20px;margin-bottom:16px;border:1px solid var(--border)}
+.section-box h3{font-family:'Fraunces',serif;font-size:.97rem;font-weight:900;margin-bottom:12px}
+.card-tbl{width:100%;border-collapse:collapse}
+.card-tbl th{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:7px 10px;text-align:left;border-bottom:2px solid var(--border)}
+.card-tbl td{padding:9px 10px;font-size:.87rem;border-bottom:1px solid var(--border)}
+.card-tbl tr:last-child td{border-bottom:none}
+.pill{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.7rem;font-weight:700}
+.pill.excellent{background:#dcfce7;color:#16a34a}.pill.good{background:#dbeafe;color:#1d4ed8}.pill.fair{background:#fef9c3;color:#a16207}.pill.poor{background:#fee2e2;color:#dc2626}
+.action-item{display:flex;gap:10px;margin-bottom:9px;font-size:.88rem;color:var(--muted)}
+.action-item:last-child{margin-bottom:0}
+.action-dot{width:7px;height:7px;background:var(--teal);border-radius:50%;margin-top:6px;flex-shrink:0}
+.aff-card{display:flex;align-items:center;gap:16px;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--teal);border-radius:0 14px 14px 0;padding:16px 20px;margin-top:18px}
+.aff-lbl{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin-bottom:3px}
+.aff-card h3{font-size:.95rem;font-weight:700;margin-bottom:3px}
+.aff-card p{font-size:.81rem;color:var(--muted);margin:0}
+.aff-btn{background:var(--teal);color:white;padding:9px 18px;border-radius:100px;text-decoration:none;font-size:.82rem;font-weight:700;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.aff-btn:hover{background:var(--teal-dark)}
+.article-wrap{background:var(--white);border-radius:20px;border:1px solid var(--border);box-shadow:0 2px 20px rgba(0,0,0,.05);padding:40px 42px}
+.article-wrap h2{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;letter-spacing:-.02em;margin:0 0 16px;padding-bottom:13px;border-bottom:2px solid var(--teal-light);color:var(--navy)}
+.article-wrap h3{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--teal-dark);margin:26px 0 10px}
+.article-wrap p{color:var(--muted);font-size:.97rem;line-height:1.8;margin-bottom:15px}
+.article-wrap ul,.article-wrap ol{color:var(--muted);font-size:.97rem;line-height:1.85;margin:0 0 15px 22px}
+.article-wrap li{margin-bottom:3px}
+.article-wrap strong{color:var(--navy);font-weight:700}
+.article-wrap a{color:var(--teal);text-decoration:underline}
+.tldr{background:#f0fdfa;border-left:4px solid var(--teal);border-radius:0 12px 12px 0;padding:18px 22px;margin-bottom:28px}
+.tldr-lbl{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-dark);margin-bottom:8px}
+.tldr ul{color:#134e4a;font-size:.93rem;line-height:1.85;margin:0 0 0 18px}
+.tip-box{background:#f0fdf4;border-left:4px solid #16a34a;border-radius:0 10px 10px 0;padding:15px 18px;margin:18px 0}
+.tip-box p{color:#166534;margin:0;font-size:.92rem}
+.warn-box{background:#fffbeb;border-left:4px solid #f59e0b;border-radius:0 10px 10px 0;padding:15px 18px;margin:18px 0}
+.warn-box p{color:#78350f;margin:0;font-size:.92rem}
+.faq-wrap{margin-top:32px}
+.faq-wrap>h2{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:900;margin-bottom:16px}
+.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:9px;overflow:hidden}
+.faq-q{width:100%;background:var(--white);border:none;padding:15px 18px;text-align:left;font-family:'DM Sans',sans-serif;font-size:.92rem;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q:hover{color:var(--teal)}
+.faq-q span{color:var(--teal);font-size:1.1rem;transition:transform .2s;flex-shrink:0}
+.faq-q.open span{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 18px 14px;font-size:.9rem;color:var(--muted);line-height:1.75}
+.faq-a.open{display:block}
+.cta-box{background:linear-gradient(135deg,var(--teal),var(--teal-dark));color:white;border-radius:18px;padding:32px;text-align:center;margin-top:32px}
+.cta-box h3{font-family:'Fraunces',serif;font-size:1.35rem;font-weight:900;margin-bottom:9px}
+.cta-box p{opacity:.88;margin-bottom:20px;font-size:.93rem}
+.cta-box a{display:inline-block;background:white;color:var(--teal);padding:12px 30px;border-radius:100px;font-weight:700;text-decoration:none;font-size:.93rem}
+footer{background:#0f1f0f;color:#8a9e8a;padding:34px 0;text-align:center;font-size:.84rem;margin-top:0}
+footer a{color:#5eead4;text-decoration:none}
+@media(max-width:680px){
+  .site-nav{padding:0 16px}
+  .nav-links a:not(.nav-cta){display:none}
+  .tool-hero{padding:36px 20px 32px}
+  .page-wrap{padding:22px 16px 60px}
+  .calc-body{padding:18px}
+  .card-row{grid-template-columns:1fr 1fr;gap:8px}
+  .card-row .field:last-of-type{grid-column:1/2}
+  .rm-btn{grid-column:2/3;justify-self:end}
+  .article-wrap{padding:26px 18px}
+  .score-pct{font-size:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a href="/index.html" class="site-logo">
+      <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect width="36" height="36" rx="9" fill="#d1fae5"/><path d="M18 6L9 12v6c0 6.2 4.1 12 9 13.5C23 30 27 24.2 27 18v-6L18 6z" fill="#0d9488" opacity=".95"/><path d="M13.5 18.5l3 3L22.5 14" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="site-logo-text">CreditGen <span>10X</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="/index.html">Home</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/tools.html">Tools</a>
+      <a href="/index.html#guide" class="nav-cta">Free Guide</a>
+    </div>
+  </div>
+</nav>
+
+<div class="tool-hero">
+  <div class="hero-pill">🔢 Free Calculator · No Signup</div>
+  <h1>Credit Utilization <em>Calculator</em></h1>
+  <p class="sub">Enter your balances and limits for every card. Get your overall ratio, a per-card breakdown, and an exact paydown action plan.</p>
+</div>
+
+<div class="page-wrap">
+
+  <div class="calc-card">
+    <div class="calc-head">
+      <h2>Your Credit Cards &amp; Lines of Credit</h2>
+      <p>Add each revolving account. Skip auto loans, mortgages, and student loans — those don't affect utilization.</p>
+    </div>
+    <div class="calc-body">
+      <div id="cards-wrap"></div>
+      <button class="add-btn" onclick="addCard()">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M7.5 2v11M2 7.5h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Add Another Card
+      </button>
+      <button class="calc-btn" onclick="calculate()">Calculate My Utilization →</button>
+
+      <div class="results" id="results">
+        <div class="score-banner" id="banner">
+          <div class="score-pct" id="pct-display"></div>
+          <div class="score-lbl">Overall Credit Utilization</div>
+          <div class="bar-wrap"><div class="bar" id="util-bar"></div></div>
+          <div class="score-verdict" id="verdict"></div>
+        </div>
+
+        <div class="section-box">
+          <h3>Per-Card Breakdown</h3>
+          <table class="card-tbl">
+            <thead><tr><th>Card</th><th>Balance</th><th>Limit</th><th>Utilization</th><th>Rating</th></tr></thead>
+            <tbody id="tbl-body"></tbody>
+          </table>
+        </div>
+
+        <div class="section-box">
+          <h3>🎯 Your Action Plan</h3>
+          <div id="actions"></div>
+        </div>
+
+        <div class="aff-card">
+          <div style="font-size:1.8rem;flex-shrink:0">💳</div>
+          <div style="flex:1">
+            <div class="aff-lbl">Recommended Tool</div>
+            <h3>Add a credit line — lower your utilization instantly</h3>
+            <p>Kikoff adds a $750 revolving credit line to your report, raising your total available credit and dropping your utilization ratio — no hard inquiry.</p>
+          </div>
+          <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994" class="aff-btn" target="_blank">Try Kikoff →</a>
+          <img height="0" width="0" src="https://imp.pxf.io/i/7007975/2344833/14994" style="position:absolute;visibility:hidden" border="0">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <article class="article-wrap" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="author" content="CreditGen 10X Editorial Team">
+    <meta itemprop="datePublished" content="2026-01-01">
+    <meta itemprop="dateModified" content="2026-03-01">
+
+    <div class="tldr">
+      <div class="tldr-lbl">📋 Quick Summary — What This Page Covers</div>
+      <ul>
+        <li>Credit utilization = total balances ÷ total limits × 100</li>
+        <li>Below 10% is ideal; below 30% is acceptable; above 30% hurts your score</li>
+        <li>Utilization accounts for ~30% of your FICO score — the second biggest factor</li>
+        <li>Both overall utilization and per-card utilization affect your score separately</li>
+        <li>Paying down balances can raise your score within a single billing cycle</li>
+        <li>You can lower utilization without paying debt by requesting a limit increase</li>
+      </ul>
+    </div>
+
+    <h2 itemprop="headline">What Is Credit Utilization — And Why Does It Control Your Score?</h2>
+    <p>Credit utilization is the percentage of your available revolving credit that you're currently using. It's calculated by dividing your total credit card balances by your total credit card limits. If you owe $3,000 across cards with a combined $10,000 limit, your utilization is 30%.</p>
+    <p>It's the <strong>second most powerful factor in your FICO credit score</strong> — behind only payment history — accounting for roughly 30% of your total score. That means this single number can quietly drag your score down by 50, 80, or even 100+ points without you realizing it.</p>
+    <div class="tip-box"><p><strong>💡 The fast fix:</strong> Unlike late payments, which stay on your report for 7 years, high utilization can be fixed in a single billing cycle. Pay down a balance today and your score can improve within 30 days.</p></div>
+
+    <h3>How to Calculate Credit Utilization</h3>
+    <p>The formula: <strong>Utilization % = (Total Balances ÷ Total Credit Limits) × 100</strong></p>
+    <p>FICO calculates this both overall (all cards combined) and <em>per-card individually</em>. A single card maxed at 90% hurts your score even if your total utilization looks fine.</p>
+
+    <h3>What Is a Good Credit Utilization Ratio?</h3>
+    <ul>
+      <li><strong>Under 10%:</strong> Excellent — maximum score benefit</li>
+      <li><strong>10–29%:</strong> Good — minimal score impact</li>
+      <li><strong>30–49%:</strong> Fair — noticeable damage begins here</li>
+      <li><strong>50–74%:</strong> Poor — significant score damage</li>
+      <li><strong>75%+:</strong> Very Poor — severe impact, signals financial stress to lenders</li>
+    </ul>
+    <div class="warn-box"><p><strong>⚠️ The 30% myth:</strong> "Stay under 30%" is a floor, not a goal. People with 800+ scores carry utilization under 7%. Aim for under 10% on every card if you're actively trying to maximize your score.</p></div>
+
+    <h3>5 Ways to Lower Your Credit Utilization Fast</h3>
+    <p><strong>1. Pay the highest-utilization card first.</strong> Even if it's not your biggest balance in dollars, paying down the card with the highest utilization percentage has the biggest score impact. A card at 85% hurts more than one at 40%.</p>
+    <p><strong>2. Request a credit limit increase.</strong> If your balance stays the same but your limit goes up, your utilization drops automatically. Many issuers will approve with just a soft pull.</p>
+    <p><strong>3. Add a new credit line.</strong> A new revolving account (like <a rel="sponsored" href="https://kikoff.pxf.io/c/7007975/2344833/14994">Kikoff</a>) adds available credit and lowers your overall ratio. Don't carry a balance on the new account.</p>
+    <p><strong>4. Pay before your statement closes.</strong> Card issuers report your balance on the statement closing date — not the due date. Paying before that date means the lower number gets reported to the bureaus.</p>
+    <p><strong>5. Spread balances across cards.</strong> Moving debt from a maxed card to one with available room can reduce per-card utilization even if your total debt doesn't change.</p>
+
+    <h3>What Counts Toward Credit Utilization?</h3>
+    <p>Only <strong>revolving credit</strong> counts — primarily credit cards and personal lines of credit. Installment loans (auto, mortgage, student, personal loans) and charge cards with no preset spending limit do not affect your utilization ratio.</p>
+
+    <div class="faq-wrap">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What is a good credit utilization ratio?<span>+</span></button><div class="faq-a">Below 10% is ideal for maximizing your credit score. Below 30% is generally acceptable. Above 30% starts to meaningfully hurt your score. People with excellent credit typically carry utilization under 7%.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How is credit utilization calculated?<span>+</span></button><div class="faq-a">Divide total revolving credit balances by total revolving credit limits, then multiply by 100. For example, $2,000 in balances with a $10,000 combined limit equals 20% utilization. FICO also evaluates each card individually.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">How quickly does paying down balances improve my score?<span>+</span></button><div class="faq-a">Credit utilization updates every billing cycle when your card issuer reports to the bureaus — typically within 30 days. Your score can improve almost immediately after a lower balance is reported, sometimes within a single billing cycle.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Does opening a new card lower my utilization?<span>+</span></button><div class="faq-a">Yes — a new card adds to your total available credit, which lowers your overall utilization ratio. However, applying triggers a hard inquiry and the new account reduces your average account age. The utilization benefit usually outweighs these within 3–6 months if you don't carry a balance on the new card.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">What happens to utilization when I close a credit card?<span>+</span></button><div class="faq-a">Closing a card removes its available credit from your total limit, which can increase your overall utilization ratio even if you don't owe anything on that card. This is one of the main reasons closing cards often lowers your score temporarily.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="faq(this)">Do installment loans count toward credit utilization?<span>+</span></button><div class="faq-a">No. Installment loans like auto loans, mortgages, student loans, and personal loans do not count toward credit utilization. Only revolving credit accounts — primarily credit cards and lines of credit — are used in the utilization calculation.</div></div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Errors on Your Report Can Tank Your Score Too</h3>
+      <p>Our free Pre-Dispute Guide walks you through the 5 critical steps to take before disputing any credit report error — the steps most people skip that cause disputes to fail.</p>
+      <a href="/index.html#guide">Get the Free Guide →</a>
+    </div>
+  </article>
+
+</div>
+
+<footer>
+  <p>© <span id="yr"></span> CreditGen 10X · Credit education only — not legal or financial advice · <a href="/index.html">Home</a> · <a href="/blog.html">Blog</a> · <a href="/tools.html">Tools</a></p>
+  <p style="margin-top:6px;font-size:.76rem;opacity:.6">This page contains affiliate links. We may earn a commission at no cost to you.</p>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+let n = 0;
+function addCard(nm='',bl='',lm='') {
+  n++;
+  const d = document.createElement('div');
+  d.className='card-row'; d.id='cr-'+n;
+  d.innerHTML=`<div class="card-row-label">Card ${n}</div>
+    <div class="field"><label>Card Name</label><input type="text" placeholder="e.g. Chase Freedom" id="cn-${n}" value="${nm}"></div>
+    <div class="field"><label>Current Balance</label><div class="pw"><span>$</span><input type="number" min="0" placeholder="0" id="cb-${n}" value="${bl}"></div></div>
+    <div class="field"><label>Credit Limit</label><div class="pw"><span>$</span><input type="number" min="1" placeholder="5000" id="cl-${n}" value="${lm}"></div></div>
+    <button class="rm-btn" onclick="document.getElementById('cr-${n}').remove()" title="Remove">✕</button>`;
+  document.getElementById('cards-wrap').appendChild(d);
+}
+function rating(p){return p<=10?{c:'excellent',l:'Excellent'}:p<=29?{c:'good',l:'Good'}:p<=49?{c:'fair',l:'Fair'}:{c:'poor',l:'High'}}
+function calculate(){
+  const rows=[...document.querySelectorAll('[id^="cr-"]')];
+  let tb=0,tl=0,cards=[];
+  for(const r of rows){
+    const id=r.id.split('-')[1];
+    const nm=document.getElementById('cn-'+id)?.value||'Card '+id;
+    const b=parseFloat(document.getElementById('cb-'+id)?.value)||0;
+    const l=parseFloat(document.getElementById('cl-'+id)?.value)||0;
+    if(l<=0)continue;
+    tb+=b;tl+=l;
+    cards.push({nm,b,l,p:b/l*100});
+  }
+  if(!cards.length||tl===0){alert('Please add at least one card with a valid credit limit.');return;}
+  const ov=tb/tl*100;
+  const rt=rating(ov);
+  const banner=document.getElementById('banner');
+  banner.className='score-banner '+rt.c;
+  document.getElementById('pct-display').textContent=ov.toFixed(1)+'%';
+  const bar=document.getElementById('util-bar');
+  bar.className='bar';
+  setTimeout(()=>{bar.style.width=Math.min(ov,100)+'%';bar.style.background=rt.c==='excellent'?'linear-gradient(90deg,#16a34a,#4ade80)':rt.c==='good'?'linear-gradient(90deg,#2563eb,#60a5fa)':rt.c==='fair'?'linear-gradient(90deg,#d97706,#fbbf24)':'linear-gradient(90deg,#dc2626,#f87171)'},50);
+  const verdicts={excellent:'🟢 Excellent — your utilization is in the ideal range for top credit scores.',good:'🔵 Good — acceptable, but reducing it further will raise your score.',fair:'🟡 Fair — above 30%, this is meaningfully hurting your score. See your action plan.',poor:'🔴 High — your utilization is significantly damaging your score. Act on your plan below.'};
+  document.getElementById('verdict').textContent=verdicts[rt.c];
+  document.getElementById('tbl-body').innerHTML=cards.map(c=>{const r=rating(c.p);return`<tr><td><strong>${c.nm}</strong></td><td>$${c.b.toLocaleString()}</td><td>$${c.l.toLocaleString()}</td><td><strong>${c.p.toFixed(1)}%</strong></td><td><span class="pill ${r.c}">${r.l}</span></td></tr>`}).join('');
+  const acts=[];
+  if(ov>10){const p30=Math.ceil(tb-tl*.1);if(p30>0)acts.push(`Pay down <strong>$${p30.toLocaleString()}</strong> total to reach the ideal 10% threshold.`);}
+  if(ov>30){const p30=Math.ceil(tb-tl*.3);acts.push(`Pay down <strong>$${p30.toLocaleString()}</strong> to get below 30% overall utilization.`);}
+  const hi=[...cards].sort((a,b)=>b.p-a.p).filter(c=>c.p>30);
+  if(hi.length)acts.push(`Priority card: <strong>${hi[0].nm}</strong> at ${hi[0].p.toFixed(0)}% — pay this one first for maximum score impact.`);
+  acts.push('Pay balances before your statement closing date so the lower balance gets reported to all three bureaus.');
+  if(ov>20)acts.push('Ask your card issuers for a credit limit increase — many approve with a soft pull that won\'t affect your score.');
+  document.getElementById('actions').innerHTML=acts.map(a=>`<div class="action-item"><div class="action-dot"></div><div>${a}</div></div>`).join('');
+  const res=document.getElementById('results');
+  res.classList.add('show');
+  res.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function faq(btn){
+  btn.classList.toggle('open');
+  btn.nextElementSibling.classList.toggle('open');
+}
+addCard();addCard();
+</script>
+</body>
+</html>
