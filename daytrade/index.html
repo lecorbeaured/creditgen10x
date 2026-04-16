@@ -1035,14 +1035,33 @@ footer {
 </footer>
 
 <script>
-function handleSubmit(e, successId, formId) {
+async function handleSubmit(e, successId, formId) {
   e.preventDefault();
   const form = document.getElementById(formId);
+  const btn = form.querySelector('button');
   const email = form.querySelector('input[type="email"]').value;
-  // TODO: wire to Resend API endpoint
-  console.log('Email captured:', email);
-  form.style.display = 'none';
-  document.getElementById(successId).style.display = 'block';
+
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/.netlify/functions/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json();
+    if (data.success) {
+      form.style.display = 'none';
+      document.getElementById(successId).style.display = 'block';
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
 }
 
 function toggleFaq(btn) {
