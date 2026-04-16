@@ -103,7 +103,7 @@ exports.handler = async (event) => {
               <p style="margin:0 0 24px;font-size:15px;color:#888899;line-height:1.6;">
                 If you want to skip ahead and get the <strong style="color:#E8E8F0;">complete 50-page playbook</strong> — strategies, 30-day roadmap, broker comparison table, and daily checklists — it's available now:
               </p>
-              <a href="https://payhip.com/b/uUGMQ" target="_blank"
+              <a href="https://payhip.com/ericcoste" target="_blank"
                  style="display:inline-block;background:#D4A017;color:#000000;font-weight:700;font-size:15px;padding:14px 32px;border-radius:6px;text-decoration:none;letter-spacing:0.02em;">
                 Get the Full Guide — $17 →
               </a>
@@ -154,8 +154,33 @@ exports.handler = async (event) => {
     const req = https.request(options, (res) => {
       let body = "";
       res.on("data", (chunk) => (body += chunk));
-      res.on("end", () => {
+      res.on("end", async () => {
         if (res.statusCode === 200 || res.statusCode === 201) {
+          // Ping Railway sequence service to register subscriber
+          try {
+            const sequenceUrl = process.env.SEQUENCE_URL;
+            const webhookSecret = process.env.WEBHOOK_SECRET;
+            if (sequenceUrl && webhookSecret) {
+              const payload = JSON.stringify({ email, secret: webhookSecret });
+              const url = new URL(sequenceUrl + "/subscriber");
+              const pingOptions = {
+                hostname: url.hostname,
+                path: url.pathname,
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "Content-Length": Buffer.byteLength(payload),
+                },
+              };
+              const pingReq = https.request(pingOptions, () => {});
+              pingReq.on("error", (e) => console.error("Sequence ping failed:", e.message));
+              pingReq.write(payload);
+              pingReq.end();
+            }
+          } catch (e) {
+            console.error("Sequence ping error:", e.message);
+          }
+
           resolve({
             statusCode: 200,
             headers: { "Access-Control-Allow-Origin": "*" },
