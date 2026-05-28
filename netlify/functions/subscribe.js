@@ -1,16 +1,14 @@
 /**
- * CreditGen 10X — Resend Subscribe + Automation Trigger
+ * CreditGen 10X — Resend Automation Trigger
  * POST /.netlify/functions/subscribe
  * Body: { email: "user@example.com" }
  *
  * Flow:
- * 1. Add contact to Resend audience (get contactId back)
- * 2. Fire guide.downloaded event → triggers the 5-email drip automation
- * 3. Return success (client opens PDF)
+ * 1. Create or update contact in Resend
+ * 2. Fire guide.downloaded event with contactId → triggers drip automation
  */
 
-const RESEND_API_KEY  = process.env.RESEND_API_KEY;
-const AUDIENCE_ID     = process.env.RESEND_AUDIENCE_ID;
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 async function resendPost(path, body) {
   const res = await fetch(`https://api.resend.com${path}`, {
@@ -42,8 +40,8 @@ exports.handler = async (event) => {
     return { statusCode: 405, headers, body: JSON.stringify({ error: "Method not allowed" }) };
   }
 
-  if (!RESEND_API_KEY || !AUDIENCE_ID) {
-    console.error("Missing RESEND_API_KEY or RESEND_AUDIENCE_ID");
+  if (!RESEND_API_KEY) {
+    console.error("Missing RESEND_API_KEY");
     return { statusCode: 500, headers, body: JSON.stringify({ error: "Server config error" }) };
   }
 
@@ -59,22 +57,18 @@ exports.handler = async (event) => {
   }
 
   try {
-    // 1. Add contact to audience — returns contactId
-    const contact = await resendPost(`/audiences/${AUDIENCE_ID}/contacts`, {
-      email,
-      unsubscribed: false
-    });
-
+    // 1. Create contact — Resend returns a contactId even without an audience
+    const contact = await resendPost("/contacts", { email });
     const contactId = contact.id;
 
-    // 2. Fire the automation trigger event
+    // 2. Fire automation trigger
     await resendPost("/events", {
       event: "guide.downloaded",
       contact_id: contactId,
       payload: { email }
     });
 
-    console.log(`Subscribed and triggered drip for: ${email}`);
+    console.log(`Drip triggered for: ${email} (contactId: ${contactId})`);
 
     return {
       statusCode: 200,
@@ -84,7 +78,7 @@ exports.handler = async (event) => {
 
   } catch (err) {
     console.error("Subscribe error:", err.message);
-    // Still return success so the PDF opens — don't block the user
+    // Always return success so PDF still opens
     return {
       statusCode: 200,
       headers,
