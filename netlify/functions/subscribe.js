@@ -43,9 +43,14 @@ exports.handler = async (event) => {
   }
 
   try {
-    // Step 1: create contact
+    // Step 1: create contact — derive first name from email prefix as fallback
+    const firstName = email.split("@")[0].split(".")[0];
     console.log("Creating contact for:", email);
-    const contact = await resendPost("/contacts", { email });
+    const contact = await resendPost("/contacts", {
+      email,
+      first_name: firstName,
+      unsubscribed: false
+    });
     console.log("Contact created:", JSON.stringify(contact));
     const contactId = contact.id;
 
