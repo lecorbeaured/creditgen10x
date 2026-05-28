@@ -54,10 +54,10 @@ exports.handler = async (event) => {
     const contactId = contact.id;
     console.log("Contact id:", contactId);
 
-    // Step 2: fire automation event — camelCase contactId per Resend SDK docs
-    console.log("Firing event guide.downloaded for:", contactId);
+    // Step 2: fire existing automation event
+    console.log("Firing event for contactId:", contactId);
     const eventResult = await resendPost("/events", {
-      name: "guide.downloaded",
+      event: "guide.downloaded",
       contactId: contactId,
       payload: { email }
     });
