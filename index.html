@@ -2403,31 +2403,27 @@
             e.preventDefault();
             const form = e.target;
             const btn = document.getElementById('guide-submit-btn');
-            const formData = new FormData(form);
+            const email = form.querySelector('input[name="email"]').value.trim();
 
-            // Button loading state
             btn.disabled = true;
             btn.textContent = 'Sending…';
 
-            fetch('/', {
+            fetch('/.netlify/functions/subscribe', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: new URLSearchParams(formData).toString()
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email })
             })
             .then(() => {
-                btn.textContent = '✓ Check your inbox!';
+                btn.textContent = '✓ Guide is on its way!';
                 form.reset();
-                // Open PDF in new tab — works in all modern browsers
                 window.open('/pre-dispute-guide.pdf', '_blank', 'noopener');
             })
             .catch(() => {
-                // Network hiccup — Netlify likely still got it; open PDF anyway
                 btn.textContent = '✓ Opening Guide…';
                 form.reset();
                 window.open('/pre-dispute-guide.pdf', '_blank', 'noopener');
             })
             .finally(() => {
-                // Re-enable button after 4 seconds
                 setTimeout(() => {
                     btn.disabled = false;
                     btn.textContent = 'Unlock & Download Free Guide →';
