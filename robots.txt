@@ -1,23 +1,15 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://creditgen10x.com/sitemap.xml
 
-# Crawl rate optimization
 Crawl-delay: 1
 
-# Block admin and utility pages
 Disallow: /admin/
 Disallow: /api/
 Disallow: /private/
+Disallow: /design-options.html
 
-# Allow all content pages
-Allow: /privacy
-Allow: /terms
-Allow: /contact
-
-# Specific bot optimizations
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0.5

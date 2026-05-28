@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://daytrade.creditgen10x.com/sitemap.xml

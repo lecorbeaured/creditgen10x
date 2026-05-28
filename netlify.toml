@@ -1,5 +1,3 @@
-# Netlify configuration for CreditGen 10X + Decap CMS
-
 [build]
   publish = "."
   command = "node build.js"
@@ -7,16 +5,79 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Serve blog posts by slug: /blog/my-post-slug → blog-post.html
+# Blog post slugs: /blog/my-post-slug -> blog-post.html
 [[redirects]]
   from = "/blog/:slug"
   to = "/blog-post.html"
   status = 200
 
-# Serve blog index at /blog
+# Blog index
 [[redirects]]
   from = "/blog"
   to = "/blog.html"
+  status = 200
+
+# Tools hub
+[[redirects]]
+  from = "/tools"
+  to = "/tools.html"
+  status = 200
+
+# Individual tools (canonical without .html)
+[[redirects]]
+  from = "/credit-utilization-calculator"
+  to = "/credit-utilization-calculator.html"
+  status = 200
+
+[[redirects]]
+  from = "/debt-payoff-calculator"
+  to = "/debt-payoff-calculator.html"
+  status = 200
+
+[[redirects]]
+  from = "/credit-score-estimator"
+  to = "/credit-score-estimator.html"
+  status = 200
+
+[[redirects]]
+  from = "/score-impact-simulator"
+  to = "/score-impact-simulator.html"
+  status = 200
+
+[[redirects]]
+  from = "/credit-repair-timeline-estimator"
+  to = "/credit-repair-timeline-estimator.html"
+  status = 200
+
+[[redirects]]
+  from = "/statute-of-limitations-checker"
+  to = "/statute-of-limitations-checker.html"
+  status = 200
+
+[[redirects]]
+  from = "/banned-debt-collectors"
+  to = "/banned-debt-collectors.html"
+  status = 200
+
+[[redirects]]
+  from = "/pre-dispute-guide"
+  to = "/pre-dispute-guide.html"
+  status = 200
+
+# Legal pages (standalone)
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
   status = 200
 
 # Admin panel
@@ -32,6 +93,9 @@
     X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://identity.netlify.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://api.netlify.com; frame-ancestors 'self';"
 
 # Cache static assets
 [[headers]]
@@ -39,8 +103,24 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Never cache posts/index.json — must always be fresh after publish
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.pdf"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Never cache posts index — must be fresh after each publish
 [[headers]]
   for = "/posts/index.json"
   [headers.values]
     Cache-Control = "no-cache, no-store, must-revalidate"
+
+# Cache HTML pages for 1 hour
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
