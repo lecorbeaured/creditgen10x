@@ -1,13 +1,3 @@
-/**
- * CreditGen 10X — Resend Automation Trigger
- * POST /.netlify/functions/subscribe
- * Body: { email: "user@example.com" }
- *
- * Flow:
- * 1. Create or update contact in Resend
- * 2. Fire guide.downloaded event with contactId → triggers drip automation
- */
-
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
 
 async function resendPost(path, body) {
@@ -20,6 +10,7 @@ async function resendPost(path, body) {
     body: JSON.stringify(body)
   });
   const data = await res.json();
+  console.log(`Resend ${path} status:`, res.status, JSON.stringify(data));
   if (!res.ok) throw new Error(data.message || `Resend ${res.status}: ${path}`);
   return data;
 }
@@ -32,17 +23,12 @@ exports.handler = async (event) => {
     "Content-Type": "application/json"
   };
 
-  if (event.httpMethod === "OPTIONS") {
-    return { statusCode: 204, headers, body: "" };
-  }
-
-  if (event.httpMethod !== "POST") {
-    return { statusCode: 405, headers, body: JSON.stringify({ error: "Method not allowed" }) };
-  }
+  if (event.httpMethod === "OPTIONS") return { statusCode: 204, headers, body: "" };
+  if (event.httpMethod !== "POST") return { statusCode: 405, headers, body: JSON.stringify({ error: "Method not allowed" }) };
 
   if (!RESEND_API_KEY) {
     console.error("Missing RESEND_API_KEY");
-    return { statusCode: 500, headers, body: JSON.stringify({ error: "Server config error" }) };
+    return { statusCode: 500, headers, body: JSON.stringify({ error: "Missing API key" }) };
   }
 
   let email;
@@ -57,32 +43,25 @@ exports.handler = async (event) => {
   }
 
   try {
-    // 1. Create contact — Resend returns a contactId even without an audience
+    // Step 1: create contact
+    console.log("Creating contact for:", email);
     const contact = await resendPost("/contacts", { email });
+    console.log("Contact created:", JSON.stringify(contact));
     const contactId = contact.id;
 
-    // 2. Fire automation trigger
-    await resendPost("/events", {
+    // Step 2: fire automation event
+    console.log("Firing event for contactId:", contactId);
+    const eventResult = await resendPost("/events", {
       event: "guide.downloaded",
       contact_id: contactId,
       payload: { email }
     });
+    console.log("Event fired:", JSON.stringify(eventResult));
 
-    console.log(`Drip triggered for: ${email} (contactId: ${contactId})`);
-
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({ success: true })
-    };
+    return { statusCode: 200, headers, body: JSON.stringify({ success: true, contactId }) };
 
   } catch (err) {
-    console.error("Subscribe error:", err.message);
-    // Always return success so PDF still opens
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({ success: true })
-    };
+    console.error("Subscribe failed:", err.message);
+    return { statusCode: 200, headers, body: JSON.stringify({ success: true, error: err.message }) };
   }
 };
