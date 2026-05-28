@@ -11,7 +11,7 @@ async function resendPost(path, body) {
   });
   const data = await res.json();
   console.log(`Resend ${path} status:`, res.status, JSON.stringify(data));
-  if (!res.ok) throw new Error(data.message || `Resend ${res.status}: ${path}`);
+  if (!res.ok) throw new Error(JSON.stringify(data));
   return data;
 }
 
@@ -43,25 +43,25 @@ exports.handler = async (event) => {
   }
 
   try {
-    // Step 1: create contact — derive first name from email prefix as fallback
+    // Step 1: create contact
     const firstName = email.split("@")[0].split(".")[0];
-    console.log("Creating contact for:", email);
+    console.log("Creating contact:", email);
     const contact = await resendPost("/contacts", {
       email,
       first_name: firstName,
       unsubscribed: false
     });
-    console.log("Contact created:", JSON.stringify(contact));
     const contactId = contact.id;
+    console.log("Contact id:", contactId);
 
-    // Step 2: fire automation event
-    console.log("Firing event for contactId:", contactId);
+    // Step 2: fire automation event — camelCase contactId per Resend SDK docs
+    console.log("Firing event guide.downloaded for:", contactId);
     const eventResult = await resendPost("/events", {
-      event: "guide.downloaded",
-      contact_id: contactId,
+      name: "guide.downloaded",
+      contactId: contactId,
       payload: { email }
     });
-    console.log("Event fired:", JSON.stringify(eventResult));
+    console.log("Event result:", JSON.stringify(eventResult));
 
     return { statusCode: 200, headers, body: JSON.stringify({ success: true, contactId }) };
 
